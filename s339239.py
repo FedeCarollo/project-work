@@ -4,7 +4,7 @@ from itertools import combinations
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
-
+import time
 from icecream import ic
 from src.genetic_solver import GeneticSolver
     
@@ -121,13 +121,15 @@ class Problem:
         return (improvement, solution_cost, baseline_cost)
 
 if __name__ == "__main__":
-    out = open("results_v1.txt", "w")
+    out = open("results.txt", "w")
     #possible values num_cities: 100, 1_000, density: 0.2, 1, alpha: 1, 2, beta: 1, 2
     for num_cities in [100]:
         for density in [0.2, 1]:
             for beta in [1, 2]:
                 for alpha in [1, 2]:
                     print(f"Running Problem with {num_cities} cities, density={density}, alpha={alpha}, beta={beta}")
+                    start_time = time.time()
                     (improvment, sol_cost, base_cost) = Problem(100, density=density, alpha=alpha, beta=beta).compare()
-                    out.write(f"Density: {density}, Alpha: {alpha}, Beta: {beta} => Improvement: {improvment:.2f}%, Solution Cost: {sol_cost:.2f}, Baseline Cost: {base_cost:.2f}\n")
+                    elapsed_time = time.time() - start_time
+                    out.write(f"Density: {density}, Alpha: {alpha}, Beta: {beta} => Improvement: {improvment:.2f}%, Solution Cost: {sol_cost:.2f}, Baseline Cost: {base_cost:.2f}, Time: {elapsed_time:.2f}s\n")
     out.close()
