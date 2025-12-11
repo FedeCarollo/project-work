@@ -81,25 +81,38 @@ class Problem:
         color = ['red'] + ['lightblue'] * (len(self._graph) - 1)
         return nx.draw(self._graph, pos, with_labels=True, node_color=color, node_size=size)
     
+    
+    from src.genetic_solver import GeneticSolver
     def solution(self):
-        # Placeholder for user-defined solution
-        return 0
-    def baseline(self):
         """
-        Baseline: visita ogni nodo singolarmente tornando sempre al deposito (0).
+        Risolve il problema utilizzando un Algoritmo Genetico con decodifica intelligente.
         """
-        cost = 0
-        for dest, path in nx.single_source_dijkstra_path(
-            self._graph, source=0, weight='dist'
-        ).items():
-            if dest == 0:
-                continue
-            # Andata (peso 0)
-            cost += self.cost(path, 0)
-            # Ritorno (peso = oro del nodo)
-            cost += self.cost(path, self._graph.nodes[dest]['gold'])
-            
-        logging.info(f"baseline: total cost: {cost:.2f}")
+        import logging
+        
+        # Configurazione parametri GA
+        # Sentiti libero di aumentarli per risultati migliori (es. pop=200, gen=500)
+        POPULATION_SIZE = 10
+        GENERATIONS = 20
+        MUTATION_RATE = 0.3
+        
+        logging.info(f"Starting Genetic Algorithm (Pop: {POPULATION_SIZE}, Gen: {GENERATIONS})...")
+        # Istanzia ed esegue il solver
+        solver = self.GeneticSolver(
+            problem=self, 
+            pop_size=POPULATION_SIZE, 
+            generations=GENERATIONS, 
+            mutation_rate=MUTATION_RATE
+        )
+
+        best_individual = solver.evolve()
+        
+        # Logging del risultato finale (simile alla baseline)
+        path = best_individual.phenotype
+        cost = best_individual.fitness
+        
+        logging.info(f"Solution found with cost: {cost:.2f}")
+        logging.info(f"Path length: {len(path)} steps")
+        logging.debug(f"Full path: {path}") # De-commentare se serve vedere il percorso
         return cost
     
     def compare(self):
@@ -109,15 +122,13 @@ class Problem:
         return (improvement, solution_cost, baseline_cost)
 
 if __name__ == "__main__":
-    ic(Problem(100, density=0.2, alpha=1, beta=1).compare())
-    ic(Problem(100, density=0.2, alpha=2, beta=1).compare())
-    ic(Problem(100, density=0.2, alpha=1, beta=2).compare())
-    ic(Problem(100, density=1, alpha=1, beta=1).compare())
-    ic(Problem(100, density=1, alpha=2, beta=1).compare())
-    ic(Problem(100, density=1, alpha=1, beta=2).compare())
-    ic(Problem(1_000, density=0.2, alpha=1, beta=1).compare())
-    ic(Problem(1_000, density=0.2, alpha=2, beta=1).compare())
-    ic(Problem(1_000, density=0.2, alpha=1, beta=2).compare())
-    ic(Problem(1_000, density=1, alpha=1, beta=1).compare())
-    ic(Problem(1_000, density=1, alpha=2, beta=1).compare())
-    ic(Problem(1_000, density=1, alpha=1, beta=2).compare())
+    out = open("results.txt", "w")
+    #possible values num_cities: 100, 1_000, density: 0.2, 1, alpha: 1, 2, beta: 1, 2
+    for num_cities in [100]:
+        for density in [0.2, 1]:
+            for beta in [1, 2]:
+                for alpha in [1, 2]:
+                    print(f"Running Problem with {num_cities} cities, density={density}, alpha={alpha}, beta={beta}")
+                    (improvment, sol_cost, base_cost) = Problem(100, density=density, alpha=alpha, beta=beta).compare()
+                    out.write(f"Density: {density}, Alpha: {alpha}, Beta: {beta} => Improvement: {improvment:.2f}%, Solution Cost: {sol_cost:.2f}, Baseline Cost: {base_cost:.2f}\n")
+    out.close()

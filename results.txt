@@ -1,0 +1,5 @@
+Density: 0.2, Alpha: 1, Beta: 1 => Improvement: 28.36%, Solution Cost: 27806.73, Baseline Cost: 38815.58
+Density: 0.2, Alpha: 2, Beta: 1 => Improvement: 25.30%, Solution Cost: 57860.94, Baseline Cost: 77458.97
+Density: 0.2, Alpha: 1, Beta: 2 => Improvement: 45.21%, Solution Cost: 13352544.41, Baseline Cost: 24369662.26
+Density: 0.2, Alpha: 2, Beta: 2 => Improvement: 44.17%, Solution Cost: 54419584.87, Baseline Cost: 97478132.43
+Density: 1, Alpha: 1, Beta: 1 => Improvement: -5.57%, Solution Cost: 19284.07, Baseline Cost: 18266.19
