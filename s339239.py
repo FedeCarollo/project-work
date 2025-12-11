@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 from icecream import ic
-
+from src.genetic_solver import GeneticSolver
+    
 class Problem:
     _graph: nx.Graph
     _alpha: float
@@ -81,13 +82,10 @@ class Problem:
         color = ['red'] + ['lightblue'] * (len(self._graph) - 1)
         return nx.draw(self._graph, pos, with_labels=True, node_color=color, node_size=size)
     
-    
-    from src.genetic_solver import GeneticSolver
     def solution(self):
         """
         Risolve il problema utilizzando un Algoritmo Genetico con decodifica intelligente.
         """
-        import logging
         
         # Configurazione parametri GA
         # Sentiti libero di aumentarli per risultati migliori (es. pop=200, gen=500)
@@ -97,13 +95,14 @@ class Problem:
         
         logging.info(f"Starting Genetic Algorithm (Pop: {POPULATION_SIZE}, Gen: {GENERATIONS})...")
         # Istanzia ed esegue il solver
-        solver = self.GeneticSolver(
+        solver = GeneticSolver(
             problem=self, 
-            pop_size=POPULATION_SIZE, 
-            generations=GENERATIONS, 
-            mutation_rate=MUTATION_RATE
+            pop_size=POPULATION_SIZE,
+            generations=GENERATIONS,
+            mutation_rate=MUTATION_RATE,
+            elite_size=2
         )
-
+        
         best_individual = solver.evolve()
         
         # Logging del risultato finale (simile alla baseline)
@@ -122,7 +121,7 @@ class Problem:
         return (improvement, solution_cost, baseline_cost)
 
 if __name__ == "__main__":
-    out = open("results.txt", "w")
+    out = open("results_v1.txt", "w")
     #possible values num_cities: 100, 1_000, density: 0.2, 1, alpha: 1, 2, beta: 1, 2
     for num_cities in [100]:
         for density in [0.2, 1]:

@@ -1,77 +1,117 @@
 import random
-import numpy as np
-import networkx as nx
 
 class Individual:
-    def __init__(self, genome, problem):
-        self.genome = genome  # Lista di interi (città)
+    def __init__(self, genome, problem, dist_cache, path_cache):
+        self.genome = genome            # Lista di città (es. [5, 2, 9...])
         self.problem = problem
+        self.dist_cache = dist_cache    # Cache distanze (numeri)
+        self.path_cache = path_cache    # Cache percorsi (liste nodi)
         self.fitness = float('inf')
-        self.phenotype = [] # Il percorso reale con i ritorni a 0
-
+        self.phenotype = []             # Il percorso finale completo
     def evaluate(self):
         """
-        Decodifica il genotipo in un percorso reale (fenotipo) usando un'euristica
-        Greedy per gestire il peso e calcola il costo totale.
+        Calcola il costo usando SOLO la matematica e la cache (veloce).
+        Non costruisce la lista completa dei nodi qui per risparmiare tempo.
         """
-        path = [0] # Si parte sempre da 0
+        current_node = 0
         current_weight = 0
         total_cost = 0
-        current_node = 0
-
-        # Scorre le città nell'ordine stabilito dal genoma
+        
+        alpha = self.problem.alpha
+        beta = self.problem.beta
+        
+        # Scorriamo il genoma (l'ordine delle città da visitare)
         for next_node in self.genome:
             gold = self.problem.graph.nodes[next_node]['gold']
             
-            # Calcola il costo per andare diretto
-            # Nota: usiamo shortest_path per robustezza, se il grafo non è completo
+            # Recuperiamo le distanze dalla cache (O(1))
+            # d_dir: Distanza Diretta (Current -> Next)
+            # d_home: Distanza Ritorno (Current -> 0)
+            # d_out: Distanza Andata (0 -> Next)
+            
             try:
-                path_to_next = nx.shortest_path(self.problem.graph, current_node, next_node, weight='dist')
-                cost_direct = self.problem.cost(path_to_next, current_weight)
-            except nx.NetworkXNoPath:
-                cost_direct = float('inf')
+                d_dir = self.dist_cache[current_node][next_node]
+                d_home = self.dist_cache[current_node][0]
+                d_out = self.dist_cache[0][next_node]
+            except KeyError:
+                # Caso raro: grafo non connesso (ma il problema garantisce connessione)
+                self.fitness = float('inf')
+                return float('inf')
 
-            # Calcola il costo per tornare a 0 (scaricare) e poi andare
-            try:
-                path_to_0 = nx.shortest_path(self.problem.graph, current_node, 0, weight='dist')
-                path_0_to_next = nx.shortest_path(self.problem.graph, 0, next_node, weight='dist')
-                
-                cost_return = self.problem.cost(path_to_0, current_weight)
-                cost_from_0 = self.problem.cost(path_0_to_next, 0) # Peso azzerato
-                cost_split = cost_return + cost_from_0
-            except nx.NetworkXNoPath:
-                cost_split = float('inf')
+            # --- FORMULA DEL COSTO ---
+            # Cost = dist + (alpha * dist * weight)^beta
+            
+            # 1. Ipotesi: Vado Diretto
+            cost_direct = d_dir + (alpha * d_dir * current_weight) ** beta
 
-            # Decisione Greedy: conviene tornare a casa?
+            # 2. Ipotesi: Torno a Casa (scarico) e poi Vado
+            # Costo ritorno (con peso attuale)
+            c_return = d_home + (alpha * d_home * current_weight) ** beta
+            # Costo andata (con peso 0)
+            c_go = d_out + (alpha * d_out * 0) ** beta 
+            
+            cost_split = c_return + c_go
+
+            # --- DECISIONE GREEDY ---
             if cost_split < cost_direct:
-                # Aggiungi il ritorno a 0 al percorso
-                path.extend(path_to_0[1:]) # [1:] per non duplicare il nodo corrente
-                path.extend(path_0_to_next[1:])
-                current_weight = 0 # Scarico
                 total_cost += cost_split
+                current_weight = 0 # Ho scaricato
             else:
-                # Vado diretto
-                path.extend(path_to_next[1:])
                 total_cost += cost_direct
-
-            # Aggiorno stato
-            current_node = next_node
+            
+            # Arrivato a destinazione, prendo l'oro
             current_weight += gold
+            current_node = next_node
         
         # Ritorno finale obbligatorio a 0
-        try:
-            path_home = nx.shortest_path(self.problem.graph, current_node, 0, weight='dist')
-            total_cost += self.problem.cost(path_home, current_weight)
-            path.extend(path_home[1:])
-        except nx.NetworkXNoPath:
-            total_cost = float('inf')
+        d_end = self.dist_cache[current_node][0]
+        total_cost += d_end + (alpha * d_end * current_weight) ** beta
 
         self.fitness = total_cost
-        self.phenotype = path
         return total_cost
 
+    def rebuild_phenotype(self):
+        """
+        Ricostruisce il percorso completo (lista di nodi) usando path_cache.
+        Da chiamare SOLO alla fine sul vincitore.
+        """
+        path = [0]
+        current_node = 0
+        current_weight = 0
+        alpha = self.problem.alpha
+        beta = self.problem.beta
+
+        for next_node in self.genome:
+            gold = self.problem.graph.nodes[next_node]['gold']
+            
+            d_dir = self.dist_cache[current_node][next_node]
+            d_home = self.dist_cache[current_node][0]
+            d_out = self.dist_cache[0][next_node]
+
+            cost_direct = d_dir + (alpha * d_dir * current_weight) ** beta
+            cost_split = (d_home + (alpha * d_home * current_weight) ** beta) + \
+                         (d_out + (alpha * d_out * 0) ** beta)
+
+            if cost_split < cost_direct:
+                # Split: Aggiungi path Current->0 e 0->Next
+                # [1:] per evitare di duplicare il nodo di partenza
+                path.extend(self.path_cache[current_node][0][1:])
+                path.extend(self.path_cache[0][next_node][1:])
+                current_weight = 0
+            else:
+                # Direct: Aggiungi path Current->Next
+                path.extend(self.path_cache[current_node][next_node][1:])
+            
+            current_weight += gold
+            current_node = next_node
+        
+        # Ritorno finale
+        path.extend(self.path_cache[current_node][0][1:])
+        self.phenotype = path
+        return path
+
     def mutate(self, mutation_rate=0.1):
-        """Applica mutatione Inversion (2-opt)"""
+        """Mutazione 2-OPT (Inversion)"""
         if random.random() < mutation_rate:
             idx1, idx2 = random.sample(range(len(self.genome)), 2)
             if idx1 > idx2:
