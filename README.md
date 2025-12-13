@@ -122,7 +122,7 @@ $$
     = N \sum_s C_{s\_\text{static}} + \alpha^\beta N^{-\beta+1} \sum_s w_s^\beta \sum_{(i,j) \in s} d_{i,j}^\beta
 $$
 
-To simplify a bit the formula we introduce
+To simplify a bit the notation we introduce
 
 $$
     C_{s\_\text{beta\_static}} (\beta) = \sum_{(i,j) \in s} d_{i,j}^\beta
@@ -159,12 +159,12 @@ The derived formula for $N^*$ can be applied independently to each round trip in
 
 This approach is valid because:
 - Each round trip is independent (starts and ends at depot)
-- The optimization formula depends only on the trip's internal structure (distances, weights, pickup sequence)
+- The optimization formula depends only on the trip's internal structure (distances, weights, pickup sequence). The result depends on the importance of the static costs
 - No interaction exists between different trips that would prevent independent optimization
 
 ### Key Advantages
 
 - **Analytical Solution**: Closed-form formula with no hyperparameters or iterative optimization
 - **Computational Efficiency**: $O(L)$ per trip, where $L$ is the trip length
-- **Guaranteed Improvement**: When $\beta > 1$, splitting always reduces cost (superlinear cost function)
+- **(Almost) Guaranteed Improvement**: When $\beta > 1$, splitting almost always reduces cost (superlinear cost function)
 - **Exact Optimum**: The continuous relaxation provides the theoretically optimal split count (rounded to nearest integer)
