@@ -7,6 +7,8 @@ import networkx as nx
 import time
 from icecream import ic
 from src.genetic_solver import GeneticSolver
+from src.merge_optimizer import merge_solver
+from src.utils import check_feasibility
     
 class Problem:
     _graph: nx.Graph
@@ -43,7 +45,7 @@ class Problem:
 
     @property
     def graph(self) -> nx.Graph:
-        return nx.Graph(self._graph)
+        return self._graph
 
     @property
     def alpha(self):
@@ -54,8 +56,59 @@ class Problem:
         return self._beta
 
     def cost(self, path, weight):
-        dist = nx.path_weight(self._graph, path, weight='dist')
+        """
+        Cost to traverse a path carrying constant weight
+        
+        :param path: nodes in the path
+        :param weight: constant weight carried
+        """
+        return sum(
+            self.adj_cost(path[i], path[i+1], weight)
+            for i in range(len(path) - 1)
+        )
+    
+    def adj_cost(self, src, dest, weight):
+        """
+        Cost to go from src to dest (adjacent nodes) carrying weight
+        
+        :param src: starting city
+        :param dest: destination city
+        :param weight: weight carried
+        """
+        dist = self._graph[src][dest]['dist']
         return dist + (self._alpha * dist * weight) ** self._beta
+    
+    def path_cost(self, path: list[tuple[int, float]]) -> float:
+        """
+        Calculates the total cost of traversing the given path.
+        Iterates through edges (u -> v) to ensure consistency with the optimizer logic.
+        
+        :param path: Sequence of (city, gold to pick up at city)
+                        Example: [(0, 0), (20, 1000), (0, 0)]
+        :type path: list[tuple[int, float]]
+        """
+        if path[0][0] != 0:
+                path = [(0, 0.0)] + path
+
+        total_cost = 0.0
+        current_weight = 0.0
+
+        # Iterate through each edge in the path
+        for i in range(len(path) - 1):
+            u, gold_u = path[i]
+            v, gold_v = path[i+1]
+
+            # Discharge logic: if we return to the depot (node 0), reset weight
+            if u == 0:
+                current_weight = 0.0
+
+            # Pick up gold at node u
+            current_weight += gold_u
+
+            # Compute cost to go from u to v with current weight
+            total_cost += self.adj_cost(u, v, current_weight)
+
+        return total_cost
 
     def baseline(self):
         cost = 0
@@ -84,45 +137,70 @@ class Problem:
     
     def solution(self):
         """
-        Risolve il problema utilizzando un Algoritmo Genetico con decodifica intelligente.
+        Solve the problem using a Genetic Algorithm with smart decoding.
         """
         
-        # Configurazione parametri GA
-        # Sentiti libero di aumentarli per risultati migliori (es. pop=200, gen=500)
-        POPULATION_SIZE = 10
-        GENERATIONS = 20
-        MUTATION_RATE = 0.3
+        genetic_path, genetic_cost = genetic_solve(self)
+        merge_path, merge_cost = merge_solver(self)
+
+        print("Checking feasibility of genetic solution")
+        check_feasibility(self, genetic_path)
+        print("Checking feasibility of merge solution")
+        check_feasibility(self, merge_path)
+
         
-        logging.info(f"Starting Genetic Algorithm (Pop: {POPULATION_SIZE}, Gen: {GENERATIONS})...")
-        # Istanzia ed esegue il solver
-        solver = GeneticSolver(
-            problem=self, 
-            pop_size=POPULATION_SIZE,
-            generations=GENERATIONS,
-            mutation_rate=MUTATION_RATE,
-            elite_size=2
-        )
-        
-        best_individual = solver.evolve()
-        
-        # Logging del risultato finale (simile alla baseline)
-        path = best_individual.phenotype
-        cost = best_individual.fitness
-        
-        logging.info(f"Solution found with cost: {cost:.2f}")
-        logging.info(f"Path length: {len(path)} steps")
-        logging.debug(f"Full path: {path}") # De-commentare se serve vedere il percorso
-        return cost
+
+        logging.info(f"Merge Optimizer cost: {merge_cost:.2f}, Genetic Algorithm cost: {genetic_cost:.2f}")
+        if merge_cost < genetic_cost:
+            logging.info("Merge Optimizer selected as final solution.")
+            return merge_cost
+        else:
+            logging.info("Genetic Algorithm selected as final solution.")
+
+        return genetic_cost
+
     
     def compare(self):
         baseline_cost = self.baseline()
         solution_cost = self.solution()
         improvement = (baseline_cost - solution_cost) / baseline_cost * 100
         return (improvement, solution_cost, baseline_cost)
+    
+def genetic_solve(problem: Problem) -> float:
+    # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
+    POPULATION_SIZE = 10
+    GENERATIONS = 20
+    MUTATION_RATE = 0.3
+
+
+    
+    logging.info(f"Starting Genetic Algorithm (Pop: {POPULATION_SIZE}, Gen: {GENERATIONS})...")
+    # Initialize and run the solver
+    solver = GeneticSolver(
+        problem=problem, 
+        pop_size=POPULATION_SIZE,
+        generations=GENERATIONS,
+        mutation_rate=MUTATION_RATE,
+        elite_size=2
+    )
+    
+    best_individual = solver.evolve()
+    
+    # Extract final solution (path and cost)
+    path = best_individual.phenotype
+    cost = best_individual.fitness
+    
+    logging.info(f"Solution found with cost: {cost:.2f}")
+    logging.info(f"Path length: {len(path)} steps")
+    logging.debug(f"Full path: {path}")  # Uncomment to see full path details
+    return path, cost
+
+
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     out = open("results.txt", "w")
-    #possible values num_cities: 100, 1_000, density: 0.2, 1, alpha: 1, 2, beta: 1, 2
+    # Possible values: num_cities: 100, 1_000; density: 0.2, 1; alpha: 1, 2; beta: 1, 2
     for num_cities in [100]:
         for density in [0.2, 1]:
             for beta in [1, 2]:
