@@ -1,58 +1,5 @@
 # from s339239 import Problem
 
-def path_splitter(path: list[tuple[int, float]]) -> list[list[tuple[int, float]]]:
-    """
-    Split the path in subpaths where gold is picked up.
-    """
-    subpaths = []
-    current_subpath = []
-
-    starting_node = 0
-    cumulated_gold = 0.0
-
-    for (node, gold) in path:
-        current_subpath.append((node, gold))
-        if gold > 0:
-            subpaths.append({
-                'start_node': starting_node,
-                'path': current_subpath,
-                'cumulated_gold': cumulated_gold
-            })
-            current_subpath = []
-            starting_node = node
-            cumulated_gold += gold
-    
-    if current_subpath:
-        subpaths.append({
-            'start_node': starting_node,
-            'path': current_subpath,
-            'cumulated_gold': cumulated_gold
-        })
-
-    return subpaths
-
-def compute_beta_weighted_static_cost(beta: float, path_split: dict, problem) -> float:
-    """
-    Compute the static cost of the path considering beta-weighted static cost.
-    Just the linear part of the cost function.
-    """
-
-    src = path_split['start_node']
-    path = path_split['path']
-    
-    cost = 0.0
-
-    for i in range(len(path) - 1):
-        dest = path[i][0]
-        dist = problem.graph[src][dest]['dist']
-        cost += dist**beta  # Linear part only
-        src = dest
-
-    return cost
-
-
-
-
 def path_optimizer(path: list[tuple[int, float]], problem) -> list[tuple[int, float]]:
     """
     Optimize the given path by determining the optimal number of trips (N_opt)
@@ -123,6 +70,7 @@ def path_optimizer(path: list[tuple[int, float]], problem) -> list[tuple[int, fl
 if __name__ == "__main__":
     import logging
     import networkx as nx
+    from s339239 import Problem
 
     logging.basicConfig(level=logging.INFO)
 
