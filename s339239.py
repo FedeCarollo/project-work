@@ -8,6 +8,7 @@ import time
 from icecream import ic
 from src.genetic_solver import GeneticSolver
 from src.merge_optimizer import merge_solver
+from src.utils import check_feasibility
     
 class Problem:
     _graph: nx.Graph
@@ -141,6 +142,13 @@ class Problem:
         
         genetic_path, genetic_cost = genetic_solve(self)
         merge_path, merge_cost = merge_solver(self)
+
+        print("Checking feasibility of genetic solution")
+        check_feasibility(self, genetic_path)
+        print("Checking feasibility of merge solution")
+        check_feasibility(self, merge_path)
+
+        
 
         logging.info(f"Merge Optimizer cost: {merge_cost:.2f}, Genetic Algorithm cost: {genetic_cost:.2f}")
         if merge_cost < genetic_cost:
