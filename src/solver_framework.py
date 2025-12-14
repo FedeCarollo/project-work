@@ -5,7 +5,7 @@ from src.merge_optimizer import merge_strategy_optimized
 from src.utils import check_feasibility
 import logging
 from src.genetic_solver import GeneticSolver
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from time import time
 
 
@@ -22,7 +22,7 @@ def problem_solver(problem) -> tuple[list[tuple[int, float]], float]:
     
     # Run all solvers in parallel
     results = {}
-    with ProcessPoolExecutor(max_workers=len(solvers)) as executor:
+    with ThreadPoolExecutor(max_workers=len(solvers)) as executor:
         futures = {executor.submit(solver_func, problem): name 
                    for name, solver_func in solvers.items()}
         

@@ -5,7 +5,7 @@ from src.beta_optimizer import path_optimizer
 def check_feasibility(
     problem,
     solution: List[Tuple[int, float]],
-) -> Tuple[bool, float]:
+) -> bool:
     """
     Checks if a solution is feasible:
     1. Each step must be between adjacent cities
@@ -23,17 +23,12 @@ def check_feasibility(
     prev_city = 0  # Start from depot
     
     current_weight = 0
-    total_cost = 0
     
     for city, gold in solution[1:]:
         # Check adjacency
         if not graph.has_edge(prev_city, city):
             print(f"❌ Feasibility failed: no edge between {prev_city} and {city}")
-            return False, 0.0
-        
-        #calculate cost
-        dist = graph[prev_city][city]['dist']
-        total_cost += dist + (problem.alpha * dist * current_weight) ** problem.beta
+            return False
         
         # Track collected gold
         if gold > 0:
@@ -57,7 +52,7 @@ def check_feasibility(
             print(f"❌ Feasibility failed: city {city} has {expected_gold:.2f} gold, collected {collected_gold:.2f}")
             return False
     
-    return True, total_cost
+    return True
 
 def split_path(path: list[tuple[int, float]]) -> list[list[tuple[int, float]]]:
     """
