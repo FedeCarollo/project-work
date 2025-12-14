@@ -1,8 +1,8 @@
-Density: 0.2, Alpha: 1, Beta: 1 => Improvement: 34.99%, Solution Cost: 25235.11, Baseline Cost: 38815.58, Time: 0.86s
-Density: 0.2, Alpha: 2, Beta: 1 => Improvement: 34.94%, Solution Cost: 50394.02, Baseline Cost: 77458.97, Time: 0.90s
-Density: 0.2, Alpha: 1, Beta: 2 => Improvement: 99.72%, Solution Cost: 37801.89, Baseline Cost: 13492778.92, Time: 0.97s
-Density: 0.2, Alpha: 2, Beta: 2 => Improvement: 99.86%, Solution Cost: 75603.41, Baseline Cost: 53970599.08, Time: 1.20s
-Density: 1, Alpha: 1, Beta: 1 => Improvement: -0.00%, Solution Cost: 18266.19, Baseline Cost: 18266.19, Time: 1.49s
-Density: 1, Alpha: 2, Beta: 1 => Improvement: 0.00%, Solution Cost: 36457.92, Baseline Cost: 36457.92, Time: 1.31s
-Density: 1, Alpha: 1, Beta: 2 => Improvement: 99.58%, Solution Cost: 22776.35, Baseline Cost: 5404978.09, Time: 1.55s
-Density: 1, Alpha: 2, Beta: 2 => Improvement: 99.79%, Solution Cost: 45552.55, Baseline Cost: 21619689.00, Time: 1.69s
+Density: 0.2, Alpha: 1, Beta: 1 => Improvement: 34.99%, Solution Cost: 25235.11, Baseline Cost: 38815.58, Time: 84.07s
+Density: 0.2, Alpha: 2, Beta: 1 => Improvement: 34.94%, Solution Cost: 50394.02, Baseline Cost: 77458.97, Time: 103.24s
+Density: 0.2, Alpha: 1, Beta: 2 => Improvement: 99.72%, Solution Cost: 37801.89, Baseline Cost: 13492778.92, Time: 153.86s
+Density: 0.2, Alpha: 2, Beta: 2 => Improvement: 99.86%, Solution Cost: 75603.41, Baseline Cost: 53970599.08, Time: 107.03s
+Density: 1, Alpha: 1, Beta: 1 => Improvement: 0.07%, Solution Cost: 18253.31, Baseline Cost: 18266.19, Time: 232.79s
+Density: 1, Alpha: 2, Beta: 1 => Improvement: 0.03%, Solution Cost: 36448.79, Baseline Cost: 36457.92, Time: 69.85s
+Density: 1, Alpha: 1, Beta: 2 => Improvement: 99.58%, Solution Cost: 22776.35, Baseline Cost: 5404978.09, Time: 72.54s
+Density: 1, Alpha: 2, Beta: 2 => Improvement: 99.79%, Solution Cost: 45552.55, Baseline Cost: 21619689.00, Time: 72.06s

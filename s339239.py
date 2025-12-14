@@ -171,6 +171,7 @@ def genetic_solve(problem: Problem) -> float:
     POPULATION_SIZE = 10
     GENERATIONS = 20
     MUTATION_RATE = 0.3
+    ELITE_SIZE = 3
 
 
     
@@ -181,7 +182,7 @@ def genetic_solve(problem: Problem) -> float:
         pop_size=POPULATION_SIZE,
         generations=GENERATIONS,
         mutation_rate=MUTATION_RATE,
-        elite_size=2
+        elite_size=ELITE_SIZE
     )
     
     best_individual = solver.evolve()
