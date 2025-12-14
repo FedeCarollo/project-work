@@ -55,37 +55,37 @@ Let's denote
     - $P_{\text{go}}$ is such path represented as pairs `[from, to]` representing pairs of each step
 - $C_{return}$ as the cost to return from target city to 
     - $P_{\text{return}}$ as explained before
-    - $C_{\text{ret\_s}}$ is the static part, depending only on geoemtric distance
+    - $C_{\text{ret s}}$ is the static part, depending only on geoemtric distance
     - $C_{\text{ret}}(w)$ is the part depending on weight carried
 ```math
     C_{\text{go}} = \sum_{(i,j) \in P_{\text{go}}} d_{i,j} \\
     C_{\text{return}} = \sum_{(i,j) \in P_{\text{return}}} d_{i,j} + (d_{i,j} \alpha w)^\beta = 
     \sum_{(i,j) \in P_{\text{return}}} d_{i,j} + 
-    \sum_{(i,j) \in P_{\text{return}}} (d_{i,j} \alpha w)^\beta =  C_{\text{ret\_s}} + C_{\text{ret}}(w)
+    \sum_{(i,j) \in P_{\text{return}}} (d_{i,j} \alpha w)^\beta =  C_{\text{ret s}} + C_{\text{ret}}(w)
 ```
 
 Finally the total cost of the round trip can be computed ad
 ```math
-    C = C_{\text{go}} + C_{\text{ret\_s}} + C_{\text{ret}}(w)
+    C = C_{\text{go}} + C_{\text{ret s}} + C_{\text{ret}}(w)
 ```
 
 Now we consider the cost picking $\frac{w}{N}$ gold at each round-trip, repeated $N$ times
 
 ```math
-    C(N) = N \left( C_{\text{go}} + C_{\text{ret\_s}} + C_{\text{ret}} \left(\frac{w}{N} \right) \right )
+    C(N) = N \left( C_{\text{go}} + C_{\text{ret s}} + C_{\text{ret}} \left(\frac{w}{N} \right) \right )
 ```
 
 We want to find $N^*$ such that it minimizes the cost.
 
 To find such value, we treat $N$ as a continous variable and differentiate w.r.t. $N$
 ```math
-    C'(N) = C_{\text{go}} + C_{\text{ret\_s}} + (1 - \beta)N^{-\beta}(\alpha w)^\beta \sum_{(i, j) \in P_{\text{ret}}} d_{i,j}^\beta = 0 
+    C'(N) = C_{\text{go}} + C_{\text{ret s}} + (1 - \beta)N^{-\beta}(\alpha w)^\beta \sum_{(i, j) \in P_{\text{ret}}} d_{i,j}^\beta = 0 
 ```
 
 Solving the equation yields
 
 ```math
-    N^* = \alpha w \left ( \frac{\beta - 1} {C_{\text{ret\_s}} + C_{\text{go}} } \sum_{(i, j) \in P_{\text{ret}}} d_{i,j}^\beta \right ) ^ {\frac{1}{\beta}}
+    N^* = \alpha w \left ( \frac{\beta - 1} {C_{\text{ret s}} + C_{\text{go}} } \sum_{(i, j) \in P_{\text{ret}}} d_{i,j}^\beta \right ) ^ {\frac{1}{\beta}}
 ```
 
 **Note**
@@ -105,47 +105,47 @@ Carrying respectively `[0, gold(5), gold(5)+gold(6)]` total gold
 
 Considering the cost from a single path to introduce some notation
 ```math
-    C_s = \sum_{(i,j) \in s} d_{i,j} + (d_{i,j} w_s \alpha)^\beta = C_{\text{s\_static}} + C_{s\_\text{dyn}}(w_s)
+    C_s = \sum_{(i,j) \in s} d_{i,j} + (d_{i,j} w_s \alpha)^\beta = C_{\text{s static}} + C_{s \text{dyn}}(w_s)
 ```
 
 We can express the total cost of a single round trip as 
 ```math
     C = \sum_{s \in S} C_s = 
     \sum_{s \in S} \sum_{(i,j) \in S} d_{i,j} + \sum_{s \in S} \sum_{(i,j) \in S} (\alpha w_s d_{i,j})^\beta =
-    \sum_{s \in S} C_{\text{s\_static}} + C_{s\_\text{dyn}}(w_s)
+    \sum_{s \in S} C_{\text{s static}} + C_{\text{s dyn}}(w_s)
 ```
 
 As before we now consider splitting the path in $N$ identical trips, picking $\frac{w}{N}$ gold each
 
 ```math
-    C(N) = N \left( \sum_{s \in S} C_{\text{s\_static}} + C_{s\_\text{dyn}}\left(\frac{w_s}{N}\right) \right) 
-    = N \sum_s C_{s\_\text{static}} + \alpha^\beta N^{-\beta+1} \sum_s w_s^\beta \sum_{(i,j) \in s} d_{i,j}^\beta
+    C(N) = N \left( \sum_{s \in S} C_{\text{s static}} + C_{s \text{dyn}}\left(\frac{w_s}{N}\right) \right) 
+    = N \sum_s C_{s \text{static}} + \alpha^\beta N^{-\beta+1} \sum_s w_s^\beta \sum_{(i,j) \in s} d_{i,j}^\beta
 ```
 
 To simplify a bit the notation we introduce
 
 ```math
-    C_{s\_\text{beta\_static}} (\beta) = \sum_{(i,j) \in s} d_{i,j}^\beta
+    C_{s \text{beta static}} (\beta) = \sum_{(i,j) \in s} d_{i,j}^\beta
 ```
 
 Getting
 
-$$
+```math
     C(N)
-    = N \sum_s C_{s\_\text{static}} + \alpha^\beta N^{-\beta+1} \sum_s w_s^\beta C_{s\_\text{beta\_static}} (\beta)
-$$
+    = N \sum_s C_{s \text{static}} + \alpha^\beta N^{-\beta+1} \sum_s w_s^\beta C_{s \text{beta static}} (\beta)
+```
 
 Once again, differentiating w.r.t. $N$ and setting the derivative to $0$ yields
 
-$$
-    C'(N) = \sum_s C_{s\_\text{static}} + (1 - \beta) \alpha^\beta N^{-\beta} \sum_s w_s^\beta C_{s\_\text{beta\_static}} (\beta) = 0
-$$
+```math
+    C'(N) = \sum_s C_{s \text{static}} + (1 - \beta) \alpha^\beta N^{-\beta} \sum_s w_s^\beta C_{s \text{beta static}} (\beta) = 0
+```
 
 Solving for optimal $N^*$ gives
 
 ```math
     N^* = \left ( 
-        \alpha^\beta (\beta - 1) \frac{\sum_s w_s^\beta C_{s\_\text{beta\_static}} (\beta)}{\sum_s C_{s\_\text{static}}}
+        \alpha^\beta (\beta - 1) \frac{\sum_s w_s^\beta C_{s \text{beta static}} (\beta)}{\sum_s C_{s \text{static}}}
     \right)^{\beta^{-1}}
 ```
 
