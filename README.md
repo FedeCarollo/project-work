@@ -88,6 +88,47 @@ Solving the equation yields
     N^* = \alpha w \left ( \frac{\beta - 1} {C_{\text{ret s}} + C_{\text{go}} } \sum_{(i, j) \in P_{\text{ret}}} d_{i,j}^\beta \right ) ^ {\frac{1}{\beta}}
 ```
 
+
+#### Second Order Condition (Proof of Minimality)
+
+To strictly prove that $N^*$ represents a **minimum** cost (and not a maximum or an inflection point), we must examine the **second derivative** of the cost function, $C''(N)$.
+
+We differentiate $C'(N)$ with respect to $N$ once again. Note that the static costs ($C_{\text{go}} + C_{\text{ret}}$) are constants, so their derivative is zero. We therefore focus on the other term.
+
+> *(Where $K = (\alpha w)^\beta \sum d^\beta$ is a constant positive term representing weights and distances.)*
+
+Applying the power rule, we obtain:
+
+$$
+C''(N) = (1 - \beta)(-\beta) K N^{-\beta - 1}
+$$
+
+---
+
+#### Analyzing the Sign of $C''(N)$
+
+We analyze the sign of each component under the constraint that **$\beta > 1$** (which is a precondition for this optimization):
+
+1. **$(1 - \beta)$**: since $\beta > 1$, this term is **negative** (< 0).
+2. **$(-\beta)$**: since $\beta > 1$, this term is **negative** (< 0).
+3. **$N^{-\beta - 1}$**: since $N$ (number of trips) is positive, this term is **positive** (> 0).
+4. **$K$**: distances and weights are positive, so this term is **positive** (> 0).
+
+Multiplying these signs together yields:
+
+$$
+C''(N) > 0 \text{ } \forall N > 0 \text{ when } \beta > 1
+$$
+
+---
+
+### Conclusion
+
+Since the second derivative is strictly positive, the cost function $C(N)$ is **strictly convex** (it has a $\cup$-shaped profile).
+
+Consequently, the stationary point $N^*$ found where $C'(N) = 0$ is guaranteed to be the **global minimum** of the cost function.
+
+
 **Note**
 - Given the scale of values of $w$ in the context, it is almost always beneficial to split a path into multiple subpaths
 - From the formula, it is clear the constraint of $\beta > 1$, otherwise the problem becomes linear or sublinear and the exploit is never beneficial
