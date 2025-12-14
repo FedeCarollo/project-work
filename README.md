@@ -99,9 +99,9 @@ We differentiate $C'(N)$ with respect to $N$ once again. Note that the static co
 
 Applying the power rule, we obtain:
 
-$$
+```math
 C''(N) = (1 - \beta)(-\beta) K N^{-\beta - 1}
-$$
+```
 
 ---
 
@@ -116,9 +116,9 @@ We analyze the sign of each component under the constraint that **$\beta > 1$** 
 
 Multiplying these signs together yields:
 
-$$
-C''(N) > 0 \text{ } \forall N > 0 \text{ when } \beta > 1
-$$
+```math
+C''(N) > 0 \text{ } \quad \forall N > 0 \; \text{ when } \beta > 1
+```
 
 ---
 
