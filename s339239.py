@@ -6,9 +6,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import time
 from icecream import ic
-from src.genetic_solver import GeneticSolver
-from src.merge_optimizer import merge_solver
-from src.utils import check_feasibility, optimize_full_path
+from src.solver_framework import problem_solver
     
 class Problem:
     _graph: nx.Graph
@@ -137,72 +135,19 @@ class Problem:
     
     def solution(self):
         """
-        Solve the problem using a Genetic Algorithm with smart decoding.
+        Solve the problem using multiple solvers and select the best solution.
         """
         
-        genetic_path, genetic_cost = genetic_solve(self)
-        merge_path, merge_cost = merge_solver(self)
-
-        print("Checking feasibility of genetic solution")
-        check_feasibility(self, genetic_path)
-        print("Checking feasibility of merge solution")
-        check_feasibility(self, merge_path)
-
-        
-
-        logging.info(f"Merge Optimizer cost: {merge_cost:.2f}, Genetic Algorithm cost: {genetic_cost:.2f}")
-        if merge_cost < genetic_cost:
-            logging.info("Merge Optimizer selected as final solution.")
-            return merge_cost
-        else:
-            logging.info("Genetic Algorithm selected as final solution.")
-
-        return genetic_cost
+        return problem_solver(self)
 
     
     def compare(self):
         baseline_cost = self.baseline()
-        solution_cost = self.solution()
+        _, solution_cost = self.solution()
         improvement = (baseline_cost - solution_cost) / baseline_cost * 100
         return (improvement, solution_cost, baseline_cost)
     
-def genetic_solve(problem: Problem) -> float:
-    # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
-    POPULATION_SIZE = 10
-    GENERATIONS = 20
-    MUTATION_RATE = 0.3
-    ELITE_SIZE = 3
 
-
-    
-    logging.info(f"Starting Genetic Algorithm (Pop: {POPULATION_SIZE}, Gen: {GENERATIONS})...")
-    # Initialize and run the solver
-    solver = GeneticSolver(
-        problem=problem, 
-        pop_size=POPULATION_SIZE,
-        generations=GENERATIONS,
-        mutation_rate=MUTATION_RATE,
-        elite_size=ELITE_SIZE
-    )
-    
-    best_individual = solver.evolve()
-    
-    # Extract final solution (path and cost)
-    path = best_individual.rebuild_phenotype()
-    cost = best_individual.fitness
-    logging.info(f"Solution found with cost: {cost:.2f}")
-    logging.info(f"Path length: {len(path)} steps")
-    logging.debug(f"Full path: {path}")  # Uncomment to see full path details
-
-    path = [(0, 0.0)] + path  # Ensure depot at start
-    # Apply beta-optimization to full genetic pathù
-    optimized_path = optimize_full_path(path, problem)
-    optimized_cost = problem.path_cost(optimized_path)
-
-    logging.info(f"Optimized path cost after beta-optimization: {optimized_cost:.2f}")
-
-
-    return optimized_path, optimized_cost
 
 
 
@@ -212,8 +157,8 @@ if __name__ == "__main__":
     # Possible values: num_cities: 100, 1_000; density: 0.2, 1; alpha: 1, 2; beta: 1, 2
     for num_cities in [100]:
         for density in [0.2, 1]:
-            for beta in [1, 2]:
-                for alpha in [1, 2]:
+            for beta in [0.0, 0.5, 1, 2]:
+                for alpha in [0, 1, 2]:
                     print(f"Running Problem with {num_cities} cities, density={density}, alpha={alpha}, beta={beta}")
                     start_time = time.time()
                     (improvment, sol_cost, base_cost) = Problem(100, density=density, alpha=alpha, beta=beta).compare()

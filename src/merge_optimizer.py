@@ -2,7 +2,7 @@ import networkx as nx
 import math
 from typing import List, Tuple, Dict
 from time import time
-from src.beta_optimizer import path_optimizer
+import logging
 
 def get_return_path_optimized(G: nx.Graph, start_node: int, current_weight: float, alpha: float, beta: float) -> Tuple[float, List[int]]:
     """
@@ -66,7 +66,7 @@ def single_paths(problem, src=0) -> Dict[int, dict]:
 
     for dst, gold in gold_at.items():
         if cnt % 100 == 0:
-            print(f"[single_paths] Processing city {cnt}/{total_cities}", end='\r')
+            logging.debug(f"[single_paths] Processing city {cnt}/{total_cities}", end='\r')
         cnt += 1
         
         if dst == src or gold <= 0:
@@ -92,7 +92,7 @@ def single_paths(problem, src=0) -> Dict[int, dict]:
             'original_single_cost': total_cost
         }
         
-    print(f"[single_paths] Processing complete.               ")
+    logging.debug(f"[single_paths] Processing complete.")
     return single_solutions
 
 
@@ -131,7 +131,7 @@ def merge_strategy_optimized(problem) -> List[List[Tuple[int, float]]]:
     start_time = time()
     paths_info = single_paths(problem)
     end_time = time()
-    print(f"[merge_strategy_optimized] single_paths computed in {end_time - start_time:.2f} seconds.")
+    logging.debug(f"[merge_strategy_optimized] single_paths computed in {end_time - start_time:.2f} seconds.")
     
     excluded_cities = set()  # Cities already merged into other trips
     
@@ -190,24 +190,7 @@ def merge_strategy_optimized(problem) -> List[List[Tuple[int, float]]]:
         final_solution_paths.append(full_path)
         
     end_time = time()
-    print(f"[merge_strategy_optimized] Merging completed in {end_time - start_time:.2f} seconds.")
+    logging.debug(f"[merge_strategy_optimized] Merging completed in {end_time - start_time:.2f} seconds.")
              
     return final_solution_paths
 
-def merge_solver(problem) -> List[tuple[int, float]]:
-    """
-    Main solver function using the optimized merge strategy.
-    
-    Returns:
-        Final path as a list of (city, gold_picked) tuples.
-    """
-    merged_paths = merge_strategy_optimized(problem)
-    optimized_paths = [path_optimizer(trip, problem) for trip in merged_paths] if problem._beta > 1 else merged_paths
-    
-    # Flatten all trips into a single path
-    final_path = []
-    for trip in optimized_paths:
-        final_path.extend(trip[:-1])  # Exclude last depot to avoid duplication
-    final_path.append((0, 0.0))  # End at depot
-
-    return final_path, problem.path_cost(final_path)
