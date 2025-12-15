@@ -1,9 +1,10 @@
 from typing import List, Tuple
 import networkx as nx
 from src.beta_optimizer import path_optimizer
+from Problem import Problem
 
 def check_feasibility(
-    problem,
+    problem: Problem,
     solution: List[Tuple[int, float]],
 ) -> bool:
     """

@@ -3,9 +3,10 @@ import copy
 import networkx as nx
 import numpy as np
 from .individual import Individual
+from Problem import Problem
 
 class GeneticSolver:
-    def __init__(self, problem, pop_size=100, generations=100, mutation_rate=0.3, elite_size=2):
+    def __init__(self, problem: Problem, pop_size=100, generations=100, mutation_rate=0.3, elite_size=2):
         self.problem = problem
         self.pop_size = pop_size
         self.generations = generations

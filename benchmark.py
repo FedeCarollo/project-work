@@ -15,7 +15,7 @@ def solve_single_instance(params):
     Solve a single problem instance with all available solvers.
     
     Args:
-        params: dict with keys 'n', 'alpha', 'beta', 'seed'
+        params: dict with keys 'n', 'alpha', 'beta', 'seed', 'density'
     
     Returns:
         dict with results for each solver
@@ -47,7 +47,7 @@ def solve_single_instance(params):
                 'time': elapsed_time,
                 'path_length': len(path),
                 'feasible': feasible,
-                # Opzionalmente salva il path (può essere molto grande)
+                # Optionally store the path (can be large)
                 # 'path': path,
             }
         except Exception as e:
@@ -148,12 +148,7 @@ def generate_test_instances():
             'seed': randint(0, 10000)
         })
     
-    return instances
-
-
-
-
-    
+    return instances    
 
 
 def benchmark():
@@ -175,7 +170,7 @@ def benchmark():
     print(f"Tested {len(results)} instances")
     
     # Save results
-    save_results(results)
+    save_results(results, filename='benchmark_results_new.json')
     
     # Print summary
     print("\n=== Summary ===")
@@ -250,5 +245,5 @@ if __name__ == '__main__':
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
 
-    # benchmark()      # Uncomment to run benchmark
-    print_results('benchmark_results.json')
+    benchmark()      # Uncomment to run benchmark
+    print_results('benchmark_results_new.json')

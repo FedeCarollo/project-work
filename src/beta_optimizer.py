@@ -1,6 +1,6 @@
-# from s339239 import Problem
+from Problem import Problem
 
-def path_optimizer(path: list[tuple[int, float]], problem) -> list[tuple[int, float]]:
+def path_optimizer(path: list[tuple[int, float]], problem: Problem) -> list[tuple[int, float]]:
     """
     Optimize the given path by determining the optimal number of trips (N_opt)
     using the linear scan method (no path splitting).
@@ -70,7 +70,6 @@ def path_optimizer(path: list[tuple[int, float]], problem) -> list[tuple[int, fl
 if __name__ == "__main__":
     import logging
     import networkx as nx
-    from s339239 import Problem
 
     logging.basicConfig(level=logging.INFO)
 

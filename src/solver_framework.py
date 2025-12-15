@@ -1,4 +1,4 @@
-# from s339239 import Problem
+from Problem import Problem
 from src.utils import optimize_full_path
 from src.beta_optimizer import path_optimizer
 from src.merge_optimizer import merge_strategy_optimized
@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from time import time
 
 
-def problem_solver(problem) -> tuple[list[tuple[int, float]], float]:
+def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     """
     Multithreaded solver that runs multiple strategies in parallel and selects the best solution.
     """
@@ -45,7 +45,7 @@ def problem_solver(problem) -> tuple[list[tuple[int, float]], float]:
 
 
 
-def genetic_solver(problem) -> tuple[list[tuple[int, float]], float]:
+def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     start_time = time()
     
     # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
@@ -53,6 +53,11 @@ def genetic_solver(problem) -> tuple[list[tuple[int, float]], float]:
     GENERATIONS = 20
     MUTATION_RATE = 0.3
     ELITE_SIZE = 3
+
+    # POPULATION_SIZE = 50
+    # GENERATIONS = 100
+    # MUTATION_RATE = 0.3
+    # ELITE_SIZE = 10
 
     # Initialize and run the solver
     solver = GeneticSolver(

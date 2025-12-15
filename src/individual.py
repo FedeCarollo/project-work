@@ -1,8 +1,9 @@
 import random
 import networkx as nx
+from Problem import Problem
 
 class Individual:
-    def __init__(self, genome, problem, dist_cache):
+    def __init__(self, genome, problem: Problem, dist_cache):
         self.genome = genome            
         self.problem = problem
         self.dist_cache = dist_cache    

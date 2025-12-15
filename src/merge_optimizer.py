@@ -3,6 +3,7 @@ import math
 from typing import List, Tuple, Dict
 from time import time
 import logging
+from Problem import Problem
 
 def get_return_path_optimized(G: nx.Graph, start_node: int, current_weight: float, alpha: float, beta: float) -> Tuple[float, List[int]]:
     """
@@ -44,7 +45,7 @@ def get_return_path_optimized(G: nx.Graph, start_node: int, current_weight: floa
         return float('inf'), []
 
 
-def single_paths(problem, src=0) -> Dict[int, dict]:
+def single_paths(problem: Problem, src=0) -> Dict[int, dict]:
     """
     Computes optimal single-city round trips (depot -> city -> depot).
     Each trip picks up gold at one city only.
@@ -111,7 +112,7 @@ def fast_cost_calc(distances_cache: List[float], start_idx: int, current_weight:
     return cost
 
 
-def merge_strategy_optimized(problem) -> List[List[Tuple[int, float]]]:
+def merge_strategy_optimized(problem: Problem) -> List[List[Tuple[int, float]]]:
     """
     Merge strategy: combines multiple cities into single trips when profitable.
     
