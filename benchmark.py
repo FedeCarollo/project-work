@@ -2,7 +2,7 @@
 Benchmark script to test multiple problem instances in parallel
 """
 from s339239 import Problem
-from src.solver_framework import genetic_solver, merge_solver
+from src.solver_framework import genetic_solver, merge_solver, aco_solver, ils_solver
 from src.utils import check_feasibility
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from time import time
@@ -30,6 +30,8 @@ def solve_single_instance(params):
     solvers = {
         'genetic': genetic_solver,
         'merge': merge_solver,
+        'ACO': aco_solver,
+        'ILS': ils_solver,
     }
     
     # Test each solver
@@ -119,7 +121,7 @@ def benchmark_parallel(instances, max_workers=4):
     return results
 
 
-def save_results(results, filename='benchmark_results.json'):
+def save_results(results, filename='benchmark_results_merge_genetic_aco_ils.json'):
     """Save results to JSON file"""
     with open(filename, 'w') as f:
         json.dump(results, f, indent=2)
@@ -170,7 +172,7 @@ def benchmark():
     print(f"Tested {len(results)} instances")
     
     # Save results
-    save_results(results, filename='benchmark_results_new.json')
+    save_results(results, filename='benchmark_results_merge_genetic_aco_ils.json')
     
     # Print summary
     print("\n=== Summary ===")
@@ -246,4 +248,4 @@ if __name__ == '__main__':
     )
 
     benchmark()      # Uncomment to run benchmark
-    print_results('benchmark_results_new.json')
+    print_results('benchmark_results_merge_genetic_aco_ils.json')
