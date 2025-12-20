@@ -50,51 +50,8 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     return best_path, best_cost
 
 
+
 def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
-    start_time = time()
-
-    # Grazie al Pruning e alla Memoization, possiamo osare di più con le generazioni
-    # senza perdere velocità rispetto a prima.
-    POPULATION_SIZE = 50  # Aumentato da 10 per migliore esplorazione
-    GENERATIONS = 100  # Aumentato da 20
-    MUTATION_RATE = 0.3
-    ELITE_SIZE = 10
-
-    # Initialize and run the solver
-    solver = GeneticSolver(
-        problem=problem,
-        pop_size=POPULATION_SIZE,
-        generations=GENERATIONS,
-        mutation_rate=MUTATION_RATE,
-        elite_size=ELITE_SIZE
-    )
-
-    best_individual = solver.evolve()
-
-    # Extract final solution (path and cost)
-    # Nota: rebuild_phenotype ora usa la cache interna se disponibile
-    path = best_individual.rebuild_phenotype()
-    cost = best_individual.fitness
-
-    # Assicuriamo che inizi dal deposito
-    if not path or path[0][0] != 0:
-        path = [(0, 0.0)] + path
-
-    # Apply beta-optimization to full genetic path (External Refinement)
-    # Questo è fondamentale per "limare" il costo finale
-    optimized_path = optimize_full_path(path, problem)
-    optimized_cost = problem.path_cost(optimized_path)
-
-    elapsed_time = time() - start_time
-    logging.info(
-        f"Genetic Solver: pop={POPULATION_SIZE}, gen={GENERATIONS} | "
-        f"Raw cost: {cost:.2f} -> Opt cost: {optimized_cost:.2f} | "
-        f"Time: {elapsed_time:.2f}s"
-    )
-
-    return optimized_path, optimized_cost
-
-def genetic_solver1(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     start_time = time()
 
     # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
