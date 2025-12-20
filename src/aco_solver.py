@@ -280,24 +280,3 @@ class ACOSolver:
 
         return physical_path
 
-
-def aco_solver(problem):
-    start_time = time()
-
-    # Adaptive settings based on problem difficulty
-    iterations = 50
-    ants = 25
-
-    if problem.beta > 1.5:
-        iterations = 80
-        ants = 35
-
-    solver = ACOSolver(problem, n_ants=ants, n_iterations=iterations)
-    path, cost = solver.solve()
-
-    elapsed = time() - start_time
-    logging.info(f"ACO Solver: ants={ants}, iter={iterations} | "
-                 f"Cost: {cost:.2f} | Steps: {len(path)} | "
-                 f"Time: {elapsed:.2f}s")
-
-    return path, cost

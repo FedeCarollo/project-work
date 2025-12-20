@@ -55,10 +55,10 @@ def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
 
     # Grazie al Pruning e alla Memoization, possiamo osare di più con le generazioni
     # senza perdere velocità rispetto a prima.
-    POPULATION_SIZE = 30  # Aumentato da 10 per migliore esplorazione
-    GENERATIONS = 50  # Aumentato da 20
+    POPULATION_SIZE = 50  # Aumentato da 10 per migliore esplorazione
+    GENERATIONS = 100  # Aumentato da 20
     MUTATION_RATE = 0.3
-    ELITE_SIZE = 5
+    ELITE_SIZE = 10
 
     # Initialize and run the solver
     solver = GeneticSolver(
@@ -87,7 +87,7 @@ def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
 
     elapsed_time = time() - start_time
     logging.info(
-        f"Genetic Solver (Pruned): pop={POPULATION_SIZE}, gen={GENERATIONS} | "
+        f"Genetic Solver: pop={POPULATION_SIZE}, gen={GENERATIONS} | "
         f"Raw cost: {cost:.2f} -> Opt cost: {optimized_cost:.2f} | "
         f"Time: {elapsed_time:.2f}s"
     )
@@ -176,7 +176,8 @@ def aco_solver(problem):
 
     solver = ACOSolver(problem, n_ants=ants, n_iterations=iterations)
     path, cost = solver.solve()
-
+    path = optimize_full_path(path, problem)
+    cost = problem.path_cost(path)
     elapsed = time() - start_time
     logging.info(f"ACO Solver: ants={ants}, iter={iterations} | "
                  f"Cost: {cost:.2f} | Steps: {len(path)} | "
@@ -199,6 +200,8 @@ def ils_solver(problem):
     solver = IteratedLocalSearchSolver(problem, max_iterations=max_iter, max_time=max_duration)
     path, cost = solver.solve()
 
+    path = optimize_full_path(path, problem)
+    cost = problem.path_cost(path)
     elapsed = time() - start_time
     logging.info(f"ILS Solver: iter={max_iter} | Cost: {cost:.2f} | Steps: {len(path)} | Time: {elapsed:.2f}s")
 
