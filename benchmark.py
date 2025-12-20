@@ -4,7 +4,7 @@ Benchmark script to test multiple problem instances in parallel
 from s339239 import Problem
 from src.solver_framework import genetic_solver, merge_solver, ils_solver
 from src.utils import check_feasibility
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from time import time
 import json
 import logging
@@ -20,6 +20,10 @@ def solve_single_instance(params):
     Returns:
         dict with results for each solver
     """
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
     n, alpha, beta, seed = params['n'], params['alpha'], params['beta'], params['seed']
     density = params.get('density', 0.5)
     
@@ -99,7 +103,7 @@ def benchmark_parallel(instances, max_workers=4):
     """
     results = {}
     
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+    with ProcessPoolExecutor(max_workers=max_workers) as executor:
         # Submit all instances
         futures = {executor.submit(solve_single_instance, params): params 
                    for params in instances}
@@ -164,7 +168,7 @@ def benchmark():
     # Run benchmark
     print("\nRunning benchmark...")
     start_time = time()
-    results = benchmark_parallel(instances, max_workers=4)
+    results = benchmark_parallel(instances, max_workers=12)
     total_time = time() - start_time
     
     print(f"\nBenchmark completed in {total_time:.2f}s")

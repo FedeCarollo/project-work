@@ -1,5 +1,5 @@
 import logging
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from time import time
 
 from Problem import Problem
@@ -27,7 +27,7 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
 
     # Run all solvers in parallel
     results = {}
-    with ThreadPoolExecutor(max_workers=len(solvers)) as executor:
+    with ProcessPoolExecutor(max_workers=len(solvers)) as executor:
         futures = {executor.submit(solver_func, problem): name
                    for name, solver_func in solvers.items()}
 
@@ -55,15 +55,16 @@ def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     start_time = time()
 
     # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
-    POPULATION_SIZE = 10
-    GENERATIONS = 20
-    MUTATION_RATE = 0.3
-    ELITE_SIZE = 3
-
-    # POPULATION_SIZE = 50
-    # GENERATIONS = 100
-    # MUTATION_RATE = 0.3
-    # ELITE_SIZE = 10
+    if problem.graph.number_of_nodes() <= 200:
+        POPULATION_SIZE = 50
+        GENERATIONS = 100
+        MUTATION_RATE = 0.3
+        ELITE_SIZE = 10
+    else:
+        POPULATION_SIZE = 10
+        GENERATIONS = 20
+        MUTATION_RATE = 0.3
+        ELITE_SIZE = 3
 
     # Initialize and run the solver
     solver = GeneticSolver(
