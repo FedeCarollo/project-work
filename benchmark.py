@@ -8,7 +8,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from time import time
 import json
 import logging
-
+from tqdm import tqdm
 
 def solve_single_instance(params):
     """
@@ -21,7 +21,7 @@ def solve_single_instance(params):
         dict with results for each solver
     """
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.WARNING,
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
     n, alpha, beta, seed = params['n'], params['alpha'], params['beta'], params['seed']
@@ -109,7 +109,7 @@ def benchmark_parallel(instances, max_workers=4):
                    for params in instances}
         
         # Collect results as they complete
-        for future in as_completed(futures):
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Benchmarking"):
             params = futures[future]
             try:
                 result = future.result()
@@ -139,9 +139,9 @@ def generate_test_instances():
     instances = []
     
     # Example: test different combinations
-    n_cities = [50, 100]
-    alpha_values = [0.0, 1.0, 2.0]
-    beta_values = [0.5, 1, 2]
+    n_cities = [10, 50, 100, 1000]
+    alpha_values = [0.0, 1.0, 2.0, 4.0]
+    beta_values = [0.5, 1, 2, 4]
     density_values = [0.2, 0.5, 1.0]
     
     for n, alpha, beta, density in product(n_cities, alpha_values, beta_values, density_values):
@@ -152,7 +152,6 @@ def generate_test_instances():
             'density': density,
             'seed': randint(0, 10000)
         })
-    
     return instances    
 
 
@@ -168,7 +167,7 @@ def benchmark():
     # Run benchmark
     print("\nRunning benchmark...")
     start_time = time()
-    results = benchmark_parallel(instances, max_workers=12)
+    results = benchmark_parallel(instances, max_workers=16)
     total_time = time() - start_time
     
     print(f"\nBenchmark completed in {total_time:.2f}s")
@@ -203,7 +202,7 @@ def print_results(path: str):
     # Count wins for each solver
     wins = defaultdict(int)
     total_instances = 0
-    
+    file = open("results_benchmark.txt", "w")
     for key, result in results.items():
         params = result['params']
         best_solver = result['best_solver']
@@ -229,6 +228,7 @@ def print_results(path: str):
             wins[best_solver] += 1
             total_instances += 1
             print(f"  Best solver: {best_solver} with cost {best_cost:.2f}\n")
+            file.write(f"Instance: n={params['n']}, alpha={params['alpha']}, beta={params['beta']}, density={params['density']}, seed={params['seed']}, best_solver={best_solver}, best_cost={best_cost:.2f}\n")
         else:
             total_instances += 1
             print("  No feasible solution found by any solver.\n")
@@ -239,14 +239,15 @@ def print_results(path: str):
         for solver_name, win_count in sorted(wins.items(), key=lambda x: x[1], reverse=True):
             win_percentage = (win_count / total_instances) * 100 if total_instances > 0 else 0
             print(f"{solver_name}: {win_count}/{total_instances} wins ({win_percentage:.1f}%)")
+            file.write(f"{solver_name}: {win_count}/{total_instances} wins ({win_percentage:.1f}%)\n")
     else:
         print("No wins recorded (no feasible solutions found)")
 
-
+    file.close()
 if __name__ == '__main__':
     # Configure logging
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.WARNING,
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
 
