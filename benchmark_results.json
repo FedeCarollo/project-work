@@ -1,1460 +1,4694 @@
 {
-  "n=50_alpha=0.0_beta=0.5_seed=2310": {
+  "n=10_alpha=0.0_beta=1_seed=4838": {
     "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 0.5,
-      "seed": 2310
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 15.83057540008037,
-        "time": 3.8659956455230713,
-        "path_length": 68,
-        "feasible": true,
-        "improvement": 72.01229655285262
-      },
-      "merge": {
-        "cost": 34.37467304860373,
-        "time": 0.01500558853149414,
-        "path_length": 129,
-        "feasible": true,
-        "improvement": 39.22721498979205
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 56.56260946874469
-  },
-  "n=50_alpha=0.0_beta=0.5_seed=8661": {
-    "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 1.0,
-      "seed": 8661
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 15.452547068523652,
-        "time": 4.075000286102295,
-        "path_length": 51,
-        "feasible": true,
-        "improvement": 61.9861132734462
-      },
-      "merge": {
-        "cost": 40.6497424998365,
-        "time": 0.09399223327636719,
-        "path_length": 99,
-        "feasible": true,
-        "improvement": 1.7479636820896418e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 40.649742499836506
-  },
-  "n=50_alpha=0.0_beta=0.5_seed=7235": {
-    "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 0.2,
-      "seed": 7235
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 20.042919327114312,
-        "time": 4.437005519866943,
-        "path_length": 91,
-        "feasible": true,
-        "improvement": 73.85641506584004
-      },
-      "merge": {
-        "cost": 34.32547024956973,
-        "time": 0.015999555587768555,
-        "path_length": 147,
-        "feasible": true,
-        "improvement": 55.2265399950692
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 76.6647702585182
-  },
-  "n=50_alpha=0.0_beta=1_seed=1490": {
-    "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 0.0,
       "beta": 1,
       "density": 0.2,
-      "seed": 1490
+      "seed": 4838
     },
     "solvers": {
       "genetic": {
-        "cost": 25.532121640856143,
-        "time": 5.9219970703125,
-        "path_length": 84,
+        "cost": 4.483543956132622,
+        "time": 1.4939568042755127,
+        "path_length": 13,
         "feasible": true,
-        "improvement": 76.19430511539579
+        "improvement": 70.00587068898567
       },
       "merge": {
-        "cost": 50.94999103863511,
-        "time": 0.14000177383422852,
-        "path_length": 169,
+        "cost": 11.096218859751739,
+        "time": 0.001432180404663086,
+        "path_length": 27,
         "feasible": true,
-        "improvement": 52.495136984691456
+        "improvement": 25.768225627079154
+      },
+      "ILS": {
+        "cost": 4.483543956132622,
+        "time": 0.02897953987121582,
+        "path_length": 13,
+        "feasible": true,
+        "improvement": 70.00587068898567
       }
     },
     "best_solver": "genetic",
-    "baseline": 107.2521586310361
+    "baseline": 14.948071703105551
   },
-  "n=50_alpha=0.0_beta=1_seed=113": {
+  "n=10_alpha=0.0_beta=0.5_seed=5930": {
     "params": {
-      "n": 50,
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 5930
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2.8645475399577807,
+        "time": 1.4389991760253906,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 59.38648136625703
+      },
+      "merge": {
+        "cost": 7.053187303938313,
+        "time": 0.001382589340209961,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 2.8645475399577807,
+        "time": 0.08832335472106934,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 59.38648136625703
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7.053187303938313
+  },
+  "n=10_alpha=0.0_beta=0.5_seed=2458": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 2458
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3.474597981294495,
+        "time": 1.5487611293792725,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 53.4130342456394
+      },
+      "merge": {
+        "cost": 6.108600206057312,
+        "time": 0.0013613700866699219,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 18.096668984810552
+      },
+      "ILS": {
+        "cost": 3.474597981294495,
+        "time": 0.03567075729370117,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 53.4130342456394
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7.458304967992616
+  },
+  "n=10_alpha=0.0_beta=0.5_seed=5548": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 5548
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 5.107693281726392,
+        "time": 1.5734450817108154,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 53.533452561561965
+      },
+      "merge": {
+        "cost": 8.161900094592719,
+        "time": 0.010455608367919922,
+        "path_length": 25,
+        "feasible": true,
+        "improvement": 25.748219986107546
+      },
+      "ILS": {
+        "cost": 5.10769328172639,
+        "time": 0.1082918643951416,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 53.53345256156198
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 10.992194521216371
+  },
+  "n=10_alpha=0.0_beta=1_seed=18": {
+    "params": {
+      "n": 10,
       "alpha": 0.0,
       "beta": 1,
       "density": 0.5,
-      "seed": 113
+      "seed": 18
     },
     "solvers": {
       "genetic": {
-        "cost": 16.969923917557715,
-        "time": 3.8839995861053467,
-        "path_length": 69,
+        "cost": 3.860508420047669,
+        "time": 1.5764391422271729,
+        "path_length": 11,
         "feasible": true,
-        "improvement": 73.41256060156607
+        "improvement": 61.91561523227325
       },
       "merge": {
-        "cost": 32.70643836839103,
-        "time": 0.031000375747680664,
-        "path_length": 127,
+        "cost": 8.059630612828258,
+        "time": 0.0013921260833740234,
+        "path_length": 21,
         "feasible": true,
-        "improvement": 48.757551755520204
+        "improvement": 20.49076444161449
+      },
+      "ILS": {
+        "cost": 3.860508420047669,
+        "time": 0.08239102363586426,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 61.91561523227325
       }
     },
     "best_solver": "genetic",
-    "baseline": 63.82684568923656
+    "baseline": 10.136722553331406
   },
-  "n=50_alpha=0.0_beta=1_seed=8802": {
+  "n=10_alpha=0.0_beta=2_seed=1834": {
     "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 0.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 8802
+      "beta": 2,
+      "density": 0.2,
+      "seed": 1834
     },
     "solvers": {
       "genetic": {
-        "cost": 14.407554421028355,
-        "time": 4.19499659538269,
-        "path_length": 51,
+        "cost": 4.454460656251456,
+        "time": 1.6418564319610596,
+        "path_length": 11,
         "feasible": true,
-        "improvement": 61.906887754794006
+        "improvement": 51.83099863266144
       },
       "merge": {
-        "cost": 37.82194095427722,
-        "time": 0.0930016040802002,
-        "path_length": 99,
+        "cost": 7.216001437456448,
+        "time": 0.0013766288757324219,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 21.968648972183164
+      },
+      "ILS": {
+        "cost": 5.1339069724564945,
+        "time": 0.0279538631439209,
+        "path_length": 13,
+        "feasible": true,
+        "improvement": 44.48370048369645
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 9.24756696175114
+  },
+  "n=10_alpha=0.0_beta=1_seed=9390": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 9390
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2.732026764378912,
+        "time": 1.6598820686340332,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 61.64595672956125
+      },
+      "merge": {
+        "cost": 7.123177979216115,
+        "time": 0.0013587474822998047,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": -4.987540237189845e-14
+      },
+      "ILS": {
+        "cost": 2.732026764378912,
+        "time": 0.0975799560546875,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 61.64595672956125
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7.123177979216112
+  },
+  "n=10_alpha=0.0_beta=2_seed=5532": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 5532
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 4.685992315901218,
+        "time": 1.8009979724884033,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 51.64765051183803
+      },
+      "merge": {
+        "cost": 6.643420926999402,
+        "time": 0.0014386177062988281,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 31.449949380152688
+      },
+      "ILS": {
+        "cost": 5.237183914919464,
+        "time": 0.04645061492919922,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 45.96018731642658
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 9.69134357586591
+  },
+  "n=10_alpha=0.0_beta=2_seed=9285": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 9285
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3.2211431215583097,
+        "time": 1.154395580291748,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 55.031447570221914
+      },
+      "merge": {
+        "cost": 7.163101651066881,
+        "time": 0.003634214401245117,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 3.5940295841776018,
+        "time": 0.04582929611206055,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 49.82579112719554
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7.163101651066881
+  },
+  "n=10_alpha=0.0_beta=4_seed=7704": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 7704
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3.005482396074346,
+        "time": 1.2212002277374268,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 67.3554695598563
+      },
+      "merge": {
+        "cost": 7.1644452224865125,
+        "time": 0.0006334781646728516,
+        "path_length": 23,
+        "feasible": true,
+        "improvement": 22.18222590234143
+      },
+      "ILS": {
+        "cost": 3.415581751404644,
+        "time": 0.02158331871032715,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 62.901109452457405
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 9.206695135606662
+  },
+  "n=10_alpha=0.0_beta=4_seed=8154": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 8154
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 6.416082860992782,
+        "time": 1.750563383102417,
+        "path_length": 13,
+        "feasible": true,
+        "improvement": 66.93670698280036
+      },
+      "merge": {
+        "cost": 13.151298833797512,
+        "time": 0.0006732940673828125,
+        "path_length": 25,
+        "feasible": true,
+        "improvement": 32.22886045593854
+      },
+      "ILS": {
+        "cost": 7.884438908481281,
+        "time": 0.03601384162902832,
+        "path_length": 15,
+        "feasible": true,
+        "improvement": 59.369989516159485
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 19.40545624918581
+  },
+  "n=10_alpha=0.0_beta=4_seed=4851": {
+    "params": {
+      "n": 10,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 4851
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2.6419338156736583,
+        "time": 1.631232738494873,
+        "path_length": 11,
+        "feasible": true,
+        "improvement": 53.26882909564203
+      },
+      "merge": {
+        "cost": 5.653472328097138,
+        "time": 0.0006115436553955078,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": -1.5710316919496997e-14
+      },
+      "ILS": {
+        "cost": 2.9685206205920127,
+        "time": 0.045281171798706055,
+        "path_length": 12,
+        "feasible": true,
+        "improvement": 47.4920818867585
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 5.653472328097137
+  },
+  "n=10_alpha=1.0_beta=0.5_seed=3664": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 3664
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 179.58234042375653,
+        "time": 1.6398394107818604,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 23.829345671188005
+      },
+      "merge": {
+        "cost": 193.1853880579094,
+        "time": 0.0005104541778564453,
+        "path_length": 23,
+        "feasible": true,
+        "improvement": 18.059552067237675
+      },
+      "ILS": {
+        "cost": 214.95335674076898,
+        "time": 0.0641016960144043,
+        "path_length": 25,
+        "feasible": true,
+        "improvement": 8.82657061666761
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 235.76315840551794
+  },
+  "n=10_alpha=1.0_beta=0.5_seed=3158": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 3158
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 173.94502211311234,
+        "time": 1.631004810333252,
+        "path_length": 25,
+        "feasible": true,
+        "improvement": 1.6339478465743064e-14
+      },
+      "merge": {
+        "cost": 160.9208986666955,
+        "time": 0.0005209445953369141,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 7.487494202592117
+      },
+      "ILS": {
+        "cost": 173.94502211311237,
+        "time": 0.06533360481262207,
+        "path_length": 25,
         "feasible": true,
         "improvement": 0.0
       }
     },
-    "best_solver": "genetic",
-    "baseline": 37.82194095427722
+    "best_solver": "merge",
+    "baseline": 173.94502211311237
   },
-  "n=50_alpha=0.0_beta=2_seed=3561": {
+  "n=10_alpha=1.0_beta=1_seed=1742": {
     "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 2,
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 1,
       "density": 0.2,
-      "seed": 3561
+      "seed": 1742
     },
     "solvers": {
       "genetic": {
-        "cost": 19.543828313743777,
-        "time": 5.9780049324035645,
-        "path_length": 79,
+        "cost": 4038.40896767938,
+        "time": 1.6151514053344727,
+        "path_length": 23,
         "feasible": true,
-        "improvement": 77.62966330263983
+        "improvement": 0.1427462031667068
       },
       "merge": {
-        "cost": 36.060803043163155,
-        "time": 0.030997514724731445,
-        "path_length": 155,
+        "cost": 4038.40896767938,
+        "time": 0.0005712509155273438,
+        "path_length": 23,
         "feasible": true,
-        "improvement": 58.72393613458725
+        "improvement": 0.1427462031667068
+      },
+      "ILS": {
+        "cost": 4040.2077720025877,
+        "time": 0.03928709030151367,
+        "path_length": 29,
+        "feasible": true,
+        "improvement": 0.09826738458469451
       }
     },
     "best_solver": "genetic",
-    "baseline": 87.36492694832823
+    "baseline": 4044.181883767614
   },
-  "n=50_alpha=0.0_beta=2_seed=2633": {
+  "n=10_alpha=1.0_beta=0.5_seed=2122": {
     "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 2,
-      "density": 0.5,
-      "seed": 2633
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 17.910084919553363,
-        "time": 5.280999183654785,
-        "path_length": 67,
-        "feasible": true,
-        "improvement": 66.21588209884081
-      },
-      "merge": {
-        "cost": 35.431063620503735,
-        "time": 0.0780022144317627,
-        "path_length": 115,
-        "feasible": true,
-        "improvement": 33.165742312492554
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 53.013327066736394
-  },
-  "n=50_alpha=1.0_beta=0.5_seed=402": {
-    "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 1.0,
       "beta": 0.5,
-      "density": 0.2,
-      "seed": 402
+      "density": 1.0,
+      "seed": 2122
     },
     "solvers": {
       "genetic": {
-        "cost": 996.6354500281703,
-        "time": 3.882002353668213,
-        "path_length": 172,
+        "cost": 105.87236691716771,
+        "time": 1.7725720405578613,
+        "path_length": 15,
         "feasible": true,
-        "improvement": 22.051471337321775
+        "improvement": 10.050130703094613
       },
       "merge": {
-        "cost": 921.2651015644284,
-        "time": 0.3105802536010742,
-        "path_length": 156,
+        "cost": 117.7015239096185,
+        "time": 0.0005116462707519531,
+        "path_length": 19,
         "feasible": true,
-        "improvement": 27.94631259284402
+        "improvement": 2.414727395732673e-14
+      },
+      "ILS": {
+        "cost": 108.25805918808332,
+        "time": 0.07472014427185059,
+        "path_length": 16,
+        "feasible": true,
+        "improvement": 8.023230632754357
       }
     },
-    "best_solver": "merge",
-    "baseline": 1278.5814782227694
+    "best_solver": "genetic",
+    "baseline": 117.70152390961853
   },
-  "n=50_alpha=0.0_beta=2_seed=8502": {
+  "n=10_alpha=1.0_beta=1_seed=8399": {
     "params": {
-      "n": 50,
-      "alpha": 0.0,
-      "beta": 2,
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 1,
       "density": 1.0,
-      "seed": 8502
+      "seed": 8399
     },
     "solvers": {
       "genetic": {
-        "cost": 15.413893954043798,
-        "time": 5.237555265426636,
-        "path_length": 51,
+        "cost": 1620.7913332439186,
+        "time": 1.4797608852386475,
+        "path_length": 19,
         "feasible": true,
-        "improvement": 59.26824297655321
+        "improvement": -2.8057118862815865e-14
       },
       "merge": {
-        "cost": 37.842447958164335,
-        "time": 0.04799795150756836,
-        "path_length": 99,
+        "cost": 1620.7913332439184,
+        "time": 0.0005178451538085938,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": -1.4028559431407932e-14
+      },
+      "ILS": {
+        "cost": 1620.7913332439182,
+        "time": 0.06443476676940918,
+        "path_length": 19,
         "feasible": true,
         "improvement": 0.0
       }
     },
-    "best_solver": "genetic",
-    "baseline": 37.842447958164335
+    "best_solver": "ILS",
+    "baseline": 1620.7913332439182
   },
-  "n=50_alpha=1.0_beta=1_seed=9785": {
+  "n=10_alpha=1.0_beta=1_seed=6836": {
     "params": {
-      "n": 50,
-      "alpha": 1.0,
-      "beta": 1,
-      "density": 0.2,
-      "seed": 9785
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 15295.120975703296,
-        "time": 4.185000419616699,
-        "path_length": 181,
-        "feasible": true,
-        "improvement": 24.429262353961636
-      },
-      "merge": {
-        "cost": 15154.546428832145,
-        "time": 0.029997825622558594,
-        "path_length": 129,
-        "feasible": true,
-        "improvement": 25.123818625741755
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 20239.475559102353
-  },
-  "n=50_alpha=1.0_beta=0.5_seed=254": {
-    "params": {
-      "n": 50,
-      "alpha": 1.0,
-      "beta": 0.5,
-      "density": 0.5,
-      "seed": 254
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 762.2519379835319,
-        "time": 7.213559865951538,
-        "path_length": 121,
-        "feasible": true,
-        "improvement": 22.888922191379322
-      },
-      "merge": {
-        "cost": 716.303679097918,
-        "time": 0.03199887275695801,
-        "path_length": 119,
-        "feasible": true,
-        "improvement": 27.537148833442338
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 988.5115856833679
-  },
-  "n=50_alpha=1.0_beta=1_seed=97": {
-    "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 1.0,
       "beta": 1,
       "density": 0.5,
-      "seed": 97
+      "seed": 6836
     },
     "solvers": {
       "genetic": {
-        "cost": 11492.389663764954,
-        "time": 5.22300910949707,
-        "path_length": 137,
+        "cost": 1276.8015190894762,
+        "time": 1.771378993988037,
+        "path_length": 21,
         "feasible": true,
-        "improvement": 39.10578918324199
+        "improvement": 0.09066166726035874
       },
       "merge": {
-        "cost": 11486.72027249725,
-        "time": 0.03099203109741211,
-        "path_length": 117,
+        "cost": 1276.8015190894764,
+        "time": 0.0005469322204589844,
+        "path_length": 21,
         "feasible": true,
-        "improvement": 39.13582933304188
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 18872.713037283116
-  },
-  "n=50_alpha=1.0_beta=0.5_seed=4253": {
-    "params": {
-      "n": 50,
-      "alpha": 1.0,
-      "beta": 0.5,
-      "density": 1.0,
-      "seed": 4253
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 583.5974671329291,
-        "time": 7.266116619110107,
-        "path_length": 80,
-        "feasible": true,
-        "improvement": 9.624222531679544
+        "improvement": 0.09066166726034094
       },
-      "merge": {
-        "cost": 645.7454458275599,
-        "time": 0.10999822616577148,
-        "path_length": 99,
+      "ILS": {
+        "cost": 1276.8015190894762,
+        "time": 0.0811765193939209,
+        "path_length": 21,
         "feasible": true,
-        "improvement": -5.281655726239922e-14
+        "improvement": 0.09066166726035874
       }
     },
     "best_solver": "genetic",
-    "baseline": 645.7454458275596
+    "baseline": 1277.9601390584694
   },
-  "n=50_alpha=1.0_beta=1_seed=6394": {
+  "n=10_alpha=1.0_beta=2_seed=1128": {
     "params": {
-      "n": 50,
-      "alpha": 1.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 6394
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 10653.088304602881,
-        "time": 4.9425671100616455,
-        "path_length": 96,
-        "feasible": true,
-        "improvement": 0.01640310564207556
-      },
-      "merge": {
-        "cost": 10654.836028612652,
-        "time": 0.12399864196777344,
-        "path_length": 99,
-        "feasible": true,
-        "improvement": -6.828784220277504e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 10654.836028612644
-  },
-  "n=50_alpha=1.0_beta=2_seed=3965": {
-    "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 1.0,
       "beta": 2,
-      "density": 0.5,
-      "seed": 3965
+      "density": 1.0,
+      "seed": 1128
     },
     "solvers": {
       "genetic": {
-        "cost": 16693.870288386814,
-        "time": 4.978559494018555,
-        "path_length": 30243,
+        "cost": 2238.8979442509044,
+        "time": 1.6647040843963623,
+        "path_length": 3660,
         "feasible": true,
-        "improvement": 99.68855081674492
+        "improvement": 99.51861285517383
       },
       "merge": {
-        "cost": 15213.328950948508,
-        "time": 0.4089972972869873,
-        "path_length": 35357,
+        "cost": 2195.2316821979316,
+        "time": 0.01163482666015625,
+        "path_length": 3928,
         "feasible": true,
-        "improvement": 99.71617253551685
+        "improvement": 99.52800157129145
+      },
+      "ILS": {
+        "cost": 12616.46287177276,
+        "time": 0.5834050178527832,
+        "path_length": 31123,
+        "feasible": true,
+        "improvement": 97.28732475044542
       }
     },
     "best_solver": "merge",
-    "baseline": 5360062.310619347
+    "baseline": 465093.0063908085
   },
-  "n=50_alpha=1.0_beta=2_seed=2635": {
+  "n=10_alpha=2.0_beta=0.5_seed=4128": {
     "params": {
-      "n": 50,
-      "alpha": 1.0,
-      "beta": 2,
-      "density": 0.2,
-      "seed": 2635
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 33461.03205640043,
-        "time": 6.85956072807312,
-        "path_length": 55162,
-        "feasible": true,
-        "improvement": 99.59277603603236
-      },
-      "merge": {
-        "cost": 30234.99953446174,
-        "time": 0.9949476718902588,
-        "path_length": 53912,
-        "feasible": true,
-        "improvement": 99.6320371607119
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 8216862.222543341
-  },
-  "n=50_alpha=2.0_beta=0.5_seed=9485": {
-    "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 2.0,
       "beta": 0.5,
       "density": 0.2,
-      "seed": 9485
+      "seed": 4128
     },
     "solvers": {
       "genetic": {
-        "cost": 1605.6685186061961,
-        "time": 3.8440005779266357,
-        "path_length": 182,
+        "cost": 274.87787339306624,
+        "time": 1.5305569171905518,
+        "path_length": 22,
         "feasible": true,
-        "improvement": 17.138434120517783
+        "improvement": 25.369270970232105
       },
       "merge": {
-        "cost": 1451.306463159078,
-        "time": 0.031040191650390625,
-        "path_length": 165,
+        "cost": 299.6591099923739,
+        "time": 0.0005848407745361328,
+        "path_length": 27,
         "feasible": true,
-        "improvement": 25.104388163028773
+        "improvement": 18.6410402442149
+      },
+      "ILS": {
+        "cost": 319.10356222576814,
+        "time": 0.0740349292755127,
+        "path_length": 24,
+        "feasible": true,
+        "improvement": 13.361773390721709
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 368.3172829296977
+  },
+  "n=10_alpha=1.0_beta=4_seed=520": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 520
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2367.35756408046,
+        "time": 1.8196823596954346,
+        "path_length": 4359,
+        "feasible": true,
+        "improvement": 99.99999378720376
+      },
+      "merge": {
+        "cost": 2259.0292193582795,
+        "time": 0.030546903610229492,
+        "path_length": 5427,
+        "feasible": true,
+        "improvement": 99.99999407149625
+      },
+      "ILS": {
+        "cost": 16016.97878170593,
+        "time": 0.7717635631561279,
+        "path_length": 41473,
+        "feasible": true,
+        "improvement": 99.99995796569692
       }
     },
     "best_solver": "merge",
-    "baseline": 1937.7723575023388
+    "baseline": 38104542268.01174
   },
-  "n=50_alpha=2.0_beta=0.5_seed=5072": {
+  "n=10_alpha=2.0_beta=0.5_seed=8607": {
     "params": {
-      "n": 50,
+      "n": 10,
       "alpha": 2.0,
       "beta": 0.5,
       "density": 0.5,
-      "seed": 5072
+      "seed": 8607
     },
     "solvers": {
       "genetic": {
-        "cost": 998.8689079267814,
-        "time": 4.719000339508057,
+        "cost": 227.90007207276548,
+        "time": 1.6761977672576904,
+        "path_length": 22,
+        "feasible": true,
+        "improvement": 11.298811230804887
+      },
+      "merge": {
+        "cost": 226.38486834707663,
+        "time": 0.0005049705505371094,
+        "path_length": 22,
+        "feasible": true,
+        "improvement": 11.888545014009669
+      },
+      "ILS": {
+        "cost": 231.64632848176112,
+        "time": 0.07143735885620117,
+        "path_length": 22,
+        "feasible": true,
+        "improvement": 9.840727457992255
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 256.9301214956349
+  },
+  "n=10_alpha=1.0_beta=2_seed=7094": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 7094
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 5246.420558849738,
+        "time": 1.857574462890625,
+        "path_length": 6189,
+        "feasible": true,
+        "improvement": 99.25361406544259
+      },
+      "merge": {
+        "cost": 4914.38989722382,
+        "time": 0.01935124397277832,
+        "path_length": 7026,
+        "feasible": true,
+        "improvement": 99.30085065520879
+      },
+      "ILS": {
+        "cost": 24452.111325495178,
+        "time": 1.1954586505889893,
+        "path_length": 59109,
+        "feasible": true,
+        "improvement": 96.52130214136263
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 702909.8909749294
+  },
+  "n=10_alpha=1.0_beta=4_seed=3670": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 3670
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1448.2604821003295,
+        "time": 1.9055955410003662,
+        "path_length": 4481,
+        "feasible": true,
+        "improvement": 99.99996560689361
+      },
+      "merge": {
+        "cost": 1403.13462439432,
+        "time": 0.029482364654541016,
+        "path_length": 4728,
+        "feasible": true,
+        "improvement": 99.99996667853678
+      },
+      "ILS": {
+        "cost": 10024.826521559045,
+        "time": 1.0940947532653809,
+        "path_length": 41793,
+        "feasible": true,
+        "improvement": 99.99976193169033
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 4210903389.536519
+  },
+  "n=10_alpha=1.0_beta=4_seed=1398": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 1398
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 5609.205764789643,
+        "time": 1.767930030822754,
+        "path_length": 8235,
+        "feasible": true,
+        "improvement": 99.99999774276797
+      },
+      "merge": {
+        "cost": 4854.006039598887,
+        "time": 0.05051374435424805,
+        "path_length": 9282,
+        "feasible": true,
+        "improvement": 99.99999804667215
+      },
+      "ILS": {
+        "cost": 27327.651675035824,
+        "time": 1.3212063312530518,
+        "path_length": 58189,
+        "feasible": true,
+        "improvement": 99.99998900292609
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 248499299760.68854
+  },
+  "n=10_alpha=1.0_beta=2_seed=8832": {
+    "params": {
+      "n": 10,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 8832
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 15332.048214809249,
+        "time": 1.8077845573425293,
+        "path_length": 18049,
+        "feasible": true,
+        "improvement": 99.2529687436158
+      },
+      "merge": {
+        "cost": 14012.44017505847,
+        "time": 0.10266613960266113,
+        "path_length": 14785,
+        "feasible": true,
+        "improvement": 99.31726468360101
+      },
+      "ILS": {
+        "cost": 47151.81844024137,
+        "time": 2.0348241329193115,
+        "path_length": 93761,
+        "feasible": true,
+        "improvement": 97.70259774319062
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 2052397.149889002
+  },
+  "n=10_alpha=2.0_beta=0.5_seed=1897": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 1897
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 154.89126433123755,
+        "time": 1.6085186004638672,
+        "path_length": 16,
+        "feasible": true,
+        "improvement": 2.2413966809839576
+      },
+      "merge": {
+        "cost": 158.4425913142194,
+        "time": 0.0005304813385009766,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 1.7938175079476434e-14
+      },
+      "ILS": {
+        "cost": 155.0707900947599,
+        "time": 0.06712579727172852,
+        "path_length": 16,
+        "feasible": true,
+        "improvement": 2.1280901754331123
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 158.44259131421944
+  },
+  "n=10_alpha=2.0_beta=1_seed=9533": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 9533
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 13437.235166550077,
+        "time": 1.6402475833892822,
+        "path_length": 29,
+        "feasible": true,
+        "improvement": 0.05803507771901728
+      },
+      "merge": {
+        "cost": 13437.235166550077,
+        "time": 0.0005931854248046875,
+        "path_length": 29,
+        "feasible": true,
+        "improvement": 0.05803507771901728
+      },
+      "ILS": {
+        "cost": 13438.708956764764,
+        "time": 0.05524325370788574,
+        "path_length": 35,
+        "feasible": true,
+        "improvement": 0.047073485686629786
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 13445.038004805518
+  },
+  "n=10_alpha=2.0_beta=1_seed=2692": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 2692
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3513.5264666167373,
+        "time": 1.5347957611083984,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": -1.2942761502074347e-14
+      },
+      "merge": {
+        "cost": 3513.5264666167363,
+        "time": 0.0005123615264892578,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 1.2942761502074347e-14
+      },
+      "ILS": {
+        "cost": 3513.526466616737,
+        "time": 0.0825505256652832,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.0
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 3513.526466616737
+  },
+  "n=10_alpha=2.0_beta=1_seed=6156": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 6156
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3918.182191827974,
+        "time": 1.574659824371338,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.05194413372979782
+      },
+      "merge": {
+        "cost": 3918.1821918279747,
+        "time": 0.0005064010620117188,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.05194413372977462
+      },
+      "ILS": {
+        "cost": 3918.399810237895,
+        "time": 0.05992841720581055,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 0.046392953124235664
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 3920.218515376101
+  },
+  "n=10_alpha=4.0_beta=0.5_seed=688": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 688
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 210.20692874762,
+        "time": 1.4521312713623047,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 12.046964703669074
+      },
+      "merge": {
+        "cost": 220.2126271782595,
+        "time": 0.0004899501800537109,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 7.860463561782029
+      },
+      "ILS": {
+        "cost": 210.35472772133,
+        "time": 0.03133344650268555,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 11.985123886009424
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 238.99906130515208
+  },
+  "n=10_alpha=4.0_beta=0.5_seed=9798": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 9798
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 310.88978281852985,
+        "time": 1.461076259613037,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 20.55377652334569
+      },
+      "merge": {
+        "cost": 307.1105952475683,
+        "time": 0.0005209445953369141,
+        "path_length": 23,
+        "feasible": true,
+        "improvement": 21.519527721731198
+      },
+      "ILS": {
+        "cost": 312.13011518166695,
+        "time": 0.06568670272827148,
+        "path_length": 21,
+        "feasible": true,
+        "improvement": 20.236816212801696
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 391.32103354149547
+  },
+  "n=10_alpha=2.0_beta=2_seed=9723": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 9723
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7927.877055699568,
+        "time": 1.5371618270874023,
+        "path_length": 10535,
+        "feasible": true,
+        "improvement": 99.66058921016293
+      },
+      "merge": {
+        "cost": 7781.678820102385,
+        "time": 0.03223919868469238,
+        "path_length": 11069,
+        "feasible": true,
+        "improvement": 99.66684829544744
+      },
+      "ILS": {
+        "cost": 29872.19940360432,
+        "time": 1.7481999397277832,
+        "path_length": 84061,
+        "feasible": true,
+        "improvement": 98.72110191385232
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 2335776.378678147
+  },
+  "n=10_alpha=2.0_beta=2_seed=9325": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 9325
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 6318.661173899763,
+        "time": 1.799372911453247,
+        "path_length": 8346,
+        "feasible": true,
+        "improvement": 99.66258624316866
+      },
+      "merge": {
+        "cost": 6116.6799449235805,
+        "time": 0.05530381202697754,
+        "path_length": 9505,
+        "feasible": true,
+        "improvement": 99.6733719528946
+      },
+      "ILS": {
+        "cost": 29300.319273713892,
+        "time": 1.7759079933166504,
+        "path_length": 72361,
+        "feasible": true,
+        "improvement": 98.43537570216002
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 1872674.4378292053
+  },
+  "n=10_alpha=4.0_beta=1_seed=6963": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 6963
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 16864.250248379944,
+        "time": 1.5452640056610107,
+        "path_length": 28,
+        "feasible": true,
+        "improvement": -1.5915922472035078
+      },
+      "merge": {
+        "cost": 16594.247585425353,
+        "time": 0.0007457733154296875,
+        "path_length": 31,
+        "feasible": true,
+        "improvement": 0.03492538841903542
+      },
+      "ILS": {
+        "cost": 16596.78647908103,
+        "time": 0.0709848403930664,
+        "path_length": 39,
+        "feasible": true,
+        "improvement": 0.019630889984314507
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 16600.04521569467
+  },
+  "n=10_alpha=4.0_beta=0.5_seed=7778": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 7778
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 246.26849265112045,
+        "time": 1.6966185569763184,
+        "path_length": 16,
+        "feasible": true,
+        "improvement": 4.104688690492907
+      },
+      "merge": {
+        "cost": 256.80973270557115,
+        "time": 0.0005283355712890625,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": -2.213444882401643e-14
+      },
+      "ILS": {
+        "cost": 247.6664861429838,
+        "time": 0.061023712158203125,
+        "path_length": 16,
+        "feasible": true,
+        "improvement": 3.560319333017604
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 256.8097327055711
+  },
+  "n=10_alpha=2.0_beta=4_seed=4387": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 4387
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7072.842579146899,
+        "time": 1.880986213684082,
+        "path_length": 12849,
+        "feasible": true,
+        "improvement": 99.99999962515558
+      },
+      "merge": {
+        "cost": 6518.947792385861,
+        "time": 0.08668732643127441,
+        "path_length": 15020,
+        "feasible": true,
+        "improvement": 99.99999965451073
+      },
+      "ILS": {
+        "cost": 40565.98103507126,
+        "time": 1.9791529178619385,
+        "path_length": 100045,
+        "feasible": true,
+        "improvement": 99.99999785009608
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 1886874131563.4475
+  },
+  "n=10_alpha=4.0_beta=1_seed=6002": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 6002
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7129.879035407346,
+        "time": 1.8721153736114502,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.017116354099307018
+      },
+      "merge": {
+        "cost": 7129.879035407346,
+        "time": 0.000457763671875,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.017116354099307018
+      },
+      "ILS": {
+        "cost": 7129.879035407346,
+        "time": 0.06070971488952637,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.017116354099307018
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7131.099619669423
+  },
+  "n=10_alpha=2.0_beta=2_seed=9885": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 9885
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 15289.353622733584,
+        "time": 1.7311971187591553,
+        "path_length": 18589,
+        "feasible": true,
+        "improvement": 99.71678323619578
+      },
+      "merge": {
+        "cost": 14298.29227851114,
+        "time": 0.15571928024291992,
+        "path_length": 19963,
+        "feasible": true,
+        "improvement": 99.73514144763938
+      },
+      "ILS": {
+        "cost": 56458.99625563402,
+        "time": 3.3787994384765625,
+        "path_length": 155161,
+        "feasible": true,
+        "improvement": 98.95416545383713
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 5398463.501017498
+  },
+  "n=10_alpha=4.0_beta=1_seed=2994": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 2994
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 6037.437247980468,
+        "time": 1.4893553256988525,
+        "path_length": 18,
+        "feasible": true,
+        "improvement": -0.046631225726141395
+      },
+      "merge": {
+        "cost": 6034.623229200737,
+        "time": 0.0005323886871337891,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 6034.623229200737,
+        "time": 0.03932499885559082,
+        "path_length": 19,
+        "feasible": true,
+        "improvement": 0.0
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 6034.623229200737
+  },
+  "n=10_alpha=2.0_beta=4_seed=3853": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 3853
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7797.768348647727,
+        "time": 1.8024413585662842,
+        "path_length": 16425,
+        "feasible": true,
+        "improvement": 99.9999995218441
+      },
+      "merge": {
+        "cost": 6660.367755776247,
+        "time": 0.11908864974975586,
+        "path_length": 16767,
+        "feasible": true,
+        "improvement": 99.99999959158905
+      },
+      "ILS": {
+        "cost": 45653.606763596676,
+        "time": 3.076814889907837,
+        "path_length": 145575,
+        "feasible": true,
+        "improvement": 99.99999720053995
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 1630800432191.5044
+  },
+  "n=10_alpha=2.0_beta=4_seed=2801": {
+    "params": {
+      "n": 10,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 2801
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 15097.768414728414,
+        "time": 1.7384583950042725,
+        "path_length": 32471,
+        "feasible": true,
+        "improvement": 99.99999977390057
+      },
+      "merge": {
+        "cost": 14446.023151588755,
+        "time": 0.22307777404785156,
+        "path_length": 31870,
+        "feasible": true,
+        "improvement": 99.9999997836609
+      },
+      "ILS": {
+        "cost": 90120.7675798801,
+        "time": 5.824041843414307,
+        "path_length": 257561,
+        "feasible": true,
+        "improvement": 99.99999865037975
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 6677490756691.605
+  },
+  "n=10_alpha=4.0_beta=2_seed=4957": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 4957
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 12239.924700503485,
+        "time": 1.4983329772949219,
+        "path_length": 18286,
+        "feasible": true,
+        "improvement": 99.82557871642854
+      },
+      "merge": {
+        "cost": 11385.669073429392,
+        "time": 0.05843782424926758,
+        "path_length": 20684,
+        "feasible": true,
+        "improvement": 99.83775202358675
+      },
+      "ILS": {
+        "cost": 45940.4487449867,
+        "time": 2.9206383228302,
+        "path_length": 117487,
+        "feasible": true,
+        "improvement": 99.34533976033204
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 7017449.0462851245
+  },
+  "n=10_alpha=4.0_beta=2_seed=1372": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 1372
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 14587.673640897618,
+        "time": 1.4638714790344238,
+        "path_length": 30833,
+        "feasible": true,
+        "improvement": 99.77564148930938
+      },
+      "merge": {
+        "cost": 14146.944522828306,
+        "time": 0.0769345760345459,
+        "path_length": 28446,
+        "feasible": true,
+        "improvement": 99.78241990586723
+      },
+      "ILS": {
+        "cost": 46536.6005704227,
+        "time": 3.790346145629883,
+        "path_length": 172255,
+        "feasible": true,
+        "improvement": 99.28426679581636
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 6501947.974245823
+  },
+  "n=10_alpha=4.0_beta=4_seed=6133": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 6133
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 13528.39141369423,
+        "time": 1.7165000438690186,
+        "path_length": 23811,
+        "feasible": true,
+        "improvement": 99.9999997791124
+      },
+      "merge": {
+        "cost": 12588.283266269415,
+        "time": 0.20940589904785156,
+        "path_length": 25008,
+        "feasible": true,
+        "improvement": 99.99999979446221
+      },
+      "ILS": {
+        "cost": 69696.2591177362,
+        "time": 3.5814435482025146,
+        "path_length": 167785,
+        "feasible": true,
+        "improvement": 99.99999886201996
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 6124559029124.486
+  },
+  "n=10_alpha=4.0_beta=2_seed=3721": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 3721
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 20555.45329224863,
+        "time": 1.892578363418579,
+        "path_length": 22293,
+        "feasible": true,
+        "improvement": 99.87671800265721
+      },
+      "merge": {
+        "cost": 19410.237718927634,
+        "time": 0.15201687812805176,
+        "path_length": 24498,
+        "feasible": true,
+        "improvement": 99.88358647017577
+      },
+      "ILS": {
+        "cost": 65825.66714434829,
+        "time": 4.45275092124939,
+        "path_length": 181765,
+        "feasible": true,
+        "improvement": 99.60520842782695
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 16673523.900732089
+  },
+  "n=10_alpha=4.0_beta=4_seed=8968": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 8968
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 13562.820229663024,
+        "time": 1.9920284748077393,
+        "path_length": 23987,
+        "feasible": true,
+        "improvement": 99.99999995218316
+      },
+      "merge": {
+        "cost": 12669.138318248728,
+        "time": 0.18018198013305664,
+        "path_length": 27384,
+        "feasible": true,
+        "improvement": 99.99999995533392
+      },
+      "ILS": {
+        "cost": 70459.59251090745,
+        "time": 4.080205917358398,
+        "path_length": 165439,
+        "feasible": true,
+        "improvement": 99.9999997515889
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 28364107487715.902
+  },
+  "n=10_alpha=4.0_beta=4_seed=7569": {
+    "params": {
+      "n": 10,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 7569
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 25770.87249158037,
+        "time": 1.9749469757080078,
+        "path_length": 42301,
+        "feasible": true,
+        "improvement": 99.99999994615733
+      },
+      "merge": {
+        "cost": 24571.535827942083,
+        "time": 0.130173921585083,
+        "path_length": 42887,
+        "feasible": true,
+        "improvement": 99.99999994866307
+      },
+      "ILS": {
+        "cost": 152200.07123811595,
+        "time": 6.91028904914856,
+        "path_length": 344845,
+        "feasible": true,
+        "improvement": 99.99999968201082
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 47863286597787.09
+  },
+  "n=50_alpha=0.0_beta=0.5_seed=7439": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 7439
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 17.451718034720002,
+        "time": 41.22754502296448,
+        "path_length": 64,
+        "feasible": true,
+        "improvement": 70.9579669220428
+      },
+      "merge": {
+        "cost": 41.860458101424385,
+        "time": 0.010569334030151367,
+        "path_length": 145,
+        "feasible": true,
+        "improvement": 30.338502695186758
+      },
+      "ILS": {
+        "cost": 12.82335603834832,
+        "time": 2.276527166366577,
+        "path_length": 55,
+        "feasible": true,
+        "improvement": 78.66019096256221
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 60.091240815939294
+  },
+  "n=50_alpha=0.0_beta=0.5_seed=577": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 577
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 10.116807601906645,
+        "time": 41.64165115356445,
+        "path_length": 59,
+        "feasible": true,
+        "improvement": 72.01356072910367
+      },
+      "merge": {
+        "cost": 33.1809955754578,
+        "time": 0.008325576782226562,
         "path_length": 125,
         "feasible": true,
-        "improvement": 30.89294951823408
+        "improvement": 8.21038076819614
       },
-      "merge": {
-        "cost": 1012.222393440338,
-        "time": 0.08900070190429688,
-        "path_length": 140,
+      "ILS": {
+        "cost": 8.097435671580396,
+        "time": 1.9741110801696777,
+        "path_length": 54,
         "feasible": true,
-        "improvement": 29.96908454439256
+        "improvement": 77.5998120563284
       }
     },
-    "best_solver": "genetic",
-    "baseline": 1445.393633447481
+    "best_solver": "ILS",
+    "baseline": 36.14896308880322
   },
-  "n=50_alpha=1.0_beta=2_seed=6409": {
+  "n=50_alpha=0.0_beta=1_seed=4647": {
     "params": {
       "n": 50,
-      "alpha": 1.0,
-      "beta": 2,
-      "density": 1.0,
-      "seed": 6409
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 14706.715514405381,
-        "time": 10.273999452590942,
-        "path_length": 20077,
-        "feasible": true,
-        "improvement": 99.41117158581227
-      },
-      "merge": {
-        "cost": 11571.784858245648,
-        "time": 0.6330008506774902,
-        "path_length": 25872,
-        "feasible": true,
-        "improvement": 99.53668813946062
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 2497623.2736140573
-  },
-  "n=50_alpha=2.0_beta=1_seed=2551": {
-    "params": {
-      "n": 50,
-      "alpha": 2.0,
+      "alpha": 0.0,
       "beta": 1,
       "density": 0.2,
-      "seed": 2551
+      "seed": 4647
     },
     "solvers": {
       "genetic": {
-        "cost": 26440.49497598904,
-        "time": 4.778000593185425,
-        "path_length": 179,
+        "cost": 16.354438343281384,
+        "time": 41.35574412345886,
+        "path_length": 63,
         "feasible": true,
-        "improvement": 44.36824852048072
+        "improvement": 73.23995186490326
       },
       "merge": {
-        "cost": 26433.030838347306,
-        "time": 0.07699918746948242,
-        "path_length": 143,
+        "cost": 43.94869288164036,
+        "time": 0.012912750244140625,
+        "path_length": 167,
         "feasible": true,
-        "improvement": 44.38395333427755
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 47527.70544303833
-  },
-  "n=50_alpha=2.0_beta=1_seed=7543": {
-    "params": {
-      "n": 50,
-      "alpha": 2.0,
-      "beta": 1,
-      "density": 0.5,
-      "seed": 7543
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 20693.936577987664,
-        "time": 5.2310075759887695,
-        "path_length": 152,
-        "feasible": true,
-        "improvement": 46.069888345797175
+        "improvement": 28.088686856652373
       },
-      "merge": {
-        "cost": 20685.932751394696,
-        "time": 0.030987262725830078,
-        "path_length": 123,
+      "ILS": {
+        "cost": 12.53477461118328,
+        "time": 2.0515363216400146,
+        "path_length": 55,
         "feasible": true,
-        "improvement": 46.09074698041186
+        "improvement": 79.48989962742118
       }
     },
-    "best_solver": "merge",
-    "baseline": 38371.76661282689
+    "best_solver": "ILS",
+    "baseline": 61.115130513655444
   },
-  "n=50_alpha=2.0_beta=0.5_seed=8447": {
+  "n=50_alpha=0.0_beta=0.5_seed=6048": {
     "params": {
       "n": 50,
-      "alpha": 2.0,
+      "alpha": 0.0,
       "beta": 0.5,
       "density": 1.0,
-      "seed": 8447
+      "seed": 6048
     },
     "solvers": {
       "genetic": {
-        "cost": 768.7395265262895,
-        "time": 9.660998582839966,
-        "path_length": 85,
+        "cost": 9.090959023921595,
+        "time": 41.771371841430664,
+        "path_length": 51,
         "feasible": true,
-        "improvement": 3.882891119615002
+        "improvement": 77.04195678927549
       },
       "merge": {
-        "cost": 799.7946832576539,
-        "time": 0.0769963264465332,
+        "cost": 39.59814405992094,
+        "time": 0.007269382476806641,
         "path_length": 99,
         "feasible": true,
-        "improvement": 0.0
+        "improvement": 5.3831518064449287e-14
+      },
+      "ILS": {
+        "cost": 5.959533044740744,
+        "time": 2.642700433731079,
+        "path_length": 51,
+        "feasible": true,
+        "improvement": 84.94996877701485
       }
     },
-    "best_solver": "genetic",
-    "baseline": 799.7946832576539
+    "best_solver": "ILS",
+    "baseline": 39.59814405992096
   },
-  "n=50_alpha=2.0_beta=2_seed=3116": {
+  "n=50_alpha=0.0_beta=2_seed=273": {
     "params": {
       "n": 50,
-      "alpha": 2.0,
-      "beta": 2,
-      "density": 0.2,
-      "seed": 3116
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 47397.98010075106,
-        "time": 5.284999847412109,
-        "path_length": 102115,
-        "feasible": true,
-        "improvement": 99.89898400099257
-      },
-      "merge": {
-        "cost": 43979.684892418154,
-        "time": 0.8130080699920654,
-        "path_length": 110670,
-        "feasible": true,
-        "improvement": 99.90626917442482
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 46921260.559198365
-  },
-  "n=50_alpha=2.0_beta=1_seed=9572": {
-    "params": {
-      "n": 50,
-      "alpha": 2.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 9572
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 19992.262548434333,
-        "time": 7.773996353149414,
-        "path_length": 96,
-        "feasible": true,
-        "improvement": 0.0035808132503786596
-      },
-      "merge": {
-        "cost": 19992.978459656166,
-        "time": 0.07899665832519531,
-        "path_length": 99,
-        "feasible": true,
-        "improvement": -1.819628233198366e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 19992.978459656162
-  },
-  "n=50_alpha=2.0_beta=2_seed=6579": {
-    "params": {
-      "n": 50,
-      "alpha": 2.0,
-      "beta": 2,
-      "density": 0.5,
-      "seed": 6579
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 31185.699306222843,
-        "time": 4.983993291854858,
-        "path_length": 54320,
-        "feasible": true,
-        "improvement": 99.85762040973407
-      },
-      "merge": {
-        "cost": 26320.853809033106,
-        "time": 0.6409952640533447,
-        "path_length": 61748,
-        "feasible": true,
-        "improvement": 99.87983106153943
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 21903209.05403465
-  },
-  "n=50_alpha=2.0_beta=2_seed=8340": {
-    "params": {
-      "n": 50,
-      "alpha": 2.0,
-      "beta": 2,
-      "density": 1.0,
-      "seed": 8340
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 33283.442282076954,
-        "time": 9.09399962425232,
-        "path_length": 40656,
-        "feasible": true,
-        "improvement": 99.68366022930623
-      },
-      "merge": {
-        "cost": 26374.047339763034,
-        "time": 0.8020060062408447,
-        "path_length": 50608,
-        "feasible": true,
-        "improvement": 99.74933001169111
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 10521422.01692887
-  },
-  "n=100_alpha=0.0_beta=0.5_seed=8655": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 0.2,
-      "seed": 8655
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 45.43587480621212,
-        "time": 14.510996341705322,
-        "path_length": 187,
-        "feasible": true,
-        "improvement": 76.88509640262595
-      },
-      "merge": {
-        "cost": 76.98142931028946,
-        "time": 0.11100244522094727,
-        "path_length": 335,
-        "feasible": true,
-        "improvement": 60.83671053138568
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 196.56527925720536
-  },
-  "n=100_alpha=0.0_beta=0.5_seed=6109": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 1.0,
-      "seed": 6109
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 34.396147561707444,
-        "time": 20.533084869384766,
-        "path_length": 101,
-        "feasible": true,
-        "improvement": 56.844472636261344
-      },
-      "merge": {
-        "cost": 79.70276268853746,
-        "time": 0.13798856735229492,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": -7.131925788186393e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 79.7027626885374
-  },
-  "n=100_alpha=0.0_beta=0.5_seed=2369": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 0.5,
-      "density": 0.5,
-      "seed": 2369
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 32.68683914207248,
-        "time": 26.227601766586304,
-        "path_length": 146,
-        "feasible": true,
-        "improvement": 76.57634497389307
-      },
-      "merge": {
-        "cost": 68.44946913435653,
-        "time": 0.5190010070800781,
-        "path_length": 277,
-        "feasible": true,
-        "improvement": 50.94855318513789
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 139.5462796290384
-  },
-  "n=100_alpha=0.0_beta=1_seed=6604": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 1,
-      "density": 0.2,
-      "seed": 6604
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 43.29526599246327,
-        "time": 20.550607681274414,
-        "path_length": 183,
-        "feasible": true,
-        "improvement": 70.34950752370636
-      },
-      "merge": {
-        "cost": 69.60014893359696,
-        "time": 0.15899968147277832,
-        "path_length": 293,
-        "feasible": true,
-        "improvement": 52.33477275174212
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 146.01870787501758
-  },
-  "n=100_alpha=0.0_beta=1_seed=2819": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 1,
-      "density": 0.5,
-      "seed": 2819
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 31.287907243793715,
-        "time": 15.878648042678833,
-        "path_length": 146,
-        "feasible": true,
-        "improvement": 74.8382720026534
-      },
-      "merge": {
-        "cost": 65.52561748441178,
-        "time": 0.10996675491333008,
-        "path_length": 265,
-        "feasible": true,
-        "improvement": 47.30431309598078
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 124.34721195258581
-  },
-  "n=100_alpha=0.0_beta=1_seed=7306": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 7306
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 32.95686507794981,
-        "time": 15.07953691482544,
-        "path_length": 101,
-        "feasible": true,
-        "improvement": 56.31641796445845
-      },
-      "merge": {
-        "cost": 75.44451151266777,
-        "time": 0.18404126167297363,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": -1.8836167708257856e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 75.44451151266776
-  },
-  "n=100_alpha=0.0_beta=2_seed=4264": {
-    "params": {
-      "n": 100,
       "alpha": 0.0,
       "beta": 2,
       "density": 0.2,
-      "seed": 4264
+      "seed": 273
     },
     "solvers": {
       "genetic": {
-        "cost": 43.34140220463622,
-        "time": 16.842003345489502,
-        "path_length": 173,
+        "cost": 17.127796917211434,
+        "time": 41.476937770843506,
+        "path_length": 65,
         "feasible": true,
-        "improvement": 72.94545766702053
+        "improvement": 80.02985876308625
       },
       "merge": {
-        "cost": 68.32977769258241,
-        "time": 0.18999004364013672,
-        "path_length": 325,
-        "feasible": true,
-        "improvement": 57.34722991981786
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 160.20009383711906
-  },
-  "n=100_alpha=0.0_beta=2_seed=3035": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 2,
-      "density": 1.0,
-      "seed": 3035
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 28.918199635538727,
-        "time": 14.362013339996338,
-        "path_length": 101,
-        "feasible": true,
-        "improvement": 60.98790326846557
-      },
-      "merge": {
-        "cost": 74.12623790651952,
-        "time": 0.17303204536437988,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": -3.834230662865501e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 74.12623790651949
-  },
-  "n=100_alpha=0.0_beta=2_seed=4171": {
-    "params": {
-      "n": 100,
-      "alpha": 0.0,
-      "beta": 2,
-      "density": 0.5,
-      "seed": 4171
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 32.25464094764419,
-        "time": 18.874005556106567,
-        "path_length": 143,
-        "feasible": true,
-        "improvement": 71.9347703332153
-      },
-      "merge": {
-        "cost": 63.490465249873054,
-        "time": 0.32996177673339844,
-        "path_length": 245,
-        "feasible": true,
-        "improvement": 44.75602776725856
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 114.92740779462662
-  },
-  "n=100_alpha=1.0_beta=0.5_seed=2617": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 0.5,
-      "density": 0.2,
-      "seed": 2617
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 2050.482494780803,
-        "time": 10.90900444984436,
-        "path_length": 357,
-        "feasible": true,
-        "improvement": 19.5766945111796
-      },
-      "merge": {
-        "cost": 1793.0828564982894,
-        "time": 0.06200385093688965,
-        "path_length": 333,
-        "feasible": true,
-        "improvement": 29.672332876782615
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 2549.6123074247917
-  },
-  "n=100_alpha=1.0_beta=0.5_seed=1338": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 0.5,
-      "density": 1.0,
-      "seed": 1338
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 1259.2191957750495,
-        "time": 15.249006032943726,
-        "path_length": 169,
-        "feasible": true,
-        "improvement": 6.038125881840692
-      },
-      "merge": {
-        "cost": 1340.1384418871332,
-        "time": 0.15599370002746582,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": -1.6966431850358155e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 1340.138441887133
-  },
-  "n=100_alpha=1.0_beta=1_seed=945": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 1,
-      "density": 0.5,
-      "seed": 945
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 20525.914015272985,
-        "time": 12.301060199737549,
-        "path_length": 280,
-        "feasible": true,
-        "improvement": 34.05302766852523
-      },
-      "merge": {
-        "cost": 20515.98764872749,
-        "time": 0.07656526565551758,
-        "path_length": 243,
-        "feasible": true,
-        "improvement": 34.08491973527757
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 31124.876987683183
-  },
-  "n=100_alpha=1.0_beta=0.5_seed=5896": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 0.5,
-      "density": 0.5,
-      "seed": 5896
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 1538.9852153633362,
-        "time": 20.40265917778015,
-        "path_length": 266,
-        "feasible": true,
-        "improvement": 33.075790401052195
-      },
-      "merge": {
-        "cost": 1436.9551474866958,
-        "time": 0.2849617004394531,
-        "path_length": 269,
-        "feasible": true,
-        "improvement": 37.512663205161026
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 2299.5941597008155
-  },
-  "n=100_alpha=1.0_beta=1_seed=5856": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 1,
-      "density": 0.2,
-      "seed": 5856
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 24546.967652753385,
-        "time": 19.323596954345703,
-        "path_length": 397,
-        "feasible": true,
-        "improvement": 43.01412205672962
-      },
-      "merge": {
-        "cost": 24526.00331213778,
-        "time": 0.09303641319274902,
-        "path_length": 299,
-        "feasible": true,
-        "improvement": 43.06279085250033
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 43075.52772493909
-  },
-  "n=100_alpha=1.0_beta=2_seed=3038": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 2,
-      "density": 0.2,
-      "seed": 3038
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 29017.01388922847,
-        "time": 11.857004404067993,
-        "path_length": 66931,
-        "feasible": true,
-        "improvement": 99.72536191991527
-      },
-      "merge": {
-        "cost": 26687.622847006154,
-        "time": 0.49703359603881836,
-        "path_length": 81143,
-        "feasible": true,
-        "improvement": 99.74740896741798
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 10565546.438525993
-  },
-  "n=100_alpha=1.0_beta=1_seed=4194": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 4194
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 20985.918156251024,
-        "time": 14.06762981414795,
-        "path_length": 196,
-        "feasible": true,
-        "improvement": -0.022235668730134855
-      },
-      "merge": {
-        "cost": 20981.25283437534,
-        "time": 0.07603263854980469,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": 0.0
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 20981.25283437534
-  },
-  "n=100_alpha=2.0_beta=0.5_seed=5493": {
-    "params": {
-      "n": 100,
-      "alpha": 2.0,
-      "beta": 0.5,
-      "density": 0.2,
-      "seed": 5493
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 2949.840286055307,
-        "time": 12.077038288116455,
-        "path_length": 384,
-        "feasible": true,
-        "improvement": 21.29574642820321
-      },
-      "merge": {
-        "cost": 2592.5549664082055,
-        "time": 0.062001705169677734,
-        "path_length": 325,
-        "feasible": true,
-        "improvement": 30.82842334224367
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 3748.0061777910882
-  },
-  "n=100_alpha=2.0_beta=0.5_seed=8129": {
-    "params": {
-      "n": 100,
-      "alpha": 2.0,
-      "beta": 0.5,
-      "density": 0.5,
-      "seed": 8129
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 2141.801431757994,
-        "time": 12.923102378845215,
-        "path_length": 255,
-        "feasible": true,
-        "improvement": 21.64749378188788
-      },
-      "merge": {
-        "cost": 2066.1887609525807,
-        "time": 0.0919656753540039,
-        "path_length": 285,
-        "feasible": true,
-        "improvement": 24.413596265340995
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 2733.5455304975185
-  },
-  "n=100_alpha=1.0_beta=2_seed=1938": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 2,
-      "density": 0.5,
-      "seed": 1938
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 29825.05454059123,
-        "time": 22.018041849136353,
-        "path_length": 52214,
-        "feasible": true,
-        "improvement": 99.7711540104789
-      },
-      "merge": {
-        "cost": 24160.555526695643,
-        "time": 0.683992862701416,
-        "path_length": 64958,
-        "feasible": true,
-        "improvement": 99.81461739728384
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 13032806.30043144
-  },
-  "n=100_alpha=1.0_beta=2_seed=7474": {
-    "params": {
-      "n": 100,
-      "alpha": 1.0,
-      "beta": 2,
-      "density": 1.0,
-      "seed": 7474
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 30726.846653302735,
-        "time": 23.17803144454956,
-        "path_length": 40131,
-        "feasible": true,
-        "improvement": 99.33828053283575
-      },
-      "merge": {
-        "cost": 21634.299978957646,
-        "time": 0.8370358943939209,
-        "path_length": 56579,
-        "feasible": true,
-        "improvement": 99.53409350409186
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 4643485.370769148
-  },
-  "n=100_alpha=2.0_beta=1_seed=1270": {
-    "params": {
-      "n": 100,
-      "alpha": 2.0,
-      "beta": 1,
-      "density": 0.2,
-      "seed": 1270
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 47393.53834771268,
-        "time": 11.190995216369629,
-        "path_length": 420,
-        "feasible": true,
-        "improvement": 44.95990566059566
-      },
-      "merge": {
-        "cost": 47358.6417268233,
-        "time": 0.06333756446838379,
-        "path_length": 321,
-        "feasible": true,
-        "improvement": 45.00043256305621
-      }
-    },
-    "best_solver": "merge",
-    "baseline": 86107.29853670085
-  },
-  "n=100_alpha=2.0_beta=0.5_seed=6666": {
-    "params": {
-      "n": 100,
-      "alpha": 2.0,
-      "beta": 0.5,
-      "density": 1.0,
-      "seed": 6666
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 1804.4531832590208,
-        "time": 13.951138734817505,
+        "cost": 60.35617689221948,
+        "time": 0.025257587432861328,
         "path_length": 175,
         "feasible": true,
-        "improvement": 5.2336686221962605
+        "improvement": 29.62776340215908
       },
-      "merge": {
-        "cost": 1904.10787990223,
-        "time": 0.12099218368530273,
-        "path_length": 199,
+      "ILS": {
+        "cost": 26.116171027544848,
+        "time": 1.0929834842681885,
+        "path_length": 90,
         "feasible": true,
-        "improvement": 1.1941218133864714e-14
+        "improvement": 69.54987109501658
       }
     },
     "best_solver": "genetic",
-    "baseline": 1904.1078799022303
+    "baseline": 85.76702945671512
   },
-  "n=100_alpha=2.0_beta=1_seed=6438": {
+  "n=50_alpha=0.0_beta=1_seed=6430": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 6430
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 10.415887678645305,
+        "time": 42.159323930740356,
+        "path_length": 55,
+        "feasible": true,
+        "improvement": 70.8486960410109
+      },
+      "merge": {
+        "cost": 30.235811342535214,
+        "time": 0.014754295349121094,
+        "path_length": 127,
+        "feasible": true,
+        "improvement": 15.377992343372563
+      },
+      "ILS": {
+        "cost": 8.492030139292039,
+        "time": 2.409818172454834,
+        "path_length": 54,
+        "feasible": true,
+        "improvement": 76.23306246601194
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 35.73043488311424
+  },
+  "n=50_alpha=0.0_beta=2_seed=3847": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 3847
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 10.373484794420195,
+        "time": 40.93493366241455,
+        "path_length": 59,
+        "feasible": true,
+        "improvement": 76.39535886534817
+      },
+      "merge": {
+        "cost": 35.03870870512663,
+        "time": 0.013119697570800781,
+        "path_length": 133,
+        "feasible": true,
+        "improvement": 20.270173312348035
+      },
+      "ILS": {
+        "cost": 14.57417300078967,
+        "time": 1.644881248474121,
+        "path_length": 68,
+        "feasible": true,
+        "improvement": 66.836783363001
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 43.9468015431585
+  },
+  "n=50_alpha=0.0_beta=1_seed=6050": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 6050
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7.866551254859873,
+        "time": 42.98175001144409,
+        "path_length": 51,
+        "feasible": true,
+        "improvement": 78.04475780723493
+      },
+      "merge": {
+        "cost": 35.82994523946608,
+        "time": 0.013459920883178711,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": -3.9661949300299216e-14
+      },
+      "ILS": {
+        "cost": 5.5703064546611145,
+        "time": 3.310964584350586,
+        "path_length": 51,
+        "feasible": true,
+        "improvement": 84.45348878589543
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 35.82994523946606
+  },
+  "n=50_alpha=0.0_beta=2_seed=7406": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 7406
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 8.151880587882639,
+        "time": 42.527438163757324,
+        "path_length": 51,
+        "feasible": true,
+        "improvement": 78.15206723291601
+      },
+      "merge": {
+        "cost": 37.311908063742436,
+        "time": 0.025676250457763672,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": -1.9043323502679964e-14
+      },
+      "ILS": {
+        "cost": 11.606317783519,
+        "time": 1.3604886531829834,
+        "path_length": 61,
+        "feasible": true,
+        "improvement": 68.89379721966738
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 37.31190806374243
+  },
+  "n=50_alpha=0.0_beta=4_seed=3632": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 3632
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 17.138736901724762,
+        "time": 41.59405159950256,
+        "path_length": 68,
+        "feasible": true,
+        "improvement": 67.9516746276396
+      },
+      "merge": {
+        "cost": 39.144956912088574,
+        "time": 0.00703120231628418,
+        "path_length": 165,
+        "feasible": true,
+        "improvement": 26.801471835454056
+      },
+      "ILS": {
+        "cost": 20.250877137145913,
+        "time": 0.8428828716278076,
+        "path_length": 84,
+        "feasible": true,
+        "improvement": 62.13217442519737
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 53.47779237321963
+  },
+  "n=50_alpha=0.0_beta=4_seed=6637": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 6637
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 10.243722825818958,
+        "time": 41.66199612617493,
+        "path_length": 56,
+        "feasible": true,
+        "improvement": 74.84601432113432
+      },
+      "merge": {
+        "cost": 33.16168249120514,
+        "time": 0.01619434356689453,
+        "path_length": 135,
+        "feasible": true,
+        "improvement": 18.56979140743424
+      },
+      "ILS": {
+        "cost": 13.726585180823191,
+        "time": 1.4106032848358154,
+        "path_length": 70,
+        "feasible": true,
+        "improvement": 66.29366755337287
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 40.7240544564105
+  },
+  "n=50_alpha=0.0_beta=4_seed=9917": {
+    "params": {
+      "n": 50,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 9917
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 8.140923849034019,
+        "time": 41.62599420547485,
+        "path_length": 51,
+        "feasible": true,
+        "improvement": 77.46070366793208
+      },
+      "merge": {
+        "cost": 36.11880215378093,
+        "time": 0.014382362365722656,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": 5.901713457175544e-14
+      },
+      "ILS": {
+        "cost": 11.146986248445279,
+        "time": 1.687990665435791,
+        "path_length": 61,
+        "feasible": true,
+        "improvement": 69.1379957702213
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 36.118802153780955
+  },
+  "n=50_alpha=1.0_beta=0.5_seed=8790": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 8790
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1237.7976329344228,
+        "time": 42.91032958030701,
+        "path_length": 135,
+        "feasible": true,
+        "improvement": 19.087385417231857
+      },
+      "merge": {
+        "cost": 1291.314220272119,
+        "time": 0.02439141273498535,
+        "path_length": 192,
+        "feasible": true,
+        "improvement": 15.589101941947925
+      },
+      "ILS": {
+        "cost": 1180.5593798845803,
+        "time": 2.1228137016296387,
+        "path_length": 133,
+        "feasible": true,
+        "improvement": 22.828947515257152
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 1529.7956187885134
+  },
+  "n=50_alpha=1.0_beta=0.5_seed=7678": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 7678
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 721.0956791740799,
+        "time": 43.63118863105774,
+        "path_length": 100,
+        "feasible": true,
+        "improvement": 13.200320360122342
+      },
+      "merge": {
+        "cost": 751.3920354294607,
+        "time": 0.012307167053222656,
+        "path_length": 125,
+        "feasible": true,
+        "improvement": 9.553489442712532
+      },
+      "ILS": {
+        "cost": 721.6500809202784,
+        "time": 2.8445324897766113,
+        "path_length": 96,
+        "feasible": true,
+        "improvement": 13.133585951150522
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 830.7584569042498
+  },
+  "n=50_alpha=1.0_beta=1_seed=5930": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 5930
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 13037.285012835177,
+        "time": 44.602017402648926,
+        "path_length": 165,
+        "feasible": true,
+        "improvement": 0.08900724894464117
+      },
+      "merge": {
+        "cost": 13033.547252189384,
+        "time": 0.006551980972290039,
+        "path_length": 151,
+        "feasible": true,
+        "improvement": 0.11765150857532848
+      },
+      "ILS": {
+        "cost": 13036.622696856432,
+        "time": 1.853142261505127,
+        "path_length": 161,
+        "feasible": true,
+        "improvement": 0.09408289520735275
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 13048.899479279235
+  },
+  "n=50_alpha=1.0_beta=0.5_seed=3164": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 3164
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 614.8207281134605,
+        "time": 43.77326560020447,
+        "path_length": 73,
+        "feasible": true,
+        "improvement": 11.759242456560244
+      },
+      "merge": {
+        "cost": 696.7536830254347,
+        "time": 0.0077669620513916016,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": -1.6316646828182745e-14
+      },
+      "ILS": {
+        "cost": 618.116137633485,
+        "time": 3.4930903911590576,
+        "path_length": 73,
+        "feasible": true,
+        "improvement": 11.286276241912454
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 696.7536830254346
+  },
+  "n=50_alpha=1.0_beta=1_seed=1703": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 1703
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 7993.433297403002,
+        "time": 43.12271213531494,
+        "path_length": 114,
+        "feasible": true,
+        "improvement": 0.07977195273555
+      },
+      "merge": {
+        "cost": 7994.852643797872,
+        "time": 0.015452146530151367,
+        "path_length": 115,
+        "feasible": true,
+        "improvement": 0.06202971230183008
+      },
+      "ILS": {
+        "cost": 7993.937630526238,
+        "time": 2.4891600608825684,
+        "path_length": 114,
+        "feasible": true,
+        "improvement": 0.07346764283383969
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 7999.814905968723
+  },
+  "n=50_alpha=1.0_beta=1_seed=3577": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 3577
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 9535.68534863604,
+        "time": 44.69207739830017,
+        "path_length": 84,
+        "feasible": true,
+        "improvement": 0.07704250973115258
+      },
+      "merge": {
+        "cost": 9543.037544264722,
+        "time": 0.013600826263427734,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": 5.71827176129801e-14
+      },
+      "ILS": {
+        "cost": 9538.277147122511,
+        "time": 2.5718164443969727,
+        "path_length": 91,
+        "feasible": true,
+        "improvement": 0.0498834581770752
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 9543.037544264727
+  },
+  "n=50_alpha=1.0_beta=2_seed=9515": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 9515
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 15262.652940842157,
+        "time": 44.01972007751465,
+        "path_length": 22110,
+        "feasible": true,
+        "improvement": 99.41600711614431
+      },
+      "merge": {
+        "cost": 11667.7862966224,
+        "time": 0.22615838050842285,
+        "path_length": 29557,
+        "feasible": true,
+        "improvement": 99.55355702616137
+      },
+      "ILS": {
+        "cost": 328774.9787574772,
+        "time": 22.307546854019165,
+        "path_length": 882981,
+        "feasible": true,
+        "improvement": 87.4201261911433
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 2613499.8152843746
+  },
+  "n=50_alpha=1.0_beta=2_seed=300": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 300
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 17290.518242281203,
+        "time": 43.93731427192688,
+        "path_length": 30846,
+        "feasible": true,
+        "improvement": 99.30726027289816
+      },
+      "merge": {
+        "cost": 16220.074878075817,
+        "time": 0.19729065895080566,
+        "path_length": 34495,
+        "feasible": true,
+        "improvement": 99.35014728377934
+      },
+      "ILS": {
+        "cost": 362207.13888347463,
+        "time": 31.731565713882446,
+        "path_length": 1414357,
+        "feasible": true,
+        "improvement": 85.48827333984113
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 2495961.696121896
+  },
+  "n=50_alpha=1.0_beta=4_seed=3720": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 3720
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 13579.54744867947,
+        "time": 43.66087603569031,
+        "path_length": 27181,
+        "feasible": true,
+        "improvement": 99.99999718644064
+      },
+      "merge": {
+        "cost": 10871.080061156032,
+        "time": 0.23846697807312012,
+        "path_length": 37154,
+        "feasible": true,
+        "improvement": 99.99999774761056
+      },
+      "ILS": {
+        "cost": 414064.7271508202,
+        "time": 26.366515398025513,
+        "path_length": 1043897,
+        "feasible": true,
+        "improvement": 99.99991420953475
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 482646557441.3159
+  },
+  "n=50_alpha=1.0_beta=4_seed=7475": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 7475
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 12508.45169304845,
+        "time": 44.75006628036499,
+        "path_length": 33192,
+        "feasible": true,
+        "improvement": 99.99999544770365
+      },
+      "merge": {
+        "cost": 10372.599286437564,
+        "time": 0.20143556594848633,
+        "path_length": 34837,
+        "feasible": true,
+        "improvement": 99.99999622502072
+      },
+      "ILS": {
+        "cost": 360653.77543346176,
+        "time": 31.175423860549927,
+        "path_length": 1339501,
+        "feasible": true,
+        "improvement": 99.99986874451704
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 274772350305.36172
+  },
+  "n=50_alpha=1.0_beta=2_seed=1633": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 1633
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 28798.474800703447,
+        "time": 43.62113666534424,
+        "path_length": 50353,
+        "feasible": true,
+        "improvement": 99.30269749897735
+      },
+      "merge": {
+        "cost": 26535.487545817294,
+        "time": 0.27838993072509766,
+        "path_length": 50769,
+        "feasible": true,
+        "improvement": 99.35749160469076
+      },
+      "ILS": {
+        "cost": 599362.5126110507,
+        "time": 42.97189521789551,
+        "path_length": 2105191,
+        "feasible": true,
+        "improvement": 85.48753078226585
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 4129983.007155207
+  },
+  "n=50_alpha=2.0_beta=0.5_seed=1326": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 1326
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1210.2957088019443,
+        "time": 45.581870555877686,
+        "path_length": 140,
+        "feasible": true,
+        "improvement": 16.974711328164915
+      },
+      "merge": {
+        "cost": 1191.7531825235294,
+        "time": 0.01137995719909668,
+        "path_length": 156,
+        "feasible": true,
+        "improvement": 18.246713356904166
+      },
+      "ILS": {
+        "cost": 1186.9432866812235,
+        "time": 2.267631769180298,
+        "path_length": 129,
+        "feasible": true,
+        "improvement": 18.576668249650346
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 1457.7434516195985
+  },
+  "n=50_alpha=2.0_beta=0.5_seed=5429": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 5429
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 995.9323417833007,
+        "time": 45.49619102478027,
+        "path_length": 102,
+        "feasible": true,
+        "improvement": 17.56594539747627
+      },
+      "merge": {
+        "cost": 1054.1418357448417,
+        "time": 0.011448860168457031,
+        "path_length": 114,
+        "feasible": true,
+        "improvement": 12.747902642665304
+      },
+      "ILS": {
+        "cost": 1001.2104026083766,
+        "time": 2.452679395675659,
+        "path_length": 91,
+        "feasible": true,
+        "improvement": 17.129076409497948
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 1208.1564428505135
+  },
+  "n=50_alpha=1.0_beta=4_seed=1801": {
+    "params": {
+      "n": 50,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 1801
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 16536.315433667638,
+        "time": 43.49742674827576,
+        "path_length": 44928,
+        "feasible": true,
+        "improvement": 99.9999957726283
+      },
+      "merge": {
+        "cost": 15137.352654988374,
+        "time": 0.3069148063659668,
+        "path_length": 49521,
+        "feasible": true,
+        "improvement": 99.99999613026151
+      },
+      "ILS": {
+        "cost": 477352.5080753921,
+        "time": 42.15233850479126,
+        "path_length": 1960401,
+        "feasible": true,
+        "improvement": 99.9998779687955
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 391172495607.4489
+  },
+  "n=50_alpha=2.0_beta=0.5_seed=6862": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 6862
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 811.5197100683912,
+        "time": 42.82846713066101,
+        "path_length": 76,
+        "feasible": true,
+        "improvement": 10.701155623602132
+      },
+      "merge": {
+        "cost": 908.7684345026978,
+        "time": 0.01640939712524414,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": -1.250998971853908e-14
+      },
+      "ILS": {
+        "cost": 809.6104991149803,
+        "time": 2.8234405517578125,
+        "path_length": 74,
+        "feasible": true,
+        "improvement": 10.911243351226133
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 908.7684345026977
+  },
+  "n=50_alpha=2.0_beta=1_seed=3205": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 3205
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 21357.183348693165,
+        "time": 44.21896481513977,
+        "path_length": 181,
+        "feasible": true,
+        "improvement": 0.03360746298969204
+      },
+      "merge": {
+        "cost": 21356.26020689169,
+        "time": 0.010505199432373047,
+        "path_length": 175,
+        "feasible": true,
+        "improvement": 0.037928405231321176
+      },
+      "ILS": {
+        "cost": 21357.66593026825,
+        "time": 2.159827709197998,
+        "path_length": 191,
+        "feasible": true,
+        "improvement": 0.03134864737817602
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 21364.363369205454
+  },
+  "n=50_alpha=2.0_beta=1_seed=9155": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 9155
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 26828.21003508707,
+        "time": 44.39786076545715,
+        "path_length": 149,
+        "feasible": true,
+        "improvement": 0.030863108313210225
+      },
+      "merge": {
+        "cost": 26825.198328731094,
+        "time": 0.014405012130737305,
+        "path_length": 137,
+        "feasible": true,
+        "improvement": 0.04208553741244951
+      },
+      "ILS": {
+        "cost": 26824.753416005362,
+        "time": 3.3407340049743652,
+        "path_length": 136,
+        "feasible": true,
+        "improvement": 0.04374340206780296
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 26836.49261086903
+  },
+  "n=50_alpha=2.0_beta=1_seed=6158": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 6158
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 18323.428681635694,
+        "time": 43.94234895706177,
+        "path_length": 90,
+        "feasible": true,
+        "improvement": 0.018523699923663504
+      },
+      "merge": {
+        "cost": 18326.823487424044,
+        "time": 0.013440370559692383,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 18325.48309051082,
+        "time": 3.2769887447357178,
+        "path_length": 96,
+        "feasible": true,
+        "improvement": 0.007313852911515284
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 18326.823487424044
+  },
+  "n=50_alpha=4.0_beta=0.5_seed=5844": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 5844
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2301.0081165259185,
+        "time": 43.67950105667114,
+        "path_length": 171,
+        "feasible": true,
+        "improvement": 16.083780664354457
+      },
+      "merge": {
+        "cost": 2311.8670139274577,
+        "time": 0.017317771911621094,
+        "path_length": 189,
+        "feasible": true,
+        "improvement": 15.68776397517101
+      },
+      "ILS": {
+        "cost": 2218.1646627940013,
+        "time": 2.688181161880493,
+        "path_length": 137,
+        "feasible": true,
+        "improvement": 19.10502573687772
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 2742.030247242689
+  },
+  "n=50_alpha=4.0_beta=0.5_seed=9407": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 9407
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1471.5362394175588,
+        "time": 44.54143667221069,
+        "path_length": 114,
+        "feasible": true,
+        "improvement": 10.313423418773414
+      },
+      "merge": {
+        "cost": 1458.015055129847,
+        "time": 0.015254735946655273,
+        "path_length": 124,
+        "feasible": true,
+        "improvement": 11.137506915737594
+      },
+      "ILS": {
+        "cost": 1476.3738609355798,
+        "time": 2.8231849670410156,
+        "path_length": 109,
+        "feasible": true,
+        "improvement": 10.018582081451875
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 1640.754163567421
+  },
+  "n=50_alpha=2.0_beta=2_seed=8140": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 8140
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 27745.709876518515,
+        "time": 44.315672159194946,
+        "path_length": 36909,
+        "feasible": true,
+        "improvement": 99.63560534277016
+      },
+      "merge": {
+        "cost": 22739.7593328191,
+        "time": 0.26059699058532715,
+        "path_length": 44533,
+        "feasible": true,
+        "improvement": 99.70135034048691
+      },
+      "ILS": {
+        "cost": 630788.0977393346,
+        "time": 39.69056272506714,
+        "path_length": 1583877,
+        "feasible": true,
+        "improvement": 91.71562689571292
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 7614192.284663119
+  },
+  "n=50_alpha=2.0_beta=2_seed=3900": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 3900
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 40525.08277567517,
+        "time": 43.90489220619202,
+        "path_length": 71640,
+        "feasible": true,
+        "improvement": 99.65551794534335
+      },
+      "merge": {
+        "cost": 37234.69949256429,
+        "time": 0.45714235305786133,
+        "path_length": 75294,
+        "feasible": true,
+        "improvement": 99.68348773383825
+      },
+      "ILS": {
+        "cost": 813244.317050368,
+        "time": 63.84593963623047,
+        "path_length": 2983177,
+        "feasible": true,
+        "improvement": 93.08704500799905
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 11764062.083311431
+  },
+  "n=50_alpha=4.0_beta=0.5_seed=8946": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 8946
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1048.0144671360222,
+        "time": 45.301400899887085,
+        "path_length": 77,
+        "feasible": true,
+        "improvement": 10.702179348289622
+      },
+      "merge": {
+        "cost": 1173.6170709289854,
+        "time": 0.014126300811767578,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": 1.9373753251838155e-14
+      },
+      "ILS": {
+        "cost": 1049.3762476322133,
+        "time": 2.8522887229919434,
+        "path_length": 76,
+        "feasible": true,
+        "improvement": 10.58614656980309
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 1173.6170709289856
+  },
+  "n=50_alpha=2.0_beta=4_seed=2281": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 2281
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 22276.760166502863,
+        "time": 43.67937922477722,
+        "path_length": 62323,
+        "feasible": true,
+        "improvement": 99.99999956201033
+      },
+      "merge": {
+        "cost": 18968.75327856657,
+        "time": 0.369978666305542,
+        "path_length": 67166,
+        "feasible": true,
+        "improvement": 99.99999962704999
+      },
+      "ILS": {
+        "cost": 729325.4461234597,
+        "time": 62.98270893096924,
+        "path_length": 2749545,
+        "feasible": true,
+        "improvement": 99.99998566052624
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 5086138154752.129
+  },
+  "n=50_alpha=2.0_beta=2_seed=6096": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 6096
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 68842.99882511859,
+        "time": 43.497406005859375,
+        "path_length": 104653,
+        "feasible": true,
+        "improvement": 99.67483539230113
+      },
+      "merge": {
+        "cost": 66481.77143557415,
+        "time": 0.6782991886138916,
+        "path_length": 116839,
+        "feasible": true,
+        "improvement": 99.68598812519934
+      },
+      "ILS": {
+        "cost": 1231362.561334954,
+        "time": 89.41836142539978,
+        "path_length": 4036135,
+        "feasible": true,
+        "improvement": 94.18393255632742
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 21171738.00442391
+  },
+  "n=50_alpha=4.0_beta=1_seed=3736": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 3736
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 73601.73948145553,
+        "time": 45.23830008506775,
+        "path_length": 182,
+        "feasible": true,
+        "improvement": 0.018796061771930384
+      },
+      "merge": {
+        "cost": 73595.92518768442,
+        "time": 0.006490945816040039,
+        "path_length": 159,
+        "feasible": true,
+        "improvement": 0.026694245909718237
+      },
+      "ILS": {
+        "cost": 73599.0603803762,
+        "time": 1.822801113128662,
+        "path_length": 172,
+        "feasible": true,
+        "improvement": 0.022435374555434793
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 73615.57631065264
+  },
+  "n=50_alpha=4.0_beta=1_seed=9618": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 9618
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 36224.097186822124,
+        "time": 46.838539361953735,
+        "path_length": 134,
+        "feasible": true,
+        "improvement": 0.011436093061239298
+      },
+      "merge": {
+        "cost": 36224.121769923135,
+        "time": 0.015207529067993164,
+        "path_length": 131,
+        "feasible": true,
+        "improvement": 0.011368236878274767
+      },
+      "ILS": {
+        "cost": 36225.92820950444,
+        "time": 2.9666101932525635,
+        "path_length": 145,
+        "feasible": true,
+        "improvement": 0.006381962173129639
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 36228.240282095234
+  },
+  "n=50_alpha=2.0_beta=4_seed=7735": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 7735
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 22822.74733059163,
+        "time": 44.96320033073425,
+        "path_length": 49627,
+        "feasible": true,
+        "improvement": 99.99999962435258
+      },
+      "merge": {
+        "cost": 18034.600471580656,
+        "time": 0.45143818855285645,
+        "path_length": 60927,
+        "feasible": true,
+        "improvement": 99.99999970316233
+      },
+      "ILS": {
+        "cost": 950704.7357680422,
+        "time": 59.3999388217926,
+        "path_length": 2497531,
+        "feasible": true,
+        "improvement": 99.99998435202511
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 6075576820083.649
+  },
+  "n=50_alpha=2.0_beta=4_seed=2228": {
+    "params": {
+      "n": 50,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 2228
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 33971.46088596781,
+        "time": 43.71707844734192,
+        "path_length": 115787,
+        "feasible": true,
+        "improvement": 99.99999935322776
+      },
+      "merge": {
+        "cost": 33817.85239120242,
+        "time": 0.6432385444641113,
+        "path_length": 121934,
+        "feasible": true,
+        "improvement": 99.99999935615227
+      },
+      "ILS": {
+        "cost": 1042826.4604088397,
+        "time": 101.92474317550659,
+        "path_length": 4923361,
+        "feasible": true,
+        "improvement": 99.99998014594652
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 5252461221555.887
+  },
+  "n=50_alpha=4.0_beta=1_seed=1087": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 1087
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 38094.86462400941,
+        "time": 43.94579815864563,
+        "path_length": 92,
+        "feasible": true,
+        "improvement": 0.005248695543941872
+      },
+      "merge": {
+        "cost": 38096.8642124237,
+        "time": 0.01651787757873535,
+        "path_length": 99,
+        "feasible": true,
+        "improvement": 1.9098573503618376e-14
+      },
+      "ILS": {
+        "cost": 38095.58709750463,
+        "time": 3.3186209201812744,
+        "path_length": 95,
+        "feasible": true,
+        "improvement": 0.0033522835684327425
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 38096.86421242371
+  },
+  "n=50_alpha=4.0_beta=2_seed=32": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 32
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 57262.45174210348,
+        "time": 44.03761839866638,
+        "path_length": 75600,
+        "feasible": true,
+        "improvement": 99.85496844399867
+      },
+      "merge": {
+        "cost": 47200.81073619993,
+        "time": 0.5066468715667725,
+        "path_length": 90387,
+        "feasible": true,
+        "improvement": 99.88045207955072
+      },
+      "ILS": {
+        "cost": 1091824.8606251145,
+        "time": 72.76530766487122,
+        "path_length": 2751841,
+        "feasible": true,
+        "improvement": 97.23467903311996
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 39482753.492335446
+  },
+  "n=50_alpha=4.0_beta=4_seed=9542": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 9542
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 50048.91851531979,
+        "time": 44.521677017211914,
+        "path_length": 103363,
+        "feasible": true,
+        "improvement": 99.99999993017826
+      },
+      "merge": {
+        "cost": 36694.59584929079,
+        "time": 0.7663781642913818,
+        "path_length": 131179,
+        "feasible": true,
+        "improvement": 99.99999994880848
+      },
+      "ILS": {
+        "cost": 1371191.7473638703,
+        "time": 90.96067500114441,
+        "path_length": 3579549,
+        "feasible": true,
+        "improvement": 99.99999808709194
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 71681006867294.25
+  },
+  "n=50_alpha=4.0_beta=2_seed=2899": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 2899
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 59091.97475832298,
+        "time": 45.200026512145996,
+        "path_length": 101358,
+        "feasible": true,
+        "improvement": 99.84833857134964
+      },
+      "merge": {
+        "cost": 50836.26075720622,
+        "time": 0.6525461673736572,
+        "path_length": 120924,
+        "feasible": true,
+        "improvement": 99.86952712334944
+      },
+      "ILS": {
+        "cost": 1273206.7325589312,
+        "time": 106.76686978340149,
+        "path_length": 4289025,
+        "feasible": true,
+        "improvement": 96.73227451245491
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 38963087.24254053
+  },
+  "n=50_alpha=4.0_beta=4_seed=3162": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 3162
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 47047.57589161617,
+        "time": 46.14066171646118,
+        "path_length": 129455,
+        "feasible": true,
+        "improvement": 99.99999991904474
+      },
+      "merge": {
+        "cost": 39922.18362366345,
+        "time": 0.8197505474090576,
+        "path_length": 155621,
+        "feasible": true,
+        "improvement": 99.99999993130547
+      },
+      "ILS": {
+        "cost": 1496723.6410602862,
+        "time": 110.92940163612366,
+        "path_length": 5870749,
+        "feasible": true,
+        "improvement": 99.9999974245721
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 58115532475339.85
+  },
+  "n=50_alpha=4.0_beta=2_seed=9948": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 9948
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 89936.19196300027,
+        "time": 44.23903489112854,
+        "path_length": 156837,
+        "feasible": true,
+        "improvement": 99.83786061280874
+      },
+      "merge": {
+        "cost": 87363.5922454085,
+        "time": 0.9238705635070801,
+        "path_length": 174693,
+        "feasible": true,
+        "improvement": 99.8424985648122
+      },
+      "ILS": {
+        "cost": 1892529.4459690254,
+        "time": 123.88217043876648,
+        "path_length": 7060285,
+        "feasible": true,
+        "improvement": 96.58809698394764
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 55468442.01212712
+  },
+  "n=100_alpha=0.0_beta=0.5_seed=9626": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 9626
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 30.440574230049698,
+        "time": 178.61195635795593,
+        "path_length": 145,
+        "feasible": true,
+        "improvement": 66.07440182822054
+      },
+      "merge": {
+        "cost": 66.53503994617705,
+        "time": 0.01825404167175293,
+        "path_length": 291,
+        "feasible": true,
+        "improvement": 25.847619939802545
+      },
+      "ILS": {
+        "cost": 18.30667692119753,
+        "time": 8.382624626159668,
+        "path_length": 110,
+        "feasible": true,
+        "improvement": 79.59746224248143
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 89.72745027491149
+  },
+  "n=50_alpha=4.0_beta=4_seed=2407": {
+    "params": {
+      "n": 50,
+      "alpha": 4.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 2407
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 93832.61154945641,
+        "time": 44.93407607078552,
+        "path_length": 258477,
+        "feasible": true,
+        "improvement": 99.99999988304695
+      },
+      "merge": {
+        "cost": 98826.37131239123,
+        "time": 1.7467622756958008,
+        "path_length": 316606,
+        "feasible": true,
+        "improvement": 99.99999987682273
+      },
+      "ILS": {
+        "cost": 2996255.859880757,
+        "time": 158.43611216545105,
+        "path_length": 11391441,
+        "feasible": true,
+        "improvement": 99.99999626546422
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 80231012196994.03
+  },
+  "n=100_alpha=0.0_beta=0.5_seed=6544": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 6544
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 21.310278561820503,
+        "time": 179.8548731803894,
+        "path_length": 130,
+        "feasible": true,
+        "improvement": 73.00416240821961
+      },
+      "merge": {
+        "cost": 67.60541247066125,
+        "time": 0.05355572700500488,
+        "path_length": 253,
+        "feasible": true,
+        "improvement": 14.357537369169718
+      },
+      "ILS": {
+        "cost": 11.308283409351633,
+        "time": 15.459654808044434,
+        "path_length": 105,
+        "feasible": true,
+        "improvement": 85.6746789360316
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 78.93912715013883
+  },
+  "n=100_alpha=0.0_beta=0.5_seed=4402": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 4402
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 18.24250999965861,
+        "time": 172.80198526382446,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 75.5250195733853
+      },
+      "merge": {
+        "cost": 74.53534050560975,
+        "time": 0.0641319751739502,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 7.867551699264222,
+        "time": 14.852458238601685,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 89.4445351079169
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 74.53534050560975
+  },
+  "n=100_alpha=0.0_beta=1_seed=5775": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 5775
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 28.71749796642951,
+        "time": 171.79279685020447,
+        "path_length": 146,
+        "feasible": true,
+        "improvement": 64.78077649274405
+      },
+      "merge": {
+        "cost": 59.417173640448326,
+        "time": 0.03603029251098633,
+        "path_length": 311,
+        "feasible": true,
+        "improvement": 27.130604446855077
+      },
+      "ILS": {
+        "cost": 16.07163851641279,
+        "time": 10.072043418884277,
+        "path_length": 109,
+        "feasible": true,
+        "improvement": 80.28969551250425
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 81.53927062166221
+  },
+  "n=100_alpha=0.0_beta=1_seed=1180": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 1180
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 21.407883395173407,
+        "time": 173.5096950531006,
+        "path_length": 132,
+        "feasible": true,
+        "improvement": 72.51345434756283
+      },
+      "merge": {
+        "cost": 63.743312753149596,
+        "time": 0.04213428497314453,
+        "path_length": 225,
+        "feasible": true,
+        "improvement": 18.15708990539211
+      },
+      "ILS": {
+        "cost": 10.929748343196735,
+        "time": 13.362483263015747,
+        "path_length": 105,
+        "feasible": true,
+        "improvement": 85.96680385167555
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 77.8849538456835
+  },
+  "n=100_alpha=0.0_beta=2_seed=271": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 271
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 29.952707263597677,
+        "time": 174.00587034225464,
+        "path_length": 163,
+        "feasible": true,
+        "improvement": 67.92436068557438
+      },
+      "merge": {
+        "cost": 69.53702487096967,
+        "time": 0.036974191665649414,
+        "path_length": 347,
+        "feasible": true,
+        "improvement": 25.53445973579204
+      },
+      "ILS": {
+        "cost": 31.8918021440167,
+        "time": 5.580618143081665,
+        "path_length": 181,
+        "feasible": true,
+        "improvement": 65.84783025934608
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 93.38148172194597
+  },
+  "n=100_alpha=0.0_beta=1_seed=7754": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 7754
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 17.590897099970906,
+        "time": 169.71648263931274,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 76.7785922566742
+      },
+      "merge": {
+        "cost": 75.7529314949771,
+        "time": 0.02808356285095215,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 1.875947826011759e-14
+      },
+      "ILS": {
+        "cost": 7.756522130332876,
+        "time": 16.34786891937256,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 89.76076307905366
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 75.75293149497712
+  },
+  "n=100_alpha=0.0_beta=2_seed=4786": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 4786
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 19.83733534443603,
+        "time": 171.5898883342743,
+        "path_length": 140,
+        "feasible": true,
+        "improvement": 76.60637233417393
+      },
+      "merge": {
+        "cost": 70.08131573790233,
+        "time": 0.04740786552429199,
+        "path_length": 255,
+        "feasible": true,
+        "improvement": 17.355018794723442
+      },
+      "ILS": {
+        "cost": 24.57990728021628,
+        "time": 8.394029378890991,
+        "path_length": 140,
+        "feasible": true,
+        "improvement": 71.01358680538782
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 84.79802973616977
+  },
+  "n=100_alpha=0.0_beta=4_seed=37": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 37
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 31.895905172198717,
+        "time": 173.04357290267944,
+        "path_length": 155,
+        "feasible": true,
+        "improvement": 68.4495585575312
+      },
+      "merge": {
+        "cost": 78.04842742243923,
+        "time": 0.04157614707946777,
+        "path_length": 331,
+        "feasible": true,
+        "improvement": 22.796913090436767
+      },
+      "ILS": {
+        "cost": 34.74342572506541,
+        "time": 5.149158000946045,
+        "path_length": 169,
+        "feasible": true,
+        "improvement": 65.63287942663905
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 101.09495688153797
+  },
+  "n=100_alpha=0.0_beta=2_seed=3926": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 3926
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 19.96453056353324,
+        "time": 173.0508234500885,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 74.16332407264326
+      },
+      "merge": {
+        "cost": 77.27205550615804,
+        "time": 0.03677034378051758,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": -1.2873474421615019e-13
+      },
+      "ILS": {
+        "cost": 20.91032613812443,
+        "time": 9.366507291793823,
+        "path_length": 120,
+        "feasible": true,
+        "improvement": 72.93934268843404
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 77.27205550615794
+  },
+  "n=100_alpha=0.0_beta=4_seed=3131": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 3131
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 21.208895361307775,
+        "time": 172.79466605186462,
+        "path_length": 128,
+        "feasible": true,
+        "improvement": 72.35619896218182
+      },
+      "merge": {
+        "cost": 62.89094889227982,
+        "time": 0.04346156120300293,
+        "path_length": 255,
+        "feasible": true,
+        "improvement": 18.027561141658005
+      },
+      "ILS": {
+        "cost": 23.129949778001006,
+        "time": 9.068222761154175,
+        "path_length": 147,
+        "feasible": true,
+        "improvement": 69.85228514803894
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 76.72206630445969
+  },
+  "n=100_alpha=0.0_beta=4_seed=1541": {
+    "params": {
+      "n": 100,
+      "alpha": 0.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 1541
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 18.481070334669482,
+        "time": 176.4193079471588,
+        "path_length": 101,
+        "feasible": true,
+        "improvement": 73.02306007876959
+      },
+      "merge": {
+        "cost": 68.50691883005297,
+        "time": 0.07245993614196777,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 4.1487356190855005e-14
+      },
+      "ILS": {
+        "cost": 18.870933111019365,
+        "time": 11.155174970626831,
+        "path_length": 120,
+        "feasible": true,
+        "improvement": 72.45397481992583
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 68.506918830053
+  },
+  "n=100_alpha=1.0_beta=0.5_seed=6887": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 6887
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1907.0735609374428,
+        "time": 176.72387623786926,
+        "path_length": 288,
+        "feasible": true,
+        "improvement": 12.217117732439482
+      },
+      "merge": {
+        "cost": 1883.6010808848248,
+        "time": 0.019565343856811523,
+        "path_length": 322,
+        "feasible": true,
+        "improvement": 13.297559512552976
+      },
+      "ILS": {
+        "cost": 1827.6642545283644,
+        "time": 9.951509714126587,
+        "path_length": 258,
+        "feasible": true,
+        "improvement": 15.872340026030615
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 2172.4891136801816
+  },
+  "n=100_alpha=1.0_beta=0.5_seed=3578": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 3578
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1396.6578393377963,
+        "time": 182.27699375152588,
+        "path_length": 221,
+        "feasible": true,
+        "improvement": 11.407882259060836
+      },
+      "merge": {
+        "cost": 1375.7743941316858,
+        "time": 0.08063936233520508,
+        "path_length": 243,
+        "feasible": true,
+        "improvement": 12.732550752965825
+      },
+      "ILS": {
+        "cost": 1311.8276227643785,
+        "time": 15.292184114456177,
+        "path_length": 178,
+        "feasible": true,
+        "improvement": 16.788791113748434
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 1576.5035027403899
+  },
+  "n=100_alpha=1.0_beta=0.5_seed=1487": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 1487
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1187.404334666584,
+        "time": 178.3247001171112,
+        "path_length": 150,
+        "feasible": true,
+        "improvement": 13.007242681084394
+      },
+      "merge": {
+        "cost": 1364.9461992721504,
+        "time": 0.05672883987426758,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 1114.4221508654855,
+        "time": 17.96929144859314,
+        "path_length": 137,
+        "feasible": true,
+        "improvement": 18.35413355781022
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 1364.9461992721504
+  },
+  "n=100_alpha=1.0_beta=1_seed=3970": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 3970
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 27931.20713554786,
+        "time": 179.02346992492676,
+        "path_length": 359,
+        "feasible": true,
+        "improvement": 0.05452542653022474
+      },
+      "merge": {
+        "cost": 27913.83080820553,
+        "time": 0.0378422737121582,
+        "path_length": 287,
+        "feasible": true,
+        "improvement": 0.11670266341601235
+      },
+      "ILS": {
+        "cost": 27923.787114174407,
+        "time": 10.06148886680603,
+        "path_length": 322,
+        "feasible": true,
+        "improvement": 0.08107628607295604
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 27946.44505391354
+  },
+  "n=100_alpha=1.0_beta=1_seed=6453": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 6453
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 19063.905796098967,
+        "time": 181.1729645729065,
+        "path_length": 260,
+        "feasible": true,
+        "improvement": 0.05887665500515667
+      },
+      "merge": {
+        "cost": 19064.26679830864,
+        "time": 0.046013832092285156,
+        "path_length": 257,
+        "feasible": true,
+        "improvement": 0.05698412748479402
+      },
+      "ILS": {
+        "cost": 19069.001993214544,
+        "time": 17.638670921325684,
+        "path_length": 280,
+        "feasible": true,
+        "improvement": 0.03216021662333451
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 19075.136598465808
+  },
+  "n=100_alpha=1.0_beta=1_seed=6088": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 6088
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 20763.113545478645,
+        "time": 181.55819940567017,
+        "path_length": 182,
+        "feasible": true,
+        "improvement": 0.050507787232736086
+      },
+      "merge": {
+        "cost": 20773.605834113896,
+        "time": 0.06424546241760254,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 5.253751567459001e-14
+      },
+      "ILS": {
+        "cost": 20765.686524646393,
+        "time": 18.90257239341736,
+        "path_length": 187,
+        "feasible": true,
+        "improvement": 0.038121978104104184
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 20773.605834113907
+  },
+  "n=100_alpha=2.0_beta=0.5_seed=4828": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 4828
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2558.752829120032,
+        "time": 179.06955075263977,
+        "path_length": 300,
+        "feasible": true,
+        "improvement": 15.975251053118447
+      },
+      "merge": {
+        "cost": 2580.364826001343,
+        "time": 0.04058051109313965,
+        "path_length": 327,
+        "feasible": true,
+        "improvement": 15.265552722147788
+      },
+      "ILS": {
+        "cost": 2468.6077808691985,
+        "time": 12.039892196655273,
+        "path_length": 255,
+        "feasible": true,
+        "improvement": 18.93544906907362
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 3045.237101199332
+  },
+  "n=100_alpha=2.0_beta=0.5_seed=2747": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 2747
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2038.668155860864,
+        "time": 182.25217151641846,
+        "path_length": 224,
+        "feasible": true,
+        "improvement": 12.191809047522709
+      },
+      "merge": {
+        "cost": 2040.249061052224,
+        "time": 0.04784440994262695,
+        "path_length": 248,
+        "feasible": true,
+        "improvement": 12.123717325718147
+      },
+      "ILS": {
+        "cost": 1935.0528292071588,
+        "time": 15.470789194107056,
+        "path_length": 194,
+        "feasible": true,
+        "improvement": 16.654661112119733
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 2321.7289113315323
+  },
+  "n=100_alpha=1.0_beta=2_seed=2103": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.5,
+      "seed": 2103
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 32320.558516092246,
+        "time": 179.81137084960938,
+        "path_length": 61747,
+        "feasible": true,
+        "improvement": 99.25211864819042
+      },
+      "merge": {
+        "cost": 28570.981028994556,
+        "time": 0.4095635414123535,
+        "path_length": 67762,
+        "feasible": true,
+        "improvement": 99.33888197186162
+      },
+      "ILS": {
+        "cost": 1389301.402374469,
+        "time": 97.97821497917175,
+        "path_length": 5360505,
+        "feasible": true,
+        "improvement": 67.85226931145337
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 4321615.780081919
+  },
+  "n=100_alpha=1.0_beta=2_seed=9239": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 1.0,
+      "seed": 9239
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 32139.601714260392,
+        "time": 183.44551420211792,
+        "path_length": 44104,
+        "feasible": true,
+        "improvement": 99.4304779503335
+      },
+      "merge": {
+        "cost": 24146.279670181222,
+        "time": 0.45374369621276855,
+        "path_length": 61564,
+        "feasible": true,
+        "improvement": 99.57212168303003
+      },
+      "ILS": {
+        "cost": 1291762.983577107,
+        "time": 84.69222688674927,
+        "path_length": 3244825,
+        "feasible": true,
+        "improvement": 77.10962604232462
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 5643258.541627998
+  },
+  "n=100_alpha=1.0_beta=2_seed=5308": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 2,
+      "density": 0.2,
+      "seed": 5308
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 38440.494788111624,
+        "time": 179.31412959098816,
+        "path_length": 81644,
+        "feasible": true,
+        "improvement": 99.27180159985313
+      },
+      "merge": {
+        "cost": 37856.25931799187,
+        "time": 0.5185561180114746,
+        "path_length": 93512,
+        "feasible": true,
+        "improvement": 99.28286907796429
+      },
+      "ILS": {
+        "cost": 1641677.2892019989,
+        "time": 125.90897822380066,
+        "path_length": 7239233,
+        "feasible": true,
+        "improvement": 68.90084838543562
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 5278849.11314805
+  },
+  "n=100_alpha=1.0_beta=4_seed=1689": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 1689
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 27021.835205494885,
+        "time": 181.37205505371094,
+        "path_length": 53712,
+        "feasible": true,
+        "improvement": 99.99999676422239
+      },
+      "merge": {
+        "cost": 18461.00093157725,
+        "time": 0.5232646465301514,
+        "path_length": 64989,
+        "feasible": true,
+        "improvement": 99.99999778935468
+      },
+      "ILS": {
+        "cost": 1875200.5910674275,
+        "time": 95.02002382278442,
+        "path_length": 4734379,
+        "feasible": true,
+        "improvement": 99.99977545077734
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 835095561104.312
+  },
+  "n=100_alpha=1.0_beta=4_seed=4668": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 4668
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 24973.41541140569,
+        "time": 179.0411126613617,
+        "path_length": 74898,
+        "feasible": true,
+        "improvement": 99.99999629156433
+      },
+      "merge": {
+        "cost": 20957.396226017663,
+        "time": 0.3702664375305176,
+        "path_length": 81666,
+        "feasible": true,
+        "improvement": 99.99999688792444
+      },
+      "ILS": {
+        "cost": 1697557.908200406,
+        "time": 125.84719634056091,
+        "path_length": 6690721,
+        "feasible": true,
+        "improvement": 99.99974792057053
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 673421830471.2184
+  },
+  "n=100_alpha=1.0_beta=4_seed=3624": {
+    "params": {
+      "n": 100,
+      "alpha": 1.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 3624
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 28733.935230226914,
+        "time": 180.59890055656433,
+        "path_length": 97518,
+        "feasible": true,
+        "improvement": 99.99999298476979
+      },
+      "merge": {
+        "cost": 29266.00563013984,
+        "time": 0.7786705493927002,
+        "path_length": 126828,
+        "feasible": true,
+        "improvement": 99.99999285486777
+      },
+      "ILS": {
+        "cost": 1798229.8366772518,
+        "time": 149.20904874801636,
+        "path_length": 8193473,
+        "feasible": true,
+        "improvement": 99.99956097220355
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 409593618268.1755
+  },
+  "n=100_alpha=2.0_beta=0.5_seed=5495": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 5495
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 1638.144779555339,
+        "time": 183.45684003829956,
+        "path_length": 153,
+        "feasible": true,
+        "improvement": 13.612293646575143
+      },
+      "merge": {
+        "cost": 1896.270718027225,
+        "time": 0.05604290962219238,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": -7.194342240746485e-14
+      },
+      "ILS": {
+        "cost": 1578.4121783183066,
+        "time": 16.505463123321533,
+        "path_length": 136,
+        "feasible": true,
+        "improvement": 16.762297528888688
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 1896.2707180272237
+  },
+  "n=100_alpha=2.0_beta=1_seed=9602": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 9602
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 49869.343764769685,
+        "time": 178.14465284347534,
+        "path_length": 397,
+        "feasible": true,
+        "improvement": 0.02785729100755318
+      },
+      "merge": {
+        "cost": 49853.89302713024,
+        "time": 0.06086397171020508,
+        "path_length": 317,
+        "feasible": true,
+        "improvement": 0.058831096388589445
+      },
+      "ILS": {
+        "cost": 49863.43068491438,
+        "time": 11.67227053642273,
+        "path_length": 374,
+        "feasible": true,
+        "improvement": 0.03971113183474052
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 49883.239884068185
+  },
+  "n=100_alpha=2.0_beta=1_seed=3450": {
     "params": {
       "n": 100,
       "alpha": 2.0,
       "beta": 1,
       "density": 0.5,
-      "seed": 6438
+      "seed": 3450
     },
     "solvers": {
       "genetic": {
-        "cost": 40035.13646053971,
-        "time": 18.655132055282593,
-        "path_length": 330,
-        "feasible": true,
-        "improvement": 45.629059637746785
-      },
-      "merge": {
-        "cost": 40022.637123606204,
-        "time": 0.2509958744049072,
+        "cost": 32921.78150881348,
+        "time": 182.54989051818848,
         "path_length": 263,
         "feasible": true,
-        "improvement": 45.64603474419233
+        "improvement": 0.022724664617952292
+      },
+      "merge": {
+        "cost": 32918.80869006783,
+        "time": 0.04121565818786621,
+        "path_length": 241,
+        "feasible": true,
+        "improvement": 0.031752557539737526
+      },
+      "ILS": {
+        "cost": 32921.07743176603,
+        "time": 15.303472757339478,
+        "path_length": 267,
+        "feasible": true,
+        "improvement": 0.02486281454799947
       }
     },
     "best_solver": "merge",
-    "baseline": 73633.33463390662
+    "baseline": 32929.264573749024
   },
-  "n=100_alpha=2.0_beta=2_seed=5262": {
+  "n=100_alpha=2.0_beta=1_seed=3150": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 3150
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 38021.94638151259,
+        "time": 182.35044479370117,
+        "path_length": 180,
+        "feasible": true,
+        "improvement": 0.02419873091327638
+      },
+      "merge": {
+        "cost": 38031.14943702809,
+        "time": 0.04287314414978027,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": -1.9131574306558744e-14
+      },
+      "ILS": {
+        "cost": 38023.73541928138,
+        "time": 17.791863679885864,
+        "path_length": 187,
+        "feasible": true,
+        "improvement": 0.019494592870460913
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 38031.149437028085
+  },
+  "n=100_alpha=2.0_beta=2_seed=2459": {
     "params": {
       "n": 100,
       "alpha": 2.0,
       "beta": 2,
       "density": 0.2,
-      "seed": 5262
+      "seed": 2459
     },
     "solvers": {
       "genetic": {
-        "cost": 75303.36229628282,
-        "time": 13.110026359558105,
-        "path_length": 185084,
+        "cost": 80497.02425706592,
+        "time": 181.85425853729248,
+        "path_length": 164224,
         "feasible": true,
-        "improvement": 99.89244648796895
+        "improvement": 99.60185439003364
       },
       "merge": {
-        "cost": 70955.10447613845,
-        "time": 1.1559727191925049,
-        "path_length": 198486,
+        "cost": 79748.28951641466,
+        "time": 0.9914271831512451,
+        "path_length": 181468,
         "feasible": true,
-        "improvement": 99.8986569729395
+        "improvement": 99.60555770022145
+      },
+      "ILS": {
+        "cost": 3106963.927979254,
+        "time": 181.95474791526794,
+        "path_length": 13228377,
+        "feasible": true,
+        "improvement": 84.63267357190321
       }
     },
     "best_solver": "merge",
-    "baseline": 70014786.94116935
+    "baseline": 20217986.144282393
   },
-  "n=100_alpha=2.0_beta=1_seed=5044": {
-    "params": {
-      "n": 100,
-      "alpha": 2.0,
-      "beta": 1,
-      "density": 1.0,
-      "seed": 5044
-    },
-    "solvers": {
-      "genetic": {
-        "cost": 32575.376028893934,
-        "time": 22.004095315933228,
-        "path_length": 194,
-        "feasible": true,
-        "improvement": 0.002981254320723483
-      },
-      "merge": {
-        "cost": 32576.347212652716,
-        "time": 0.1100008487701416,
-        "path_length": 199,
-        "feasible": true,
-        "improvement": 8.934037406572612e-14
-      }
-    },
-    "best_solver": "genetic",
-    "baseline": 32576.347212652745
-  },
-  "n=100_alpha=2.0_beta=2_seed=6689": {
+  "n=100_alpha=2.0_beta=2_seed=9224": {
     "params": {
       "n": 100,
       "alpha": 2.0,
       "beta": 2,
       "density": 0.5,
-      "seed": 6689
+      "seed": 9224
     },
     "solvers": {
       "genetic": {
-        "cost": 55933.801908899135,
-        "time": 13.551000118255615,
-        "path_length": 111259,
+        "cost": 53867.51356058115,
+        "time": 179.82384371757507,
+        "path_length": 106955,
         "feasible": true,
-        "improvement": 99.81507658199477
+        "improvement": 99.65016826235944
       },
       "merge": {
-        "cost": 48042.062192939746,
-        "time": 0.6529932022094727,
-        "path_length": 149174,
+        "cost": 46852.28525568808,
+        "time": 0.6917004585266113,
+        "path_length": 121296,
         "feasible": true,
-        "improvement": 99.8411675579785
+        "improvement": 99.69572725228917
+      },
+      "ILS": {
+        "cost": 2355129.6271056323,
+        "time": 136.06386971473694,
+        "path_length": 9614367,
+        "feasible": true,
+        "improvement": 84.70508409688274
       }
     },
     "best_solver": "merge",
-    "baseline": 30247008.470998213
+    "baseline": 15398120.80055722
   },
-  "n=100_alpha=2.0_beta=2_seed=3163": {
+  "n=100_alpha=4.0_beta=0.5_seed=4646": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.2,
+      "seed": 4646
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3963.165333079487,
+        "time": 183.6866638660431,
+        "path_length": 323,
+        "feasible": true,
+        "improvement": 10.825998454485685
+      },
+      "merge": {
+        "cost": 3839.207025548335,
+        "time": 0.04103899002075195,
+        "path_length": 328,
+        "feasible": true,
+        "improvement": 13.6151473741885
+      },
+      "ILS": {
+        "cost": 3725.876843182198,
+        "time": 10.300108909606934,
+        "path_length": 282,
+        "feasible": true,
+        "improvement": 16.165156018319067
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 4444.305811550569
+  },
+  "n=100_alpha=4.0_beta=0.5_seed=700": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 0.5,
+      "seed": 700
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 3007.8880789752643,
+        "time": 180.59076023101807,
+        "path_length": 252,
+        "feasible": true,
+        "improvement": 8.268481194765965
+      },
+      "merge": {
+        "cost": 2848.382471427226,
+        "time": 0.056276798248291016,
+        "path_length": 265,
+        "feasible": true,
+        "improvement": 13.13292137809816
+      },
+      "ILS": {
+        "cost": 2769.5555627172894,
+        "time": 15.589254379272461,
+        "path_length": 200,
+        "feasible": true,
+        "improvement": 15.53690446152042
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 3279.012620909139
+  },
+  "n=100_alpha=2.0_beta=2_seed=9875": {
     "params": {
       "n": 100,
       "alpha": 2.0,
       "beta": 2,
       "density": 1.0,
-      "seed": 3163
+      "seed": 9875
     },
     "solvers": {
       "genetic": {
-        "cost": 62294.20773956645,
-        "time": 10.227004051208496,
-        "path_length": 81452,
+        "cost": 57457.51510768728,
+        "time": 182.39515042304993,
+        "path_length": 85045,
         "feasible": true,
-        "improvement": 99.70516433613612
+        "improvement": 99.7081497592732
       },
       "merge": {
-        "cost": 42604.36106139097,
-        "time": 0.3640022277832031,
-        "path_length": 145506,
+        "cost": 43076.790182879486,
+        "time": 0.641932487487793,
+        "path_length": 116975,
         "feasible": true,
-        "improvement": 99.7983554886909
+        "improvement": 99.78119534823165
+      },
+      "ILS": {
+        "cost": 2682727.4553439976,
+        "time": 145.4203073978424,
+        "path_length": 7287589,
+        "feasible": true,
+        "improvement": 86.37332902094487
       }
     },
     "best_solver": "merge",
-    "baseline": 21128450.65050359
+    "baseline": 19687328.32448573
+  },
+  "n=100_alpha=2.0_beta=4_seed=6857": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 1.0,
+      "seed": 6857
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 47896.14494095614,
+        "time": 186.66823768615723,
+        "path_length": 99200,
+        "feasible": true,
+        "improvement": 99.99999961074654
+      },
+      "merge": {
+        "cost": 33387.24879383653,
+        "time": 0.7668917179107666,
+        "path_length": 125081,
+        "feasible": true,
+        "improvement": 99.99999972866081
+      },
+      "ILS": {
+        "cost": 3514547.361546635,
+        "time": 148.146466255188,
+        "path_length": 9294517,
+        "feasible": true,
+        "improvement": 99.9999714371649
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 12304616642211.902
+  },
+  "n=100_alpha=2.0_beta=4_seed=7439": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.5,
+      "seed": 7439
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 40044.70528573902,
+        "time": 180.93480014801025,
+        "path_length": 125905,
+        "feasible": true,
+        "improvement": 99.99999945743082
+      },
+      "merge": {
+        "cost": 31959.80375050848,
+        "time": 0.924365758895874,
+        "path_length": 135509,
+        "feasible": true,
+        "improvement": 99.99999956697384
+      },
+      "ILS": {
+        "cost": 3140808.1932937168,
+        "time": 179.74301147460938,
+        "path_length": 12630021,
+        "feasible": true,
+        "improvement": 99.99995744491692
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 7380571170426.64
+  },
+  "n=100_alpha=4.0_beta=1_seed=8944": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.2,
+      "seed": 8944
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 95818.90158646698,
+        "time": 181.36950635910034,
+        "path_length": 361,
+        "feasible": true,
+        "improvement": 0.016281353699386304
+      },
+      "merge": {
+        "cost": 95811.23207793849,
+        "time": 0.04229140281677246,
+        "path_length": 317,
+        "feasible": true,
+        "improvement": 0.024284221298278424
+      },
+      "ILS": {
+        "cost": 95819.73306842154,
+        "time": 10.92856216430664,
+        "path_length": 371,
+        "feasible": true,
+        "improvement": 0.015413730960781975
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 95834.50474114994
+  },
+  "n=100_alpha=4.0_beta=0.5_seed=1495": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 0.5,
+      "density": 1.0,
+      "seed": 1495
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 2456.8580212552956,
+        "time": 184.9785590171814,
+        "path_length": 158,
+        "feasible": true,
+        "improvement": 11.687955361831106
+      },
+      "merge": {
+        "cost": 2782.0191813262923,
+        "time": 0.05428719520568848,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": -1.634594592082105e-14
+      },
+      "ILS": {
+        "cost": 2344.421544698581,
+        "time": 20.006737232208252,
+        "path_length": 135,
+        "feasible": true,
+        "improvement": 15.729497465905029
+      }
+    },
+    "best_solver": "ILS",
+    "baseline": 2782.019181326292
+  },
+  "n=100_alpha=2.0_beta=4_seed=3158": {
+    "params": {
+      "n": 100,
+      "alpha": 2.0,
+      "beta": 4,
+      "density": 0.2,
+      "seed": 3158
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 57146.60436543478,
+        "time": 181.0460011959076,
+        "path_length": 201040,
+        "feasible": true,
+        "improvement": 99.99999923915952
+      },
+      "merge": {
+        "cost": 52310.29105700239,
+        "time": 1.3359127044677734,
+        "path_length": 231860,
+        "feasible": true,
+        "improvement": 99.99999930354939
+      },
+      "ILS": {
+        "cost": 4280892.837565667,
+        "time": 299.86371898651123,
+        "path_length": 22262685,
+        "feasible": true,
+        "improvement": 99.99994300489749
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 7510983661992.8125
+  },
+  "n=100_alpha=4.0_beta=1_seed=9987": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 0.5,
+      "seed": 9987
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 86451.22401568302,
+        "time": 185.45588183403015,
+        "path_length": 250,
+        "feasible": true,
+        "improvement": 0.011064579921344136
+      },
+      "merge": {
+        "cost": 86449.7880722052,
+        "time": 0.042656660079956055,
+        "path_length": 241,
+        "feasible": true,
+        "improvement": 0.01272538300776659
+      },
+      "ILS": {
+        "cost": 86452.78254816077,
+        "time": 15.428740739822388,
+        "path_length": 257,
+        "feasible": true,
+        "improvement": 0.009261991177898358
+      }
+    },
+    "best_solver": "merge",
+    "baseline": 86460.79053895283
+  },
+  "n=100_alpha=4.0_beta=1_seed=8028": {
+    "params": {
+      "n": 100,
+      "alpha": 4.0,
+      "beta": 1,
+      "density": 1.0,
+      "seed": 8028
+    },
+    "solvers": {
+      "genetic": {
+        "cost": 76090.08631963682,
+        "time": 184.27076172828674,
+        "path_length": 186,
+        "feasible": true,
+        "improvement": 0.006964814342983641
+      },
+      "merge": {
+        "cost": 76095.38622201075,
+        "time": 0.05822420120239258,
+        "path_length": 199,
+        "feasible": true,
+        "improvement": 0.0
+      },
+      "ILS": {
+        "cost": 76091.38777750917,
+        "time": 17.15964984893799,
+        "path_length": 192,
+        "feasible": true,
+        "improvement": 0.005254516338114747
+      }
+    },
+    "best_solver": "genetic",
+    "baseline": 76095.38622201075
   }
 }

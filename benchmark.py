@@ -167,7 +167,7 @@ def benchmark():
     # Run benchmark
     print("\nRunning benchmark...")
     start_time = time()
-    results = benchmark_parallel(instances, max_workers=16)
+    results = benchmark_parallel(instances, max_workers=8)
     total_time = time() - start_time
     
     print(f"\nBenchmark completed in {total_time:.2f}s")
