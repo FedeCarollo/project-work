@@ -244,6 +244,32 @@ def print_results(path: str):
         print("No wins recorded (no feasible solutions found)")
 
     file.close()
+
+def csv_report(path: str):
+    """
+    Convert benchmark results from JSON to CSV format.
+    """
+
+    with open(path, 'r') as f:
+        results = json.load(f)
+
+    with open('benchmark_results.csv', 'w') as f:
+        f.write("n,alpha,beta,density,seed,best_solver,best_cost,time,best_improvement,feasible\n")
+
+        for key, result in results.items():
+            params = result['params']
+            best_solver = result['best_solver']
+            if best_solver:
+                best_result = result['solvers'][best_solver]
+                best_cost = best_result['cost']
+                time_taken = best_result['time']
+                improvement = best_result.get('improvement', 0)
+                feasible = best_result.get('feasible', False)
+                
+                f.write(f"{params['n']},{params['alpha']},{params['beta']},{params.get('density', 0.5)},{params['seed']},{best_solver},{best_cost},{time_taken},{improvement},{feasible}\n")
+        
+
+
 if __name__ == '__main__':
     # Configure logging
     logging.basicConfig(
@@ -251,5 +277,6 @@ if __name__ == '__main__':
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
 
-    benchmark()      # Uncomment to run benchmark
-    print_results('benchmark_results.json')
+    # benchmark()      # Uncomment to run benchmark
+    # print_results('benchmark_results.json')
+    # csv_report('benchmark_results.json')  # Uncomment to convert results to CSV
