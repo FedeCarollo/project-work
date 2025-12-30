@@ -136,6 +136,54 @@ Instance: n=100, alpha=4.0, beta=0.5, density=1.0, seed=1495, best_solver=ILS, b
 Instance: n=100, alpha=2.0, beta=4, density=0.2, seed=3158, best_solver=merge, best_cost=52310.29
 Instance: n=100, alpha=4.0, beta=1, density=0.5, seed=9987, best_solver=merge, best_cost=86449.79
 Instance: n=100, alpha=4.0, beta=1, density=1.0, seed=8028, best_solver=genetic, best_cost=76090.09
-merge: 61/138 wins (44.2%)
-genetic: 49/138 wins (35.5%)
-ILS: 28/138 wins (20.3%)
+Instance: n=1000, alpha=0.0, beta=0.5, density=0.2, seed=3402, best_solver=genetic, best_cost=370.53
+Instance: n=1000, alpha=0.0, beta=1, density=0.2, seed=7455, best_solver=genetic, best_cost=375.01
+Instance: n=1000, alpha=0.0, beta=0.5, density=0.5, seed=2956, best_solver=genetic, best_cost=346.77
+Instance: n=1000, alpha=0.0, beta=0.5, density=1.0, seed=8460, best_solver=genetic, best_cost=367.96
+Instance: n=1000, alpha=0.0, beta=1, density=0.5, seed=8285, best_solver=genetic, best_cost=346.28
+Instance: n=1000, alpha=0.0, beta=2, density=0.2, seed=4167, best_solver=genetic, best_cost=363.23
+Instance: n=1000, alpha=0.0, beta=1, density=1.0, seed=7045, best_solver=genetic, best_cost=376.87
+Instance: n=1000, alpha=0.0, beta=2, density=0.5, seed=7614, best_solver=genetic, best_cost=346.14
+Instance: n=1000, alpha=0.0, beta=4, density=0.2, seed=3730, best_solver=genetic, best_cost=361.06
+Instance: n=1000, alpha=0.0, beta=2, density=1.0, seed=899, best_solver=genetic, best_cost=365.39
+Instance: n=1000, alpha=0.0, beta=4, density=0.5, seed=5877, best_solver=genetic, best_cost=369.12
+Instance: n=1000, alpha=0.0, beta=4, density=1.0, seed=2186, best_solver=genetic, best_cost=360.70
+Instance: n=1000, alpha=1.0, beta=0.5, density=0.2, seed=6331, best_solver=merge, best_cost=15693.28
+Instance: n=1000, alpha=1.0, beta=0.5, density=0.5, seed=7377, best_solver=merge, best_cost=13393.38
+Instance: n=1000, alpha=1.0, beta=1, density=0.2, seed=7333, best_solver=merge, best_cost=191913.17
+Instance: n=1000, alpha=1.0, beta=0.5, density=1.0, seed=7953, best_solver=genetic, best_cost=12530.20
+Instance: n=1000, alpha=1.0, beta=1, density=0.5, seed=475, best_solver=merge, best_cost=186256.29
+Instance: n=1000, alpha=1.0, beta=2, density=0.2, seed=2286, best_solver=merge, best_cost=229064.10
+Instance: n=1000, alpha=1.0, beta=1, density=1.0, seed=7065, best_solver=merge, best_cost=193168.65
+Instance: n=1000, alpha=1.0, beta=2, density=0.5, seed=410, best_solver=merge, best_cost=215975.63
+Instance: n=1000, alpha=1.0, beta=4, density=0.2, seed=2142, best_solver=genetic, best_cost=215313.96
+Instance: n=1000, alpha=1.0, beta=2, density=1.0, seed=6412, best_solver=merge, best_cost=204907.41
+Instance: n=1000, alpha=1.0, beta=4, density=0.5, seed=6953, best_solver=genetic, best_cost=235095.31
+Instance: n=1000, alpha=2.0, beta=0.5, density=0.2, seed=9827, best_solver=merge, best_cost=22125.59
+Instance: n=1000, alpha=1.0, beta=4, density=1.0, seed=9433, best_solver=merge, best_cost=166983.89
+Instance: n=1000, alpha=2.0, beta=0.5, density=0.5, seed=2451, best_solver=genetic, best_cost=21679.46
+Instance: n=1000, alpha=2.0, beta=0.5, density=1.0, seed=8321, best_solver=genetic, best_cost=17629.97
+Instance: n=1000, alpha=2.0, beta=1, density=0.2, seed=2276, best_solver=merge, best_cost=396802.72
+Instance: n=1000, alpha=2.0, beta=1, density=0.5, seed=5494, best_solver=merge, best_cost=399479.93
+Instance: n=1000, alpha=2.0, beta=1, density=1.0, seed=8035, best_solver=merge, best_cost=402828.91
+Instance: n=1000, alpha=2.0, beta=2, density=0.2, seed=9626, best_solver=merge, best_cost=442414.95
+Instance: n=1000, alpha=2.0, beta=2, density=0.5, seed=8508, best_solver=merge, best_cost=429773.65
+Instance: n=1000, alpha=2.0, beta=4, density=0.2, seed=3483, best_solver=genetic, best_cost=454412.10
+Instance: n=1000, alpha=2.0, beta=2, density=1.0, seed=7803, best_solver=merge, best_cost=425502.57
+Instance: n=1000, alpha=2.0, beta=4, density=0.5, seed=875, best_solver=merge, best_cost=310555.94
+Instance: n=1000, alpha=4.0, beta=0.5, density=0.2, seed=7455, best_solver=merge, best_cost=31659.06
+Instance: n=1000, alpha=2.0, beta=4, density=1.0, seed=6330, best_solver=merge, best_cost=327671.75
+Instance: n=1000, alpha=4.0, beta=0.5, density=0.5, seed=7654, best_solver=merge, best_cost=26618.41
+Instance: n=1000, alpha=4.0, beta=0.5, density=1.0, seed=7401, best_solver=genetic, best_cost=24409.58
+Instance: n=1000, alpha=4.0, beta=1, density=0.2, seed=7502, best_solver=merge, best_cost=786434.85
+Instance: n=1000, alpha=4.0, beta=1, density=0.5, seed=1041, best_solver=merge, best_cost=763933.65
+Instance: n=1000, alpha=4.0, beta=1, density=1.0, seed=7686, best_solver=merge, best_cost=750121.31
+Instance: n=1000, alpha=4.0, beta=2, density=0.2, seed=2070, best_solver=merge, best_cost=888374.59
+Instance: n=1000, alpha=4.0, beta=2, density=0.5, seed=7040, best_solver=merge, best_cost=863965.69
+Instance: n=1000, alpha=4.0, beta=4, density=0.2, seed=7192, best_solver=merge, best_cost=693959.04
+Instance: n=1000, alpha=4.0, beta=2, density=1.0, seed=6098, best_solver=merge, best_cost=862031.78
+Instance: n=1000, alpha=4.0, beta=4, density=0.5, seed=747, best_solver=merge, best_cost=667308.57
+Instance: n=1000, alpha=4.0, beta=4, density=1.0, seed=332, best_solver=merge, best_cost=619734.73
+merge: 90/186 wins (48.4%)
+genetic: 68/186 wins (36.6%)
+ILS: 28/186 wins (15.1%)
