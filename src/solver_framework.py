@@ -1,5 +1,6 @@
 import logging
-from concurrent.futures import ProcessPoolExecutor, as_completed
+import multiprocessing
+from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExecutor
 from time import time
 
 from Problem import Problem
@@ -14,20 +15,20 @@ from src.utils import optimize_full_path
 
 def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     """
-    Multithreaded solver that runs multiple strategies in parallel and selects the best solution.
+    Multiprocess solver that runs multiple strategies in parallel and selects the best solution.
     """
 
     # Dictionary of available solvers - easily extensible for future solvers
     solvers = {
         'Genetic': genetic_solver,
         'Merge': merge_solver,
-        'ACO': aco_solver,
         'ILS': ils_solver,
     }
 
     # Run all solvers in parallel
     results = {}
-    with ProcessPoolExecutor(max_workers=len(solvers)) as executor:
+
+    with ProcessPoolExecutor(max_workers=min(multiprocessing.cpu_count(), len(solvers))) as executor:
         futures = {executor.submit(solver_func, problem): name
                    for name, solver_func in solvers.items()}
 
