@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 for alpha in [1, 2]:
                     print(f"Running Problem with {num_cities} cities, density={density}, alpha={alpha}, beta={beta}")
                     start_time = time.time()
-                    problem = Problem(100, density=density, alpha=alpha, beta=beta, seed=42)
+                    problem = Problem(num_cities=num_cities, density=density, alpha=alpha, beta=beta, seed=42)
                     improvement, sol_cost, base_cost = compare(problem)
                     elapsed_time = time.time() - start_time
                     out.write(f"Density: {density}, Alpha: {alpha}, Beta: {beta} => Improvement: {improvement:.2f}%, Solution Cost: {sol_cost:.2f}, Baseline Cost: {base_cost:.2f}, Time: {elapsed_time:.2f}s\n")

@@ -58,16 +58,7 @@ class IteratedLocalSearchSolver:
 
         # Evaluate the real cost using the Split Algorithm (decoding TSP tour to VRP trips)
         current_cost, current_logical_split = self._split_path(current_solution)
-
-        # As discussed with colleagues, the analytical linear scan is required
-        # to fix the exact number of trips when Beta > 1.
         current_physical_path = self._reconstruct_physical_path(current_logical_split)
-        if path_optimizer and self.problem.beta > 1:
-            try:
-                current_physical_path = path_optimizer(current_physical_path, self.problem)
-                current_cost = self.problem.path_cost(current_physical_path)
-            except Exception:
-                pass  # Fallback to estimated cost
 
         best_solution = current_solution[:]
         best_cost = current_cost
@@ -96,27 +87,16 @@ class IteratedLocalSearchSolver:
             # Acceptance Criterion
             # If the new local optimum is better, we move there.
             if refined_cost_est < current_cost:
-
-                # Reconstruct and apply the external Beta Optimizer for final polish
                 refined_physical = self._reconstruct_physical_path(refined_logical)
-
-                if path_optimizer and self.problem.beta > 1:
-                    try:
-                        refined_physical = path_optimizer(refined_physical, self.problem)
-                        real_cost = self.problem.path_cost(refined_physical)
-                    except:
-                        real_cost = refined_cost_est
-                else:
-                    real_cost = refined_cost_est
 
                 # Update current state
                 current_solution = refined_solution
-                current_cost = real_cost
+                current_cost = refined_cost_est
                 iter_no_improv = 0
 
                 # Update Global Best
-                if real_cost < best_cost:
-                    best_cost = real_cost
+                if refined_cost_est < best_cost:
+                    best_cost = refined_cost_est
                     best_solution = current_solution
                     best_physical_path = refined_physical
             else:
@@ -126,15 +106,16 @@ class IteratedLocalSearchSolver:
                 if iter_no_improv > 35:
                     current_solution = self._generate_initial_solution()
                     current_solution = self._geometric_local_search(current_solution)
-                    c, l = self._split_path(current_solution)
-                    p = self._reconstruct_physical_path(l)
-
-                    if path_optimizer and self.problem.beta > 1:
-                        p = path_optimizer(p, self.problem)
-                        c = self.problem.path_cost(p)
-
-                    current_cost = c
+                    current_cost, l = self._split_path(current_solution)
                     iter_no_improv = 0
+
+        # Apply path_optimizer only once at the end on best solution
+        if path_optimizer and self.problem.beta > 1:
+            try:
+                best_physical_path = path_optimizer(best_physical_path, self.problem)
+                best_cost = self.problem.path_cost(best_physical_path)
+            except Exception:
+                pass  # Fallback to estimated cost
 
         return best_physical_path, best_cost
 
