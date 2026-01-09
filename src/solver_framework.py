@@ -4,7 +4,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExec
 from time import time
 
 from Problem import Problem
-from src.aco_solver import ACOSolver
+# from src.aco_solver import ACOSolver
 from src.beta_optimizer import path_optimizer
 from src.genetic_solver import GeneticSolver
 from src.ils_solver import IteratedLocalSearchSolver
@@ -20,7 +20,7 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
 
     # Dictionary of available solvers - easily extensible for future solvers
     solvers = {
-        # 'Genetic': genetic_solver,
+        'Genetic': genetic_solver,
         'Merge': merge_solver,
         'ILS': ils_solver,
     }
@@ -28,7 +28,8 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     # Run all solvers in parallel
     results = {}
 
-    with ThreadPoolExecutor(max_workers=min(multiprocessing.cpu_count(), len(solvers))) as executor:
+    # IF ALREADY USING MULTIPROCESSING IN SOLVERS, CONSIDER USING ThreadPoolExecutor INSTEAD
+    with ProcessPoolExecutor(max_workers=min(multiprocessing.cpu_count(), len(solvers))) as executor:
         futures = {executor.submit(solver_func, problem): name
                    for name, solver_func in solvers.items()}
 
