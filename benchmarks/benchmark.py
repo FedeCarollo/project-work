@@ -290,8 +290,11 @@ def latex_results():
     with open('benchmark_results.tex', 'w') as f:
         f.write(df.to_latex(index=False, float_format="%.2f"))
 
+import sys
 
 if __name__ == '__main__':
+    sys.path.append('..')
+
     # Configure logging
     logging.basicConfig(
         level=logging.WARNING,
