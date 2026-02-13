@@ -19,11 +19,17 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
     """
 
     # Dictionary of available solvers - easily extensible for future solvers
-    solvers = {
-        'Genetic': genetic_solver,
-        'Merge': merge_solver,
-        'ILS': ils_solver,
-    }
+    if problem.graph.number_of_nodes() < 100:
+        solvers = {
+            'Genetic': genetic_solver,
+            'Merge': merge_solver,
+            'ILS': ils_solver,
+        }
+    else:
+        # For larger instances, skip GA and ILS due to time constraints, focus on faster Merge strategy
+        solvers = {
+            'Merge': merge_solver
+        }
 
     # Run all solvers in parallel
     results = {}
@@ -64,19 +70,18 @@ def problem_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
 
 
 def genetic_solver(problem: Problem) -> tuple[list[tuple[int, float]], float]:
+
+    if problem.graph.number_of_nodes() > 100:
+        return [], float('inf')  # Skip GA for larger instances due to time constraints
+
     start_time = time()
 
     # GA parameters (can be increased for better results, e.g., pop=200, gen=500)
-    if problem.graph.number_of_nodes() <= 200:
+    if problem.graph.number_of_nodes() <= 100:
         POPULATION_SIZE = 50
         GENERATIONS = 100
         MUTATION_RATE = 0.3
         ELITE_SIZE = 10
-    else:
-        POPULATION_SIZE = 10
-        GENERATIONS = 20
-        MUTATION_RATE = 0.3
-        ELITE_SIZE = 3
 
     # Initialize and run the solver
     solver = GeneticSolver(
@@ -133,30 +138,11 @@ def merge_solver(problem) -> tuple[list[tuple[int, float]], float]:
     return final_path, cost
 
 
-def aco_solver(problem):
-    start_time = time()
-
-    # Adaptive settings based on problem difficulty
-    iterations = 50
-    ants = 25
-
-    if problem.beta > 1.5:
-        iterations = 80
-        ants = 35
-
-    solver = ACOSolver(problem, n_ants=ants, n_iterations=iterations)
-    path, cost = solver.solve()
-    path = optimize_full_path(path, problem)
-    cost = problem.path_cost(path)
-    elapsed = time() - start_time
-    logging.info(f"ACO Solver: ants={ants}, iter={iterations} | "
-                 f"Cost: {cost:.2f} | Steps: {len(path)} | "
-                 f"Time: {elapsed:.2f}s")
-
-    return path, cost
-
 
 def ils_solver(problem):
+
+    if problem.graph.number_of_nodes() > 100:
+        return [], float('inf')  # Skip ILS for larger instances due to time constraints
     start_time = time()
 
     max_iter = 150

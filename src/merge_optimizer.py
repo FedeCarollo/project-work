@@ -148,6 +148,8 @@ def merge_strategy_optimized(problem: Problem) -> List[List[Tuple[int, float]]]:
         if main_dst in excluded_cities:
             continue
 
+        excluded_cities.add(main_dst)
+
         current_data = paths_info[main_dst]
         full_path = current_data['path']
         
