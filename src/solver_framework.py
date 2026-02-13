@@ -4,7 +4,6 @@ from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExec
 from time import time
 
 from Problem import Problem
-from src.aco_solver import ACOSolver
 from src.beta_optimizer import path_optimizer
 from src.genetic_solver import GeneticSolver
 from src.ils_solver import IteratedLocalSearchSolver
