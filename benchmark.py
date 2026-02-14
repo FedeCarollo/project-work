@@ -1,7 +1,7 @@
 """
 Benchmark script to test multiple problem instances in parallel
 """
-from s339645 import Problem
+
 from src.solver_framework import genetic_solver, merge_solver, ils_solver
 from src.utils import check_feasibility
 from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExecutor
@@ -9,6 +9,7 @@ from time import time
 import json
 import logging
 from tqdm import tqdm
+from s339645 import Problem
 
 def solve_single_instance(params):
     """
@@ -31,11 +32,18 @@ def solve_single_instance(params):
     problem = Problem(num_cities=n, alpha=alpha, beta=beta, seed=seed, density=density)
     
     # Dictionary of solvers
-    solvers = {
-        'genetic': genetic_solver,
-        'merge': merge_solver,
-        'ILS': ils_solver,
-    }
+    if problem.graph.number_of_nodes() <= 100:
+        solvers = {
+            'genetic': genetic_solver,
+            'merge': merge_solver,
+            'ILS': ils_solver,
+        }
+    else:
+        solvers = {
+            'merge': merge_solver,
+            'genetic': genetic_solver,
+        }
+
     
     # Test each solver
     results = {}
@@ -139,10 +147,14 @@ def generate_test_instances():
     instances = []
     
     # Example: test different combinations
-    n_cities = [10, 50, 100, 1000]
-    alpha_values = [0.0, 1.0, 2.0, 4.0]
-    beta_values = [0.5, 1, 2, 4]
+    n_cities = [10, 100, 1000]
+    alpha_values = [0.0, 1.0, 2.0]
+    beta_values = [0.5, 1, 2]
     density_values = [0.2, 0.5, 1.0]
+    # n_cities = [1000]
+    # alpha_values = [1.0]
+    # beta_values = [0.6]
+    # density_values = [0.9]
     
     for n, alpha, beta, density in product(n_cities, alpha_values, beta_values, density_values):
         instances.append({
@@ -167,7 +179,7 @@ def benchmark():
     # Run benchmark
     print("\nRunning benchmark...")
     start_time = time()
-    results = benchmark_parallel(instances, max_workers=8)
+    results = benchmark_parallel(instances, max_workers=3)
     total_time = time() - start_time
     
     print(f"\nBenchmark completed in {total_time:.2f}s")
@@ -294,6 +306,7 @@ import sys
 
 if __name__ == '__main__':
     sys.path.append('..')
+
 
     # Configure logging
     logging.basicConfig(

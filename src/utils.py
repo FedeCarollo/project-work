@@ -1,7 +1,51 @@
 from typing import List, Tuple
 import networkx as nx
-from src.beta_optimizer import path_optimizer
 from Problem import Problem
+
+
+def adj_cost(problem: Problem, src: int, dest: int, weight: float) -> float:
+    """
+    Cost to go from src to dest (adjacent nodes) carrying weight.
+
+    :param problem: Problem instance
+    :param src: starting city
+    :param dest: destination city
+    :param weight: weight carried
+    :return: edge cost
+    """
+    dist = problem.graph[src][dest]['dist']
+    return dist + (problem.alpha * dist * weight) ** problem.beta
+
+
+def path_cost(problem: Problem, path: list[tuple[int, float]]) -> float:
+    """
+    Calculates the total cost of traversing the given path.
+    Iterates through edges (u -> v) to ensure consistency with the optimizer logic.
+
+    :param problem: Problem instance
+    :param path: Sequence of (city, gold to pick up at city)
+                    Example: [(0, 0), (20, 1000), (0, 0)]
+    :type path: list[tuple[int, float]]
+    :return: total path cost
+    """
+    if path[0][0] != 0:
+        path = [(0, 0.0)] + path
+
+    total_cost = 0.0
+    current_weight = 0.0
+
+    for i in range(len(path) - 1):
+        u, gold_u = path[i]
+        v, gold_v = path[i + 1]
+
+        if u == 0:
+            current_weight = 0.0
+
+        current_weight += gold_u
+        total_cost += adj_cost(problem, u, v, current_weight)
+
+    return total_cost
+
 
 def check_feasibility(
     problem: Problem,
@@ -108,6 +152,7 @@ def optimize_full_path(path: list[tuple[int, float]], problem) -> list[tuple[int
     :type problem: Problem
     :return: Optimized path
     """
+    from src.beta_optimizer import path_optimizer
     splitted_paths = split_path(path)
     optimized_paths = [path_optimizer(sub_path, problem) for sub_path in splitted_paths]
     return join_paths(optimized_paths)
