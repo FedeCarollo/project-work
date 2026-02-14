@@ -122,7 +122,7 @@ def benchmark_parallel(instances, max_workers=4):
             try:
                 result = future.result()
                 # Use string key for JSON serialization
-                key = f"n={params['n']}_alpha={params['alpha']}_beta={params['beta']}_seed={params['seed']}"
+                key = f"n={params['n']}_alpha={params['alpha']}_beta={params['beta']}_density={params.get('density', 0.5)}_seed={params['seed']}"
                 results[key] = result
                 
                 logging.info(f"✓ Completed: {key}")
@@ -149,12 +149,14 @@ def generate_test_instances():
     # Example: test different combinations
     n_cities = [10, 100, 1000]
     alpha_values = [0.0, 1.0, 2.0]
-    beta_values = [0.5, 1, 2]
+    beta_values = [0.5, 1.0, 2.0]
     density_values = [0.2, 0.5, 1.0]
+
     # n_cities = [1000]
     # alpha_values = [1.0]
-    # beta_values = [0.6]
-    # density_values = [0.9]
+    # beta_values = [0.5, 1.0, 2.0]
+    # density_values = [0.2, 0.5, 1.0]
+
     
     for n, alpha, beta, density in product(n_cities, alpha_values, beta_values, density_values):
         instances.append({
