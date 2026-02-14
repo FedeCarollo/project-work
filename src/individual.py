@@ -146,7 +146,8 @@ class Individual:
         self.phenotype = path
         elapsed = time.time() - t_start
         if elapsed > 0.5 or len(self.genome) > 200:
-            print(f"🧬 rebuild_phenotype: {len(self.genome)} cities, {path_calls} path computations, {cache_hits} cache hits, {elapsed:.2f}s")
+            # print(f"🧬 rebuild_phenotype: {len(self.genome)} cities, {path_calls} path computations, {cache_hits} cache hits, {elapsed:.2f}s")
+            pass
         return path
 
     def mutate(self, mutation_rate=0.1):
