@@ -85,6 +85,11 @@ def check_feasibility(
             current_weight = 0
             
         prev_city = city
+
+    # Verify we end at the depot
+    if solution[-1][0] != 0:
+        print("❌ Feasibility failed: path does not end at depot")
+        return False
     
     # Verify all gold was collected
     for city in graph.nodes():
